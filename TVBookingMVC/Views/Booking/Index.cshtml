@@ -1,0 +1,139 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TVBookingMVC.Areas.Identity.Data
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@model IEnumerable<TVBookingMVC.Models.Booking>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var bookings = @Html.Raw(Json.Serialize(TempData["NearBookings"]));
+
+    console.log(bookings);
+
+    function checkAndNotify(bookings) {
+        var currentTime = new Date();
+
+        console.log(currentTime);
+
+        bookings.forEach(function (booking) {
+            var dateParts = booking.start.split('T')[0].split('-');
+            var timeParts = booking.start.split('T')[1].split(':');
+
+            var startTime = new Date(
+                parseInt(dateParts[0]),  // Year
+                parseInt(dateParts[1]) - 1,  // Month (Note: Months are zero-indexed in JavaScript)
+                parseInt(dateParts[2]),  // Day
+                parseInt(timeParts[0]),  // Hour
+                parseInt(timeParts[1]),  // Minute
+                parseInt(timeParts[2])   // Second (if available)
+            );
+
+            // Getting the difference in milliseconds
+            var timeDifference = startTime - currentTime;
+
+            if (timeDifference > 0 && timeDifference <= 15 * 60 * 1000) {
+                alert(`A(z) ${booking.program} műsor ${booking.start.split('T')[1].split(':')[0]}:${booking.start.split('T')[1].split(':')[1]
+                    }-kor kezdődik a(z) ${booking.channel} csatornán.`);
+            }
+        });
+    }
+
+    checkAndNotify(bookings);
+
+    setInterval(function () {
+        checkAndNotify(bookings);
+    }, 60 * 1000);
+
+</script>
+
+<h1>Index</h1>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">
+            Create new booking
+        </a>
+    </p>
+}
+
+
+<form asp-action="IndexWithFilter" method="get">
+    @foreach (var ageLimit in Globals.AgeLimits)
+    {
+        bool isChecked = ViewBag.AgeLimits != null && Array.IndexOf(ViewBag.AgeLimits, ageLimit.ToString()) != -1;
+        <input type="checkbox" name="ageLimit" value="@ageLimit" @(isChecked ? "checked" : "") />
+        @ageLimit
+        <br />
+    }
+    <input type="submit" value="Filter" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Program)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Channel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgeLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Program)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Channel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Start)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.End)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgeLimit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomNumber)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

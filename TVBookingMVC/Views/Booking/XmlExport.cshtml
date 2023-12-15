@@ -1,0 +1,21 @@
+﻿@model TVBookingMVC.Models.Booking
+
+@{
+    ViewBag.Title = "XML Export";
+    Layout = "_Layout";
+}
+
+<h2>XML Export</h2>
+
+<div class="row mb-3">
+    <div class="col-md-12">
+        <h3>Choose a date you want to export bookings for</h3>
+        <form asp-action="XMLExport" method="post">
+            <div class="form-group mb-3">
+                <label>Date</label>
+                <input class="form-control" asp-format="{0:yyyy-MM-dd}" type="date" name="Date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+            </div>
+            <button type="submit" class="btn btn-primary">Export</button>
+        </form>
+    </div>
+</div>

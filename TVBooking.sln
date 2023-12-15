@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34310.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TVBookingMVC", "TVBookingMVC\TVBookingMVC.csproj", "{1C517A33-A523-4D2B-A361-37C26F548084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVBookingMVCSelenium", "TVBookingMVCSelenium\TVBookingMVCSelenium.csproj", "{CE5BBD3D-8D4C-4740-8894-796B2FEA1A16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C517A33-A523-4D2B-A361-37C26F548084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C517A33-A523-4D2B-A361-37C26F548084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C517A33-A523-4D2B-A361-37C26F548084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C517A33-A523-4D2B-A361-37C26F548084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5BBD3D-8D4C-4740-8894-796B2FEA1A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5BBD3D-8D4C-4740-8894-796B2FEA1A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5BBD3D-8D4C-4740-8894-796B2FEA1A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5BBD3D-8D4C-4740-8894-796B2FEA1A16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8E83187-34B7-4004-A764-ACA895DC2A67}
+	EndGlobalSection
+EndGlobal

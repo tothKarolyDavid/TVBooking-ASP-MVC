@@ -1,0 +1,380 @@
+<bookings>
+  <booking>
+    <program>Program 94</program>
+    <channel>National Geographic Wild</channel>
+    <genre>Étterem</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:13:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>2</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 49</program>
+    <channel>Spíler TV</channel>
+    <genre>Családi</genre>
+    <start>12/12/2023 13:19:07</start>
+    <end>12/12/2023 13:52:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>2</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 33</program>
+    <channel>Animal Planet</channel>
+    <genre>Horror</genre>
+    <start>12/12/2023 20:19:07</start>
+    <end>12/12/2023 21:41:07</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>2</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 63</program>
+    <channel>TeenNick</channel>
+    <genre>Mesefilm</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:54:07</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>3</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 78</program>
+    <channel>Investigation Discovery</channel>
+    <genre>Horror</genre>
+    <start>12/12/2023 17:19:07</start>
+    <end>12/12/2023 18:09:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>3</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 55</program>
+    <channel>Viasat Explore</channel>
+    <genre>Fantasy</genre>
+    <start>12/12/2023 16:19:07</start>
+    <end>12/12/2023 17:20:07</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>3</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 24</program>
+    <channel>Duna</channel>
+    <genre>Romantikus</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:10:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>4</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 15</program>
+    <channel>VIASAT2</channel>
+    <genre>Egyéb</genre>
+    <start>12/12/2023 14:19:07</start>
+    <end>12/12/2023 15:37:07</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>4</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 39</program>
+    <channel>TeenNick</channel>
+    <genre>Mese</genre>
+    <start>12/12/2023 14:19:07</start>
+    <end>12/12/2023 16:19:07</end>
+    <ageLimit>Kizárólag felnőttek számára ajánlott</ageLimit>
+    <roomNumber>4</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 31</program>
+    <channel>FIXHD (Kizárólag online)</channel>
+    <genre>Családi</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:38:07</end>
+    <ageLimit>Kizárólag felnőttek számára ajánlott</ageLimit>
+    <roomNumber>5</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 90</program>
+    <channel>Duna World</channel>
+    <genre>Művészeti</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 12:11:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>6</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 32</program>
+    <channel>M2</channel>
+    <genre>Művészeti</genre>
+    <start>12/12/2023 00:19:07</start>
+    <end>12/12/2023 01:14:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>6</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 26</program>
+    <channel>Disney Channel</channel>
+    <genre>Egyéb</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 12:12:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>7</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 5</program>
+    <channel>Fishing and Hunting</channel>
+    <genre>Játék</genre>
+    <start>12/12/2023 21:19:07</start>
+    <end>12/12/2023 22:14:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>7</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 65</program>
+    <channel>TLC</channel>
+    <genre>Étterem</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 10:50:07</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>8</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 22</program>
+    <channel>FEM3</channel>
+    <genre>Dokumentum</genre>
+    <start>12/12/2023 15:19:07</start>
+    <end>12/12/2023 17:06:07</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>8</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 45</program>
+    <channel>TLC</channel>
+    <genre>Mese</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:48:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>9</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 35</program>
+    <channel>VIASAT6</channel>
+    <genre>Mesefilm</genre>
+    <start>12/12/2023 16:19:07</start>
+    <end>12/12/2023 17:13:07</end>
+    <ageLimit>16 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>9</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 67</program>
+    <channel>TV2 Comedy</channel>
+    <genre>Étterem</genre>
+    <start>12/12/2023 14:19:07</start>
+    <end>12/12/2023 16:08:07</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>9</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 4</program>
+    <channel>TV2 Séf</channel>
+    <genre>Koncert</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:57:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>11</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 4</program>
+    <channel>ATV</channel>
+    <genre>Mese</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:25:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>12</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 7</program>
+    <channel>Investigation Discovery</channel>
+    <genre>Életmód</genre>
+    <start>12/12/2023 15:19:07</start>
+    <end>12/12/2023 16:37:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>12</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 6</program>
+    <channel>Hír TV</channel>
+    <genre>Egyéb</genre>
+    <start>12/12/2023 18:19:07</start>
+    <end>12/12/2023 19:12:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>12</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 39</program>
+    <channel>TeenNick</channel>
+    <genre>Dráma</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 12:02:07</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>14</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 73</program>
+    <channel>VIASAT3</channel>
+    <genre>Komédia</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 10:58:07</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>14</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 96</program>
+    <channel>Fishing and Hunting</channel>
+    <genre>Krimi</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:24:07</end>
+    <ageLimit>16 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>14</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 12</program>
+    <channel>Cartoon Network</channel>
+    <genre>Életmód</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:59:07</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>14</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 31</program>
+    <channel>TeenNick</channel>
+    <genre>Játék</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:53:07</end>
+    <ageLimit>16 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>15</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 3</program>
+    <channel>NickToons</channel>
+    <genre>Művészeti</genre>
+    <start>12/12/2023 12:19:07</start>
+    <end>12/12/2023 13:26:07</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>15</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 82</program>
+    <channel>Sláger TV</channel>
+    <genre>Talkshow</genre>
+    <start>12/12/2023 16:19:07</start>
+    <end>12/12/2023 16:54:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>15</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 70</program>
+    <channel>Investigation Discovery</channel>
+    <genre>Gyerek</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:15:07</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>16</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 50</program>
+    <channel>Izaura TV</channel>
+    <genre>Családi</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 10:59:07</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>16</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 96</program>
+    <channel>Discovery Channel</channel>
+    <genre>Egyéb</genre>
+    <start>12/12/2023 14:19:07</start>
+    <end>12/12/2023 15:05:07</end>
+    <ageLimit>Kizárólag felnőttek számára ajánlott</ageLimit>
+    <roomNumber>16</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 21</program>
+    <channel>TV2</channel>
+    <genre>Sitcom</genre>
+    <start>12/12/2023 13:19:07</start>
+    <end>12/12/2023 14:48:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>16</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 95</program>
+    <channel>Zenebutik</channel>
+    <genre>Fantasy</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:11:07</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>17</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 99</program>
+    <channel>NickToons</channel>
+    <genre>Játék</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:25:07</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>19</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 24</program>
+    <channel>Hír TV</channel>
+    <genre>Művészeti</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:01:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>19</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 18</program>
+    <channel>TV2</channel>
+    <genre>Romantikus</genre>
+    <start>12/12/2023 10:19:07</start>
+    <end>12/12/2023 11:48:07</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 46</program>
+    <channel>ATV</channel>
+    <genre>Sitcom</genre>
+    <start>12/12/2023 11:19:07</start>
+    <end>12/12/2023 12:56:07</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 36</program>
+    <channel>Discovery Channel</channel>
+    <genre>Mesefilm</genre>
+    <start>12/12/2023 18:19:07</start>
+    <end>12/12/2023 19:09:07</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Hirado</program>
+    <channel>M1</channel>
+    <genre>Hír</genre>
+    <start>12/12/2023 17:40:00</start>
+    <end>12/12/2023 20:40:00</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>0</roomNumber>
+  </booking>
+  <booking>
+    <program>Terminator</program>
+    <channel>Moziverzum</channel>
+    <genre>Akció</genre>
+    <start>12/12/2023 22:15:00</start>
+    <end>12/12/2023 23:00:00</end>
+    <ageLimit>Kizárólag felnőttek számára ajánlott</ageLimit>
+    <roomNumber>999</roomNumber>
+  </booking>
+</bookings>

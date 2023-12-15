@@ -1,0 +1,141 @@
+﻿@model TVBookingMVC.Controllers.StatisticsModel
+
+@{
+    ViewBag.Title = "Statistics";
+    Layout = "_Layout";
+
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<h2>Statistics</h2>
+
+<h3>Viewers by channel</h3>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <canvas id="channelViewers" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<h3>Viewers by genre</h3>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <canvas id="genreViewers" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<h3>View duration in minutes in the last 30 days</h3>
+<div class="row mb-3">
+    <div class="col-md-12">
+        <canvas id="dateViewers" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<script>
+    console.log(@Html.Raw(Json.Serialize(Model.ChannelViewersJson)));
+
+    var channelViewersData = JSON.parse(@Html.Raw(Json.Serialize(Model.ChannelViewersJson)));
+    var genreViewersData = JSON.parse(@Html.Raw(Json.Serialize(Model.GenreViewersJson)));
+    var dateViewersData = JSON.parse(@Html.Raw(Json.Serialize(Model.DateViewersJson)));
+
+    var channelLabels = channelViewersData.map(function (item) {
+        return item.Channel;
+    });
+
+    var channelValues = channelViewersData.map(function (item) {
+        return item.Viewers;
+    });
+
+    var genreLabels = genreViewersData.map(function (item) {
+        return item.Genre;
+    });
+
+    var genreValues = genreViewersData.map(function (item) {
+        return item.Viewers;
+    });
+
+    var dateLabels = dateViewersData.map(function (item) {
+        return item.Date.split('T')[0];
+    });
+
+    var dateValues = dateViewersData.map(function (item) {
+        return item.Viewers;
+    });
+
+    var channelViewersCtx = document.getElementById('channelViewers').getContext('2d');
+    var channelViewersChart = new Chart(channelViewersCtx, {
+        type: 'pie',
+        data: {
+            labels: channelLabels,
+            datasets: [{
+                label: 'Channel Viewers',
+                data: channelValues,
+                backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(255, 206, 86, 0.7)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right'
+                }
+            }
+        }
+    });
+
+    var genreViewersCtx = document.getElementById('genreViewers').getContext('2d');
+    var genreViewersChart = new Chart(genreViewersCtx, {
+        type: 'pie',
+        data: {
+            labels: genreLabels,
+            datasets: [{
+                label: 'Genre Viewers',
+                data: genreValues,
+                backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(255, 206, 86, 0.7)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right'
+                }
+            }
+        }
+    });
+
+    var dateViewersCtx = document.getElementById('dateViewers').getContext('2d');
+    var dateViewersChart = new Chart(dateViewersCtx, {
+        type: 'line',
+        data: {
+            labels: dateLabels,
+            datasets: [{
+                label: 'Date Viewers',
+                data: dateValues,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                fill: true
+            }]
+        },
+        options: {
+            // make the y axis say mins after the values
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function (value, index, values) {
+                            return value + ' minutes';
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+</script>

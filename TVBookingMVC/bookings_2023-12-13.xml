@@ -1,0 +1,65 @@
+<bookings>
+  <booking>
+    <program>Program 43</program>
+    <channel>Investigation Discovery</channel>
+    <genre>Játék</genre>
+    <start>12/13/2023 01:19:07</start>
+    <end>12/13/2023 03:11:07</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>4</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 24</program>
+    <channel>Viasat Nature</channel>
+    <genre>Komédia</genre>
+    <start>12/13/2023 00:19:07</start>
+    <end>12/13/2023 01:31:07</end>
+    <ageLimit>16 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>8</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 18</program>
+    <channel>Eurosport 2</channel>
+    <genre>Krimi</genre>
+    <start>12/13/2023 00:19:07</start>
+    <end>12/13/2023 01:44:07</end>
+    <ageLimit>Kizárólag felnőttek számára ajánlott</ageLimit>
+    <roomNumber>19</roomNumber>
+  </booking>
+  <booking>
+    <program>Baratok kozt</program>
+    <channel>RTL</channel>
+    <genre>Egyéb</genre>
+    <start>12/13/2023 19:44:00</start>
+    <end>12/14/2023 20:02:00</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>999</roomNumber>
+  </booking>
+  <booking>
+    <program>jfaklsjdfl</program>
+    <channel>M1</channel>
+    <genre>Akció</genre>
+    <start>12/13/2023 10:00:00</start>
+    <end>12/13/2023 11:00:00</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>999</roomNumber>
+  </booking>
+  <booking>
+    <program>jasldjflasjdlf</program>
+    <channel>M1</channel>
+    <genre>Akció</genre>
+    <start>12/13/2023 09:30:00</start>
+    <end>12/13/2023 10:00:00</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>999</roomNumber>
+  </booking>
+  <booking>
+    <program>ggjjhg</program>
+    <channel>Comedy Central</channel>
+    <genre>Gyerek</genre>
+    <start>12/13/2023 13:00:00</start>
+    <end>12/13/2023 14:00:00</end>
+    <ageLimit>Gyermekbarát program</ageLimit>
+    <roomNumber>2</roomNumber>
+  </booking>
+</bookings>
