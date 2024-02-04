@@ -24,3 +24,10 @@ The guests can add new bookings to their own room and they can also view their o
   - View their own bookings
   - Get a notification 15 minutes before the start of a booking
 	
+## Screenshots
+
+### Home page
+![Home page](Docs/index.png)
+
+### Statistics page
+![Statistics page](Docs/statistics.png)
