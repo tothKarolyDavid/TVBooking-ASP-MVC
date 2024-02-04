@@ -1,0 +1,65 @@
+<bookings>
+  <booking>
+    <program>Program 45</program>
+    <channel>Nickelodeon</channel>
+    <genre>Film</genre>
+    <start>02/04/2024 18:18:45</start>
+    <end>02/04/2024 18:56:45</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>19</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 43</program>
+    <channel>Fishing and Hunting</channel>
+    <genre>Sport</genre>
+    <start>02/04/2024 18:18:45</start>
+    <end>02/04/2024 19:38:45</end>
+    <ageLimit>12 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 13</program>
+    <channel>M1</channel>
+    <genre>Hír</genre>
+    <start>02/04/2024 19:18:45</start>
+    <end>02/04/2024 20:56:45</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 68</program>
+    <channel>Eurosport 2</channel>
+    <genre>Szórakoztató</genre>
+    <start>02/04/2024 18:18:45</start>
+    <end>02/04/2024 19:46:45</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 15</program>
+    <channel>M4 Sport</channel>
+    <genre>Játék</genre>
+    <start>02/04/2024 18:18:45</start>
+    <end>02/04/2024 20:05:45</end>
+    <ageLimit>18 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>20</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 62</program>
+    <channel>Viasat Explore</channel>
+    <genre>Film</genre>
+    <start>02/04/2024 18:18:45</start>
+    <end>02/04/2024 19:25:45</end>
+    <ageLimit>Korhatárra való tekintet nélkül megtekinthető</ageLimit>
+    <roomNumber>21</roomNumber>
+  </booking>
+  <booking>
+    <program>Program 52</program>
+    <channel>ATV</channel>
+    <genre>Életmód</genre>
+    <start>02/04/2024 18:18:45</start>
+    <end>02/04/2024 19:05:45</end>
+    <ageLimit>6 éven aluliak számára nem ajánlott</ageLimit>
+    <roomNumber>21</roomNumber>
+  </booking>
+</bookings>
