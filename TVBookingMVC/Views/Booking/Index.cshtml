@@ -64,7 +64,6 @@
     </p>
 }
 
-
 <form asp-action="IndexWithFilter" method="get">
     @foreach (var ageLimit in Globals.AgeLimits)
     {
@@ -100,7 +99,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.RoomNumber)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -125,13 +123,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.AgeLimit)
                 </td>
-                <td>
+                <td class="text-center">
                     @Html.DisplayFor(modelItem => item.RoomNumber)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

@@ -4,7 +4,7 @@
     {
         public static bool IsAdmin { get; set; }
 
-        public static string[] AgeLimits = {
+        public static string[] AgeLimits = [
             "Gyermekbarát program",
             "Korhatárra való tekintet nélkül megtekinthető",
             "6 éven aluliak számára nem ajánlott",
@@ -12,9 +12,9 @@
             "16 éven aluliak számára nem ajánlott",
             "18 éven aluliak számára nem ajánlott",
             "Kizárólag felnőttek számára ajánlott",
-        };
+        ];
 
-        public static string[] Channels = {
+        public static string[] Channels = [
             "M1",
             "M2",
             "M4 Sport",
@@ -73,10 +73,10 @@
             "Fishing and Hunting",
             "Eurosport 1",
             "Eurosport 2",
-        };
+        ];
 
         public static string[] Genres =
-        {
+        [
             "Akció",
             "Animációs",
             "Családi",
@@ -106,6 +106,6 @@
             "Szórakoztató",
             "Talkshow",
             "Egyéb"
-        };
+        ];
     }
 }
