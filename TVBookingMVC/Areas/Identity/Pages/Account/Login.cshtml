@@ -13,7 +13,7 @@
             </div>
             <div class="card-body">
                 <form id="account" method="post">
-                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
                     <div class="form-floating mb-3">
                         <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" id="email"/>
                         <label asp-for="Input.Email" class="form-label">Email</label>
@@ -51,27 +51,22 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    @if (TempData["Message"] != null)
-    {
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                toastr.options = {
-                    "positionClass": "toast-top-right",
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "4000",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut",
-                    "closeButton": true,
-                    "tapToDismiss": false
-                };
-                toastr.success('@TempData["Message"]', 'Success');
-            });
-        </script>
-    }
+    <script>
+        function addValidationClasses() {
+            var emailError = document.querySelector('span[data-valmsg-for="Input.Email"]');
+            var roomError = document.querySelector('span[data-valmsg-for="Input.RoomNumber"]');
+            
+            if (emailError && emailError.textContent.trim()) {
+                var el = document.getElementById("email");
+                if (el) el.classList.add("is-invalid");
+            }
+            if (roomError && roomError.textContent.trim()) {
+                var el = document.getElementById("roomnumber");
+                if (el) el.classList.add("is-invalid");
+            }
+        }
+        
+        addValidationClasses();
+        setTimeout(addValidationClasses, 100);
+    </script>
 }

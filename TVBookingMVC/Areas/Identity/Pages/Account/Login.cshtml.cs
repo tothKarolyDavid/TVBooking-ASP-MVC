@@ -126,7 +126,6 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
                 {
                     await _signInManager.SignInAsync(user, Input.RememberMe);
                     _logger.LogInformation("User logged in.");
-                    TempData["Message"] = "Login successful!";
                     return LocalRedirect(returnUrl);
                 }
 
