@@ -74,7 +74,6 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            //[Required]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
@@ -109,42 +108,29 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
-            Input.Password = "Password1!";
-
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(Input.Email);
-                if (user != null && Input.Email == "admin@hotel.com" && !await _userManager.IsInRoleAsync(user, RoleNames.Admin))
-                {
-                    await _userManager.AddToRoleAsync(user, RoleNames.Admin);
-                }
-
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
-                // get the room number associated with the email address
-                var roomNumber = _signInManager.UserManager.Users.Where(u => u.Email == Input.Email).Select(u => u.RoomNumber).FirstOrDefault();
-
-                if (result.Succeeded && roomNumber == Input.RoomNumber)
-                {
-                    _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
-                }
-                else
+                if (user == null)
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     return Page();
                 }
+
+                if (Input.Email == "admin@hotel.com" && !await _userManager.IsInRoleAsync(user, RoleNames.Admin))
+                {
+                    await _userManager.AddToRoleAsync(user, RoleNames.Admin);
+                }
+
+                if (user.RoomNumber == Input.RoomNumber)
+                {
+                    await _signInManager.SignInAsync(user, Input.RememberMe);
+                    _logger.LogInformation("User logged in.");
+                    return LocalRedirect(returnUrl);
+                }
+
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return Page();
             }
 
             // If we got this far, something failed, redisplay form

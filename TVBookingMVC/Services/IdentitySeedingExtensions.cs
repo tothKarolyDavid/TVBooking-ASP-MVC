@@ -33,7 +33,7 @@ public static class IdentitySeedingExtensions
                 RoomNumber = roomNumber
             };
 
-            var result = await userManager.CreateAsync(user, "Password1!");
+            var result = await userManager.CreateAsync(user);
             if (!result.Succeeded)
             {
                 return;
