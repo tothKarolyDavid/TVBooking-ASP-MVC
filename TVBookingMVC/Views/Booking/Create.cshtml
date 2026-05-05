@@ -55,7 +55,7 @@
             <div class="form-group">
                 <label asp-for="RoomNumber" class="control-label"></label>
 
-                @if (Globals.IsAdmin)
+                @if (User.IsInRole(RoleNames.Admin))
                 {
                     <input asp-for="RoomNumber" class="form-control" />
                 }

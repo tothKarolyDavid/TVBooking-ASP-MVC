@@ -23,6 +23,36 @@ The guests can add new bookings to their own room and they can also view their o
   - Add new bookings to their own room        
   - View their own bookings
   - Get a notification 15 minutes before the start of a booking
+
+## Prerequisites
+
+- .NET 10 SDK
+- SQL Server (localdb or full instance)
+
+## Local setup
+
+1. Update the connection string in [TVBookingMVC/appsettings.json](TVBookingMVC/appsettings.json) if needed.
+2. Apply migrations and seed data:
+  - `dotnet ef database update --project TVBookingMVC`
+
+Seeded identities:
+- Admin: `admin@hotel.com` (room 999)
+- Guest: `room2@hotel.com` (room 2)
+
+All seeded users use password `Password1!`.
+
+## Run
+
+`dotnet run --project TVBookingMVC`
+
+Default HTTPS URL is listed in [TVBookingMVC/Properties/launchSettings.json](TVBookingMVC/Properties/launchSettings.json).
+
+## Tests
+
+- Unit tests: `dotnet test TVBookingMVCXUnit`
+- Selenium tests: `dotnet test TVBookingMVCSelenium`
+
+Selenium tests expect the app to already be running at the URL above and require Chrome/ChromeDriver.
 	
 ## Screenshots
 

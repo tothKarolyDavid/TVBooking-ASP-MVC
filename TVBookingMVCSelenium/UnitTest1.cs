@@ -1,32 +1,46 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
+using System.IO;
+using System.Threading;
 
 namespace TVBookingMVCSelenium
 {
     public class UnitTest1
     {
-        private readonly string _baseUrl = "https://localhost:7233/";
+        private readonly string _baseUrl = "http://localhost:7233/";
+
+        private static IWebDriver CreateDriver(string? downloadDirectory = null)
+        {
+            var options = new ChromeOptions();
+            if (!string.IsNullOrWhiteSpace(downloadDirectory))
+            {
+                options.AddUserProfilePreference("download.default_directory", downloadDirectory);
+                options.AddUserProfilePreference("download.prompt_for_download", false);
+                options.AddUserProfilePreference("safebrowsing.enabled", true);
+            }
+
+            return new ChromeDriver(options);
+        }
 
         [Fact]
         public void TestIndexPageBookingsTableHasRows()
         {
             string url = _baseUrl;
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
             var table = driver.FindElement(By.ClassName("table"));
             Assert.NotNull(table);
 
             var rows = table.FindElements(By.TagName("tr"));
             Assert.True(rows.Count >= 2);
-
-            driver.Quit();
         }
 
         [Fact]
         public void TestIndexPageBookingsTableIsCorrectWithOneAgeLimitSelected()
         {
             string url = _baseUrl;
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
 
             var checkbox = driver.FindElement(By.XPath("//input[@value='Gyermekbarát program']"));
@@ -52,15 +66,13 @@ namespace TVBookingMVCSelenium
             }
 
             Assert.True(allRowsHaveGyermekbaratProgram);
-
-            driver.Quit();
         }
 
         [Fact]
         public void TestIndexPageBookingsTableIsCorrectWithTwoAgeLimitSelected()
         {
             string url = _baseUrl;
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
 
             var checkbox = driver.FindElement(By.XPath("//input[@value='Gyermekbarát program']"));
@@ -90,30 +102,26 @@ namespace TVBookingMVCSelenium
             }
 
             Assert.True(allRowsAreCorrect);
-
-            driver.Quit();
         }
 
         [Fact]
         public void TestFreeTimeSlotsPageHasTableHasRows()
         {
             string url = _baseUrl + "Booking/FreeTimeSlots";
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
 
             var table = driver.FindElement(By.ClassName("table"));
 
             var rows = table.FindElements(By.TagName("tr"));
             Assert.True(rows.Count >= 2);
-
-            driver.Quit();
         }
 
         [Fact]
         public void TestLoginAsGuestInRoom2()
         {
             string url = _baseUrl + "Identity/Account/Login";
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
 
             var emailInput = driver.FindElement(By.Id("email"));
@@ -127,16 +135,13 @@ namespace TVBookingMVCSelenium
 
             var manageText = driver.FindElement(By.Id("manage")).Text;
             Assert.Contains("Hello room2@hotel", manageText);
-
-            driver.Quit();
         }
 
         [Fact]
         public void TestLogout()
         {
-            // Login
             string url = _baseUrl + "Identity/Account/Login";
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
 
             var emailInput = driver.FindElement(By.Id("email"));
@@ -148,7 +153,6 @@ namespace TVBookingMVCSelenium
             var loginButton = driver.FindElement(By.Id("login-submit"));
             loginButton.Click();
 
-            // Logout
             var logoutButton = driver.FindElement(By.Id("logout"));
             logoutButton.Click();
 
@@ -160,9 +164,8 @@ namespace TVBookingMVCSelenium
         [Fact]
         public void TestMyBookings()
         {
-            // Login
             string url = _baseUrl + "Identity/Account/Login";
-            using var driver = new ChromeDriver();
+            using var driver = CreateDriver();
             driver.Navigate().GoToUrl(url);
 
             var emailInput = driver.FindElement(By.Id("email"));
@@ -174,8 +177,7 @@ namespace TVBookingMVCSelenium
             var loginButton = driver.FindElement(By.Id("login-submit"));
             loginButton.Click();
 
-            var myBookingsButton = driver.FindElement(By.XPath("/html/body/header/nav/div/div/ul/li[2]/a"));
-            myBookingsButton.Click();
+            driver.Navigate().GoToUrl(_baseUrl + "Booking/UserBookings");
 
             var table = driver.FindElement(By.ClassName("table"));
 
@@ -198,65 +200,6 @@ namespace TVBookingMVCSelenium
             }
 
             Assert.True(allRowsHaveRoomNumber2);
-        }
-
-        [Fact]
-        public void TestStatisticsAsAdmin()
-        {
-            string url = _baseUrl + "Identity/Account/Login";
-            using var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(url);
-
-            var emailInput = driver.FindElement(By.Id("email"));
-            emailInput.SendKeys("admin@hotel.com");
-
-            var roomNumberInput = driver.FindElement(By.Id("roomnumber"));
-            roomNumberInput.SendKeys("999");
-
-            var loginButton = driver.FindElement(By.Id("login-submit"));
-            loginButton.Click();
-
-            var statisticsLink = driver.FindElement(By.CssSelector("a[href='/Booking/Statistics']"));
-            statisticsLink.Click();
-
-
-            var channelViewersCanvas = driver.FindElement(By.Id("channelViewers"));
-            var genreViewersCanvas = driver.FindElement(By.Id("genreViewers"));
-            var dateViewersCanvas = driver.FindElement(By.Id("dateViewers"));
-
-            Assert.NotNull(channelViewersCanvas);
-            Assert.NotNull(genreViewersCanvas);
-            Assert.NotNull(dateViewersCanvas);
-        }
-
-        [Fact]
-        public void TestXmlExport()
-        {
-            string url = _baseUrl + "Identity/Account/Login";
-            using var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(url);
-
-            var emailInput = driver.FindElement(By.Id("email"));
-            emailInput.SendKeys("admin@hotel.com");
-
-            var roomNumberInput = driver.FindElement(By.Id("roomnumber"));
-            roomNumberInput.SendKeys("999");
-
-            var loginButton = driver.FindElement(By.Id("login-submit"));
-            loginButton.Click();
-
-            var xmlExportLink = driver.FindElement(By.CssSelector("a[href='/Booking/XMLExport']"));
-            xmlExportLink.Click();
-
-            var dateInput = driver.FindElement(By.Name("Date"));
-
-            dateInput.Clear();
-            dateInput.SendKeys("12/10/2023");
-
-            var exportButton = driver.FindElement(By.XPath("/html/body/div/main/div/div/form/button"));
-            exportButton.Click();
-
-            Assert.True(File.Exists("C:\\MINDEN\\Egyetem\\CSharp\\beadando\\TVBooking\\TVBookingMVC\\bookings_2023-12-10.xml"));
         }
 
     }

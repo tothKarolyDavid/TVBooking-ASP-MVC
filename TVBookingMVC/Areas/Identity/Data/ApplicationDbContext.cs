@@ -23,25 +23,28 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
 
+        var rng = new Random(41205);
+        var baseDate = new DateTime(2024, 2, 1, 8, 0, 0, DateTimeKind.Unspecified);
         int bookingId = 10;
         for (int i = 2; i < 22; i++)
         {
             for (int j = 0; j < 30; j++)
             {
-                int bookings = new Random().Next(0, 5);
+                int bookings = rng.Next(0, 5);
                 for (int k = 0; k < bookings; k++)
                 {
-                    var start = DateTime.Now.AddDays(-j).AddHours(new Random().Next(24 / bookings) * k);
+                    var hoursPerSlot = Math.Max(1, 24 / bookings);
+                    var start = baseDate.AddDays(-j).AddHours(rng.Next(hoursPerSlot) * k);
 
                     builder.Entity<Booking>().HasData(new Booking
                     {
                         Id = bookingId++,
-                        Program = $"Program {new Random().Next(1, 100)}",
-                        Channel = Globals.Channels[new Random().Next(0, Globals.Channels.Length)],
-                        Genre = Globals.Genres[new Random().Next(0, Globals.Genres.Length)],
+                        Program = $"Program {rng.Next(1, 100)}",
+                        Channel = Globals.Channels[rng.Next(0, Globals.Channels.Length)],
+                        Genre = Globals.Genres[rng.Next(0, Globals.Genres.Length)],
                         Start = start,
-                        End = start.AddMinutes(new Random().Next(30, 121)),
-                        AgeLimit = Globals.AgeLimits[new Random().Next(0, Globals.AgeLimits.Length)],
+                        End = start.AddMinutes(rng.Next(30, 121)),
+                        AgeLimit = Globals.AgeLimits[rng.Next(0, Globals.AgeLimits.Length)],
                         RoomNumber = i,
                     });
                 }
@@ -49,20 +52,21 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
             for (int j = 0; j < 7; j++)
             {
-                int bookings = new Random().Next(0, 3);
+                int bookings = rng.Next(0, 3);
                 for (int k = 0; k < bookings; k++)
                 {
-                    var start = DateTime.Now.AddDays(j).AddHours(new Random().Next(24 / bookings) * k);
+                    var hoursPerSlot = Math.Max(1, 24 / bookings);
+                    var start = baseDate.AddDays(j).AddHours(rng.Next(hoursPerSlot) * k);
 
                     builder.Entity<Booking>().HasData(new Booking
                     {
                         Id = bookingId++,
-                        Program = $"Program {new Random().Next(1, 100)}",
-                        Channel = Globals.Channels[new Random().Next(0, Globals.Channels.Length)],
-                        Genre = Globals.Genres[new Random().Next(0, Globals.Genres.Length)],
+                        Program = $"Program {rng.Next(1, 100)}",
+                        Channel = Globals.Channels[rng.Next(0, Globals.Channels.Length)],
+                        Genre = Globals.Genres[rng.Next(0, Globals.Genres.Length)],
                         Start = start,
-                        End = start.AddMinutes(new Random().Next(30, 121)),
-                        AgeLimit = Globals.AgeLimits[new Random().Next(0, Globals.AgeLimits.Length)],
+                        End = start.AddMinutes(rng.Next(30, 121)),
+                        AgeLimit = Globals.AgeLimits[rng.Next(0, Globals.AgeLimits.Length)],
                         RoomNumber = i,
                     });
                 }

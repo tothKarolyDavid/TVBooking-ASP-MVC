@@ -2,8 +2,6 @@
 {
     public static class Globals
     {
-        public static bool IsAdmin { get; set; }
-
         public static string[] AgeLimits = [
             "Gyermekbarát program",
             "Korhatárra való tekintet nélkül megtekinthető",

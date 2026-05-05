@@ -5,7 +5,7 @@
 @inject UserManager<ApplicationUser> UserManager
 
 <ul class="navbar-nav">
-    @if (Globals.IsAdmin)
+    @if (User.IsInRole(RoleNames.Admin))
     {
         <li class="nav-item">
             <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register guest</a>

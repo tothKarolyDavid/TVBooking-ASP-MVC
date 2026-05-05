@@ -1,17 +1,34 @@
-using Xunit;
-using TVBookingMVC;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Xunit;
 
-namespace TVBookingMVCXUnit
+namespace TVBookingMVCXUnit;
+
+public class BookingAppTests : IClassFixture<TestApplicationFactory>
 {
-    public class UnitTest1
+    private readonly TestApplicationFactory _factory;
+
+    public BookingAppTests(TestApplicationFactory factory)
     {
-        private readonly WebApplicationFactory<TVBookingMVC.Startup> _factory;
+        _factory = factory;
+    }
 
-        [Fact]
-        public void Test1()
-        {
+    [Fact]
+    public async Task Index_ReturnsSuccess()
+    {
+        var client = _factory.CreateClient();
 
-        }
+        var response = await client.GetAsync("/");
+
+        Assert.True(response.IsSuccessStatusCode);
+    }
+}
+
+public sealed class TestApplicationFactory : WebApplicationFactory<Program>
+{
+    protected override void ConfigureWebHost(Microsoft.AspNetCore.Hosting.IWebHostBuilder builder)
+    {
+        Environment.SetEnvironmentVariable("TVBOOKING_USE_SQLITE", "true");
+        builder.UseEnvironment("Testing");
     }
 }

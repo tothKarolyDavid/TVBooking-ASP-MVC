@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TVBookingMVC.Areas.Identity.Data;
-using TVBookingMVC.Models;
 
 namespace TVBookingMVC.Areas.Identity.Pages.Account
 {
@@ -24,7 +23,6 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
-            Globals.IsAdmin = false;
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {

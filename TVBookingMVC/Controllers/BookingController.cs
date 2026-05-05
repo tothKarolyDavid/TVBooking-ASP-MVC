@@ -1,20 +1,33 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Globalization;
+using System.IO;
 using System.Xml;
 using TVBookingMVC.Areas.Identity.Data;
+using TVBookingMVC.Constants;
 using TVBookingMVC.Models;
+using TVBookingMVC.Services;
+using TVBookingMVC.ViewModels;
 
 namespace TVBookingMVC.Controllers;
 
 public class BookingController : Controller
 {
     private readonly ApplicationDbContext _context;
+    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly IBookingValidationService _bookingValidationService;
 
-    public BookingController(ApplicationDbContext context)
+    public BookingController(
+        ApplicationDbContext context,
+        UserManager<ApplicationUser> userManager,
+        IBookingValidationService bookingValidationService)
     {
         _context = context;
+        _userManager = userManager;
+        _bookingValidationService = bookingValidationService;
     }
 
     // GET: Booking
@@ -44,9 +57,10 @@ public class BookingController : Controller
     }
 
     // GET: Booking/Create
+    [Authorize]
     public IActionResult Create()
     {
-        if (Globals.IsAdmin)
+        if (User.IsInRole(RoleNames.Admin))
         {
             return View();
         }
@@ -58,10 +72,22 @@ public class BookingController : Controller
     }
 
     // POST: Booking/Create
+    [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking)
     {
+        var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+        if (currentRoomNumber == null)
+        {
+            return Forbid();
+        }
+
+        if (!User.IsInRole(RoleNames.Admin))
+        {
+            booking.RoomNumber = currentRoomNumber.Value;
+        }
+
         if (ModelState.IsValid)
         {
             var user = _context.Users.FirstOrDefault(u => u.RoomNumber == booking.RoomNumber);
@@ -71,21 +97,14 @@ public class BookingController : Controller
                 return View(booking);
             }
 
-            if (booking.End < booking.Start)
+            var validationErrors = await _bookingValidationService.ValidateAsync(booking);
+            foreach (var error in validationErrors)
             {
-                ModelState.AddModelError(nameof(Booking.End), "The end time must be after the start time");
-                return View(booking);
+                ModelState.AddModelError(error.Field, error.Message);
             }
 
-            if (booking.Start < DateTime.Now)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(nameof(Booking.Start), "The booking start time must be in the future");
-                return View(booking);
-            }
-
-            if (_context.Bookings.Any(old => old.Start < booking.End && old.End > booking.Start))
-            {
-                ModelState.AddModelError(nameof(Booking.Start), "The booking interval is already booked by someone");
                 return View(booking);
             }
 
@@ -100,6 +119,7 @@ public class BookingController : Controller
     }
 
     // GET: Booking/Edit/5
+    [Authorize(Roles = RoleNames.Admin)]
     public async Task<IActionResult> Edit(int? id)
     {
         if (id == null)
@@ -116,6 +136,7 @@ public class BookingController : Controller
     }
 
     // POST: Booking/Edit/5
+    [Authorize(Roles = RoleNames.Admin)]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, [Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking)
@@ -129,6 +150,17 @@ public class BookingController : Controller
         {
             try
             {
+                var validationErrors = await _bookingValidationService.ValidateAsync(booking, booking.Id);
+                foreach (var error in validationErrors)
+                {
+                    ModelState.AddModelError(error.Field, error.Message);
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    return View(booking);
+                }
+
                 _context.Update(booking);
                 await _context.SaveChangesAsync();
             }
@@ -149,6 +181,7 @@ public class BookingController : Controller
     }
 
     // GET: Booking/Delete/5
+    [Authorize(Roles = RoleNames.Admin)]
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null)
@@ -167,6 +200,7 @@ public class BookingController : Controller
     }
 
     // POST: Booking/Delete/5
+    [Authorize(Roles = RoleNames.Admin)]
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int id)
@@ -187,9 +221,16 @@ public class BookingController : Controller
         return _context.Bookings.Any(e => e.Id == id);
     }
 
-    public IActionResult UserBookings()
+    [Authorize]
+    public async Task<IActionResult> UserBookings()
     {
-        var bookings = _context.Bookings.Where(b => b.RoomNumber == _context.Users.Where(u => User.Identity != null && u.UserName == User.Identity.Name).Select(u => u.RoomNumber).FirstOrDefault()).ToList();
+        var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+        if (currentRoomNumber == null)
+        {
+            return Forbid();
+        }
+
+        var bookings = _context.Bookings.Where(b => b.RoomNumber == currentRoomNumber.Value).ToList();
         return View(bookings);
     }
 
@@ -209,6 +250,11 @@ public class BookingController : Controller
             }
 
             start = booking.End;
+        }
+
+        if (start < end)
+        {
+            freeTimeSlots.Add(new FreeTimeSlot { Start = start, End = end });
         }
 
         return View(freeTimeSlots);
@@ -231,6 +277,7 @@ public class BookingController : Controller
         return View("Index", bookings.Where(b => ageLimits.Contains(b.AgeLimit)).ToList());
     }
 
+    [Authorize(Roles = RoleNames.Admin)]
     public IActionResult Statistics()
     {
         var bookings = _context.Bookings.ToList();
@@ -262,7 +309,7 @@ public class BookingController : Controller
         }
 
 
-        StatisticsModel model = new()
+        StatisticsViewModel model = new()
         {
             ChannelViewersJson = JsonConvert.SerializeObject(channelViewers),
             GenreViewersJson = JsonConvert.SerializeObject(genreViewers),
@@ -273,12 +320,14 @@ public class BookingController : Controller
     }
 
     [HttpGet, ActionName("XmlExport")]
+    [Authorize(Roles = RoleNames.Admin)]
     public IActionResult XmlExport()
     {
         return View();
     }
 
     [HttpPost, ActionName("XmlExport")]
+    [Authorize(Roles = RoleNames.Admin)]
     public IActionResult XmlExportPost(DateTime date)
     {
         XmlDocument doc = new();
@@ -322,41 +371,22 @@ public class BookingController : Controller
             root.AppendChild(booking);
         });
 
-        doc.Save($"bookings_{date:yyyy-MM-dd}.xml");
+        var fileName = $"bookings_{date:yyyy-MM-dd}.xml";
+        using var stream = new MemoryStream();
+        doc.Save(stream);
+        stream.Position = 0;
 
-        TempData["Message"] = "Bookings exported successfully";
-
-        return View();
+        return File(stream, "application/xml", fileName);
     }
-}
 
-public class StatisticsModel
-{
-    public string? ChannelViewersJson { get; set; }
-    public string? GenreViewersJson { get; set; }
-    public string? DateViewersJson { get; set; }
-}
+    private async Task<int?> GetCurrentUserRoomNumberAsync()
+    {
+        if (User.Identity == null || string.IsNullOrWhiteSpace(User.Identity.Name))
+        {
+            return null;
+        }
 
-public class DateViewer
-{
-    public DateTime Date { get; set; }
-    public int Viewers { get; set; }
-}
-
-public class GenreViewer
-{
-    public string? Genre { get; set; }
-    public int Viewers { get; set; }
-}
-
-public class ChannelViewer
-{
-    public string? Channel { get; set; }
-    public int Viewers { get; set; }
-}
-
-public class FreeTimeSlot
-{
-    public DateTime Start { get; set; }
-    public DateTime End { get; set; }
+        var user = await _userManager.FindByNameAsync(User.Identity.Name);
+        return user?.RoomNumber;
+    }
 }

@@ -45,7 +45,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="FreeTimeSlots">Free time slots</a>
                         </li>
 
-                        @if (Globals.IsAdmin)
+                        @if (User.IsInRole(RoleNames.Admin))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Statistics">Statistics</a>
