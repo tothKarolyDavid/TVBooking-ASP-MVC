@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using TVBookingMVC;
 
 namespace TVBookingMVCSelenium;
@@ -63,7 +64,9 @@ public class BookingIndexPageTests : IClassFixture<SeleniumWebApplicationFactory
         driver.Navigate().GoToUrl(GetBaseUrl());
 
         driver.FindElement(By.XPath("//input[@value='Gyermekbarát program']")).Click();
-        driver.FindElement(By.XPath("//input[@value='Filter']")).Click();
+
+        var wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(5));
+        wait.Until(d => d.Url.Contains("ageLimit=Gyermekbar%C3%A1t+program"));
 
         var rows = driver.FindElements(By.CssSelector(".table tbody tr"));
 
@@ -82,8 +85,13 @@ public class BookingIndexPageTests : IClassFixture<SeleniumWebApplicationFactory
         driver.Navigate().GoToUrl(GetBaseUrl());
 
         driver.FindElement(By.XPath("//input[@value='Gyermekbarát program']")).Click();
+
+        var wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(5));
+        wait.Until(d => d.Url.Contains("ageLimit=Gyermekbar%C3%A1t+program"));
+
         driver.FindElement(By.XPath("//input[@value='Korhatárra való tekintet nélkül megtekinthető']")).Click();
-        driver.FindElement(By.XPath("//input[@value='Filter']")).Click();
+
+        wait.Until(d => d.Url.Contains("ageLimit=Korhat%C3%A1rra+val%C3%B3+tekintet+n%C3%A9lk%C3%BCl+megtekinthet%C5%91"));
 
         var rows = driver.FindElements(By.CssSelector(".table tbody tr"));
 

@@ -494,10 +494,32 @@ table.dataTable thead th.sorting_desc:after {
 .filter-checks label {
   color: var(--text-secondary);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .filter-checks input[type="checkbox"] {
   accent-color: var(--accent);
+}
+
+.filter-checks .form-check {
+  margin-bottom: 0;
+}
+
+.card-header[data-bs-toggle="collapse"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-header[data-bs-toggle="collapse"]:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.transition-rotate {
+  transition: transform 0.2s ease;
+}
+
+.transition-rotate.rotated {
+  transform: rotate(180deg);
 }
 
 /* Badges */

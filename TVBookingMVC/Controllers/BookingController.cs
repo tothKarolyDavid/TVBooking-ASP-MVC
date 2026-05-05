@@ -36,13 +36,18 @@ public class BookingController : Controller
     }
 
     // GET: Booking
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string[]? ageLimit = null)
     {
         ViewBag.NearBookings = await _bookingQueryService.GetNearBookingsAsync();
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.SelectedAgeLimits = Array.Empty<string>();
+        ViewBag.SelectedAgeLimits = ageLimit ?? [];
 
-        return View(await _bookingQueryService.GetAllBookingsAsync());
+        if (ageLimit == null || ageLimit.Length == 0)
+        {
+            return View(await _bookingQueryService.GetAllBookingsAsync());
+        }
+
+        return View(await _bookingQueryService.GetBookingsByAgeLimitsAsync(ageLimit));
     }
 
     // GET: Booking/Details/5
@@ -272,22 +277,6 @@ public class BookingController : Controller
     public async Task<IActionResult> FreeTimeSlots()
     {
         return View(await _bookingQueryService.GetFreeTimeSlotsAsync());
-    }
-
-    [HttpGet, ActionName("IndexWithFilter")]
-    public async Task<IActionResult> IndexWithFilter()
-    {
-        var ageLimits = Request.Query["ageLimit"].ToArray() ?? [];
-        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.SelectedAgeLimits = ageLimits;
-        ViewBag.NearBookings = await _bookingQueryService.GetNearBookingsAsync();
-
-        if (ageLimits.Length == 0)
-        {
-            return View("Index", await _bookingQueryService.GetAllBookingsAsync());
-        }
-
-        return View("Index", await _bookingQueryService.GetBookingsByAgeLimitsAsync(ageLimits.Select(a => a ?? string.Empty)));
     }
 
     [Authorize(Roles = RoleNames.Admin)]

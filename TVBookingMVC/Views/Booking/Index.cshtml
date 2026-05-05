@@ -27,23 +27,37 @@
 </div>
 
 <div class="card mb-3">
-    <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-funnel me-2"></i>Filter by Age Limit</h5>
-    </div>
-    <div class="card-body filter-checks">
-        <form asp-action="IndexWithFilter" method="get" id="filterForm">
-            @foreach (var ageLimit in ageLimits)
+    <div class="card-header" data-bs-toggle="collapse" data-bs-target="#filterCollapse" role="button" aria-expanded="true">
+        <h5 class="mb-0 d-flex align-items-center gap-2">
+            <i class="bi bi-funnel me-1"></i>Filter by Age Limit
+            @if (selectedAgeLimits.Length > 0)
             {
-                bool isChecked = selectedAgeLimits.Contains(ageLimit);
-                <div class="form-check form-check-inline me-3">
-                    <input class="form-check-input" type="checkbox" name="ageLimit" value="@ageLimit" @(isChecked ? "checked" : "") id="age-@ageLimit" />
-                    <label class="form-check-label" for="age-@ageLimit">@ageLimit</label>
-                </div>
+                <span class="badge bg-primary rounded-pill">@selectedAgeLimits.Length</span>
             }
-            <button type="submit" class="btn btn-secondary btn-sm">
-                <i class="bi bi-funnel me-1"></i>Apply Filter
-            </button>
-        </form>
+            <i class="bi bi-chevron-down ms-auto transition-rotate rotated"></i>
+        </h5>
+    </div>
+    <div class="collapse show" id="filterCollapse">
+        <div class="card-body filter-checks">
+            <form asp-action="Index" method="get" id="filterForm">
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    @foreach (var ageLimit in ageLimits)
+                    {
+                        bool isChecked = selectedAgeLimits.Contains(ageLimit);
+                        <div class="form-check">
+                            <input class="form-check-input filter-checkbox" type="checkbox" name="ageLimit" value="@ageLimit" @(isChecked ? "checked" : "") id="age-@ageLimit" />
+                            <label class="form-check-label" for="age-@ageLimit">@ageLimit</label>
+                        </div>
+                    }
+                </div>
+                @if (selectedAgeLimits.Length > 0)
+                {
+                    <a asp-action="Index" class="btn btn-outline-secondary btn-sm mt-2">
+                        <i class="bi bi-x-circle me-1"></i>Clear
+                    </a>
+                }
+            </form>
+        </div>
     </div>
 </div>
 
@@ -113,6 +127,10 @@
                     emptyTable: "No bookings found",
                     zeroRecords: "No matching bookings found"
                 }
+            });
+
+            $('.filter-checkbox').on('change', function() {
+                $('#filterForm').submit();
             });
         });
     </script>
