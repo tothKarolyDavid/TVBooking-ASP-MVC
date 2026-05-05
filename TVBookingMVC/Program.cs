@@ -7,19 +7,7 @@ using TVBookingMVC.Services;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
 
-var useSqlite = string.Equals(Environment.GetEnvironmentVariable("TVBOOKING_USE_SQLITE"), "true", StringComparison.OrdinalIgnoreCase);
-
-if (useSqlite)
-{
-    var connection = new SqliteConnection("DataSource=:memory:");
-    connection.Open();
-    builder.Services.AddSingleton(connection);
-    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connection));
-}
-else
-{
-    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
-}
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
 
 builder.Services
     .AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
@@ -34,12 +22,9 @@ builder.Services.AddScoped<IBookingQueryService, BookingQueryService>();
 
 var app = builder.Build();
 
-if (useSqlite)
-{
-    using var scope = app.Services.CreateScope();
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.EnsureCreated();
-}
+using var scope = app.Services.CreateScope();
+var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+dbContext.Database.EnsureCreated();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
