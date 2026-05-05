@@ -20,22 +20,4 @@
     <PackageReference Include="Moq" Version="4.20.70" />
   </ItemGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Booking\FreeTimeSlots.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Booking\FreeTimeSlots.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Booking\Statistics.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Booking\XmlExport.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Booking\Statistics.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Booking\XmlExport.cshtml" />
-  </ItemGroup>
-
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace TVBookingMVC.Models
 {
-    public static class Globals
+    public static class BookingReferenceData
     {
         public static string[] AgeLimits = [
             "Gyermekbarát program",

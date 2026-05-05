@@ -82,7 +82,11 @@ obj/Debug/net10.0/
  TVBookingMVC.GlobalUsings.g.cs
  TVBookingMVC.RazorAssemblyInfo.cs
 Program.cs
-Services/BookingValidationService.cs
+Services/
+ BookingQueryService.cs
+ BookingReferenceDataService.cs
+ BookingValidationService.cs
+ IdentitySeedingExtensions.cs
 ViewModels/
  FreeTimeSlot.cs
  StatisticsViewModel.cs
