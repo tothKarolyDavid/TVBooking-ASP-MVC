@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var channels = ViewBag.Channels as IEnumerable<string> ?? Array.Empty<string>();
+    var genres = ViewBag.Genres as IEnumerable<string> ?? Array.Empty<string>();
+    var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
 }
 
 <h1>Create</h1>
@@ -21,13 +25,13 @@
 
             <div class="form-group">
                 <label asp-for="Channel" class="control-label"></label>
-                <select asp-for="Channel" class="form-control" asp-items="@(new SelectList(Globals.Channels))"></select>
+                <select asp-for="Channel" class="form-control" asp-items="@(new SelectList(channels))"></select>
                 <span asp-validation-for="Channel" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Genre" class="control-label"></label>
-                <select asp-for="Genre" class="form-control" asp-items="@(new SelectList(Globals.Genres))"></select>
+                <select asp-for="Genre" class="form-control" asp-items="@(new SelectList(genres))"></select>
                 <span asp-validation-for="Genre" class="text-danger"></span>
             </div>
 
@@ -47,7 +51,7 @@
             <div class="form-group">
                 <label asp-for="AgeLimit" class="control-label"></label>
 
-                <select asp-for="AgeLimit" class="form-control" asp-items="@(new SelectList(Globals.AgeLimits))"></select>
+                <select asp-for="AgeLimit" class="form-control" asp-items="@(new SelectList(ageLimits))"></select>
 
                 <span asp-validation-for="AgeLimit" class="text-danger"></span>
             </div>

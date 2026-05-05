@@ -2,15 +2,15 @@ namespace TVBookingMVC.ViewModels;
 
 public class StatisticsViewModel
 {
-    public string? ChannelViewersJson { get; set; }
-    public string? GenreViewersJson { get; set; }
-    public string? DateViewersJson { get; set; }
+    public List<ChannelViewer> ChannelViewers { get; set; } = [];
+    public List<GenreViewer> GenreViewers { get; set; } = [];
+    public List<DateViewer> DateViewers { get; set; } = [];
 }
 
 public class DateViewer
 {
     public DateTime Date { get; set; }
-    public int Viewers { get; set; }
+    public int Minutes { get; set; }
 }
 
 public class GenreViewer

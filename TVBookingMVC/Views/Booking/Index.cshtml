@@ -10,48 +10,10 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
+    var selectedAgeLimits = ViewBag.SelectedAgeLimits as string[] ?? Array.Empty<string>();
 }
-
-<script>
-    var bookings = @Html.Raw(Json.Serialize(TempData["NearBookings"]));
-
-    console.log(bookings);
-
-    function checkAndNotify(bookings) {
-        var currentTime = new Date();
-
-        console.log(currentTime);
-
-        bookings.forEach(function (booking) {
-            var dateParts = booking.start.split('T')[0].split('-');
-            var timeParts = booking.start.split('T')[1].split(':');
-
-            var startTime = new Date(
-                parseInt(dateParts[0]),  // Year
-                parseInt(dateParts[1]) - 1,  // Month (Note: Months are zero-indexed in JavaScript)
-                parseInt(dateParts[2]),  // Day
-                parseInt(timeParts[0]),  // Hour
-                parseInt(timeParts[1]),  // Minute
-                parseInt(timeParts[2])   // Second (if available)
-            );
-
-            // Getting the difference in milliseconds
-            var timeDifference = startTime - currentTime;
-
-            if (timeDifference > 0 && timeDifference <= 15 * 60 * 1000) {
-                alert(`A(z) ${booking.program} műsor ${booking.start.split('T')[1].split(':')[0]}:${booking.start.split('T')[1].split(':')[1]
-                    }-kor kezdődik a(z) ${booking.channel} csatornán.`);
-            }
-        });
-    }
-
-    checkAndNotify(bookings);
-
-    setInterval(function () {
-        checkAndNotify(bookings);
-    }, 60 * 1000);
-
-</script>
 
 <h1>Index</h1>
 
@@ -65,9 +27,9 @@
 }
 
 <form asp-action="IndexWithFilter" method="get">
-    @foreach (var ageLimit in Globals.AgeLimits)
+    @foreach (var ageLimit in ageLimits)
     {
-        bool isChecked = ViewBag.AgeLimits != null && Array.IndexOf(ViewBag.AgeLimits, ageLimit.ToString()) != -1;
+        bool isChecked = selectedAgeLimits.Contains(ageLimit);
         <input type="checkbox" name="ageLimit" value="@ageLimit" @(isChecked ? "checked" : "") />
         @ageLimit
         <br />
@@ -130,3 +92,8 @@
         }
     </tbody>
 </table>
+
+@section Scripts {
+    <script id="near-bookings-data" type="application/json">@Html.Raw(Json.Serialize(ViewBag.NearBookings ?? Array.Empty<TVBookingMVC.Models.Booking>()))</script>
+    <script src="~/js/booking-index.js" asp-append-version="true"></script>
+}
