@@ -39,6 +39,7 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
         {
             _userManager = userManager;
             _userStore = userStore;
+            _signInManager = signInManager;
             _emailStore = GetEmailStore();
             _logger = logger;
             _emailSender = emailSender;
@@ -119,12 +120,24 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
             ExternalLogins = _signInManager != null 
                 ? (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList() 
                 : new List<AuthenticationScheme>();
+            
+            _logger.LogInformation("Register attempt: Email={Email}, Room={Room}", Input.Email, Input.RoomNumber);
+            
             if (ModelState.IsValid)
             {
-                var existingRoom = await _context.Users.FirstOrDefaultAsync(u => u.RoomNumber == Input.RoomNumber);
+                var existingUser = await _userManager.FindByEmailAsync(Input.Email);
+                if (existingUser != null)
+                {
+                    _logger.LogWarning("Duplicate email found: {Email}", Input.Email);
+                    ModelState.AddModelError("Input.Email", "This email is already registered.");
+                    return Page();
+                }
+
+                var existingRoom = await _context.Users.IgnoreQueryFilters().FirstOrDefaultAsync(u => u.RoomNumber == Input.RoomNumber);
                 if (existingRoom != null)
                 {
-                    ModelState.AddModelError(nameof(Input.RoomNumber), "This room number is already registered to another guest.");
+                    _logger.LogWarning("Duplicate room registration attempt: Room={Room}, ExistingUser={Email}", Input.RoomNumber, existingRoom.Email);
+                    ModelState.AddModelError("Input.RoomNumber", "This room number is already registered to another guest.");
                     return Page();
                 }
 
@@ -135,37 +148,60 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
-
-                if (result.Succeeded)
+                
+                try
                 {
-                    _logger.LogInformation("User created a new account with password.");
+                    var result = await _userManager.CreateAsync(user, Input.Password);
 
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
-
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                    if (result.Succeeded)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        _logger.LogInformation("User created: Email={Email}, Room={Room}", Input.Email, Input.RoomNumber);
+
+                        var userId = await _userManager.GetUserIdAsync(user);
+                        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                        var callbackUrl = Url.Page(
+                            "/Account/ConfirmEmail",
+                            pageHandler: null,
+                            values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                            protocol: Request.Scheme);
+
+                        await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                        if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                        {
+                            return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        }
+                        else
+                        {
+                            TempData["Message"] = $"Registration successful! Guest account created for room {Input.RoomNumber}.";
+                            Input = new InputModel();
+                            return Page();
+                        }
+                    }
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                }
+                catch (Microsoft.EntityFrameworkCore.DbUpdateException ex)
+                {
+                    _logger.LogError(ex, "Database constraint violation during registration");
+                    if (ex.InnerException?.Message.Contains("UNIQUE constraint") == true || 
+                        ex.Message.Contains("RoomNumber"))
+                    {
+                        ModelState.AddModelError("Input.RoomNumber", "This room number is already registered to another guest.");
+                    }
+                    else if (ex.InnerException?.Message.Contains("UNIQUE constraint") == true ||
+                            ex.Message.Contains("Email") || ex.Message.Contains("UserName"))
+                    {
+                        ModelState.AddModelError("Input.Email", "This email is already registered.");
                     }
                     else
                     {
-                        TempData["Message"] = "Registration successful! Guest account created.";
-                        return Page();
+                        ModelState.AddModelError(string.Empty, "Registration failed. The user or room may already exist.");
                     }
-                }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 
