@@ -116,6 +116,9 @@ public class BookingController : Controller
 
             if (!ModelState.IsValid)
             {
+                ViewBag.Channels = _bookingReferenceDataService.Channels;
+                ViewBag.Genres = _bookingReferenceDataService.Genres;
+                ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
                 return View(booking);
             }
 
@@ -143,6 +146,11 @@ public class BookingController : Controller
         {
             return NotFound();
         }
+
+        ViewBag.Channels = _bookingReferenceDataService.Channels;
+        ViewBag.Genres = _bookingReferenceDataService.Genres;
+        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+
         return View(booking);
     }
 
@@ -169,11 +177,16 @@ public class BookingController : Controller
 
                 if (!ModelState.IsValid)
                 {
+                    ViewBag.Channels = _bookingReferenceDataService.Channels;
+                    ViewBag.Genres = _bookingReferenceDataService.Genres;
+                    ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
                     return View(booking);
                 }
 
                 _context.Update(booking);
                 await _context.SaveChangesAsync();
+
+                TempData["Message"] = "Booking updated successfully";
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -329,7 +342,11 @@ public class BookingController : Controller
         doc.Save(stream);
         stream.Position = 0;
 
-        return File(stream, "application/xml", fileName);
+        var count = bookings.Count;
+        var file = File(stream, "application/xml", fileName);
+        
+        TempData["Message"] = $"Successfully exported {count} bookings to XML";
+        return file;
     }
 
     private async Task<int?> GetCurrentUserRoomNumberAsync()
