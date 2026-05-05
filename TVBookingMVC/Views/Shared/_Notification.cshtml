@@ -1,45 +1,42 @@
-﻿@if (TempData["Message"] != null)
+﻿@if (TempData["Message"] != null || TempData["ErrorMessage"] != null)
 {
+    <style>
+        .toast-success { background-color: #10b981; color: #fff; }
+        .toast-success .btn-close { filter: invert(1); }
+        .toast-error { background-color: #ef4444; color: #fff; }
+        .toast-error .btn-close { filter: invert(1); }
+    </style>
+    <div class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index: 9999;">
+        @if (TempData["Message"] != null)
+        {
+            <div class="toast align-items-center toast-success" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000" data-bs-autohide="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        @TempData["Message"]
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="toast align-items-center toast-error" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000" data-bs-autohide="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        @TempData["ErrorMessage"]
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        }
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            toastr.options = {
-                "positionClass": "toast-top-right",
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "4000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut",
-                "closeButton": true,
-                "tapToDismiss": false
-            };
-
-            toastr.success('@TempData["Message"]', 'Success');
-        });
-    </script>
-}
-
-@if (TempData["ErrorMessage"] != null)
-{
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            toastr.options = {
-                "positionClass": "toast-top-right",
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "4000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut",
-                "closeButton": true,
-                "tapToDismiss": false
-            };
-
-            toastr.error('@TempData["ErrorMessage"]', 'Error');
+            var toastElList = document.querySelectorAll('.toast');
+            var toastList = Array.from(toastElList).map(function(toastEl) {
+                return new bootstrap.Toast(toastEl);
+            });
+            toastList.forEach(function(toast) { toast.show(); });
         });
     </script>
 }

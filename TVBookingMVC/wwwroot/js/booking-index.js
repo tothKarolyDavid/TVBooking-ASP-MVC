@@ -8,31 +8,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function checkAndNotify(items) {
         var currentTime = new Date();
+        var pendingBookings = [];
 
         items.forEach(function (booking) {
-            var dateParts = booking.start.split('T')[0].split('-');
-            var timeParts = booking.start.split('T')[1].split(':');
+            var startTime = new Date(booking.start);
 
-            var startTime = new Date(
-                parseInt(dateParts[0], 10),
-                parseInt(dateParts[1], 10) - 1,
-                parseInt(dateParts[2], 10),
-                parseInt(timeParts[0], 10),
-                parseInt(timeParts[1], 10),
-                parseInt(timeParts[2], 10)
-            );
-
-            var timeDifference = startTime - currentTime;
-
-            if (timeDifference > 0 && timeDifference <= 15 * 60 * 1000) {
-                alert('A(z) ' + booking.program + ' műsor ' + booking.start.split('T')[1].split(':')[0] + ':' + booking.start.split('T')[1].split(':')[1] + '-kor kezdődik a(z) ' + booking.channel + ' csatornán.');
+            if (startTime > currentTime && startTime <= currentTime.getTime() + 15 * 60 * 1000) {
+                pendingBookings.push(booking);
             }
         });
+
+        if (pendingBookings.length > 0) {
+            var lines = ['Upcoming shows:'];
+            pendingBookings.forEach(function (b) {
+                lines.push('• ' + b.program + ' (' + b.channel + ') at ' + b.start.split('T')[1].substr(0, 5));
+            });
+            alert(lines.join('\n'));
+        }
     }
 
-    checkAndNotify(bookings);
+    var notified = false;
+    function doCheck() {
+        if (!notified) {
+            checkAndNotify(bookings);
+            notified = true;
+        }
+    }
 
-    setInterval(function () {
-        checkAndNotify(bookings);
-    }, 60 * 1000);
+    doCheck();
+    setTimeout(doCheck, 60 * 1000);
 });
