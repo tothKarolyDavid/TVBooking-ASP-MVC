@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -26,20 +27,22 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext _context;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
-            _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context;
         }
 
         /// <summary>
@@ -105,15 +108,26 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            ExternalLogins = _signInManager != null 
+                ? (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList() 
+                : new List<AuthenticationScheme>();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            ExternalLogins = _signInManager != null 
+                ? (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList() 
+                : new List<AuthenticationScheme>();
             if (ModelState.IsValid)
             {
+                var existingRoom = await _context.Users.FirstOrDefaultAsync(u => u.RoomNumber == Input.RoomNumber);
+                if (existingRoom != null)
+                {
+                    ModelState.AddModelError(nameof(Input.RoomNumber), "This room number is already registered to another guest.");
+                    return Page();
+                }
+
                 var user = CreateUser();
 
                 user.RoomNumber = Input.RoomNumber;
@@ -145,10 +159,8 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
                     }
                     else
                     {
+                        TempData["Message"] = "Registration successful! Guest account created.";
                         return Page();
-
-                        //await _signInManager.SignInAsync(user, isPersistent: false);
-                        //return LocalRedirect(returnUrl);
                     }
                 }
                 foreach (var error in result.Errors)
