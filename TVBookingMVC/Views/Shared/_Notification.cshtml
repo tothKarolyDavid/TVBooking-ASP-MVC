@@ -1,22 +1,45 @@
 ﻿@if (TempData["Message"] != null)
 {
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
     <script>
-        toastr.options = {
-            "positionClass": "toast-top-left",
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut",
-            "closeButton": true
-        };
+        document.addEventListener('DOMContentLoaded', function() {
+            toastr.options = {
+                "positionClass": "toast-top-right",
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "4000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut",
+                "closeButton": true,
+                "tapToDismiss": false
+            };
 
-        toastr.success('@TempData["Message"]', 'Success');
+            toastr.success('@TempData["Message"]', 'Success');
+        });
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            toastr.options = {
+                "positionClass": "toast-top-right",
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "4000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut",
+                "closeButton": true,
+                "tapToDismiss": false
+            };
+
+            toastr.error('@TempData["ErrorMessage"]', 'Error');
+        });
     </script>
 }

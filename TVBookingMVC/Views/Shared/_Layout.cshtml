@@ -9,21 +9,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TVBookingMVC</title>
+    <title>@ViewData["Title"] - TVBooking</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TVBookingMVC.styles.css" asp-append-version="true" />
-
-    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
 </head>
 <body>
+    <div class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Booking" asp-action="Index">TVBookingMVC</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Booking" asp-action="Index">
+                    <i class="bi bi-calendar-event me-2"></i>TVBooking
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,28 +32,38 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Index">Bookings</a>
+                            <a class="nav-link" asp-area="" asp-controller="Booking" asp-action="Index">
+                                <i class="bi bi-list-check me-1"></i>Bookings
+                            </a>
                         </li>
 
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="UserBookings">My bookings</a>
+                                <a class="nav-link" asp-area="" asp-controller="Booking" asp-action="UserBookings">
+                                    <i class="bi bi-person-video3 me-1"></i>My bookings
+                                </a>
                             </li>
                         }
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="FreeTimeSlots">Free time slots</a>
+                            <a class="nav-link" asp-area="" asp-controller="Booking" asp-action="FreeTimeSlots">
+                                <i class="bi bi-clock me-1"></i>Free time slots
+                            </a>
                         </li>
 
                         @if (User.IsInRole(RoleNames.Admin))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Statistics">Statistics</a>
+                                <a class="nav-link" asp-area="" asp-controller="Booking" asp-action="Statistics">
+                                    <i class="bi bi-bar-chart me-1"></i>Statistics
+                                </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="XMLExport">XML Export</a>
+                                <a class="nav-link" asp-area="" asp-controller="Booking" asp-action="XMLExport">
+                                    <i class="bi bi-download me-1"></i>XML Export
+                                </a>
                             </li>
                         }
 
@@ -63,20 +74,24 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container flex-grow-1">
         <main role="main" class="pb-3">
             <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted mt-auto">
         <div class="container">
-            &copy; 2023 - TVBookingMVC
+            &copy; 2026 - TVBooking
         </div>
     </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
