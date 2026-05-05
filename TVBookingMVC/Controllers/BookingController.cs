@@ -253,7 +253,7 @@ public class BookingController : Controller
     [HttpGet, ActionName("IndexWithFilter")]
     public async Task<IActionResult> IndexWithFilter()
     {
-        var ageLimits = Request.Query["ageLimit"].ToArray();
+        var ageLimits = Request.Query["ageLimit"].ToArray() ?? [];
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
         ViewBag.SelectedAgeLimits = ageLimits;
         ViewBag.NearBookings = await _bookingQueryService.GetNearBookingsAsync();
@@ -263,7 +263,7 @@ public class BookingController : Controller
             return View("Index", await _bookingQueryService.GetAllBookingsAsync());
         }
 
-        return View("Index", await _bookingQueryService.GetBookingsByAgeLimitsAsync(ageLimits));
+        return View("Index", await _bookingQueryService.GetBookingsByAgeLimitsAsync(ageLimits.Select(a => a ?? string.Empty)));
     }
 
     [Authorize(Roles = RoleNames.Admin)]

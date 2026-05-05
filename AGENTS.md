@@ -25,8 +25,3 @@ App URLs come from [TVBookingMVC/Properties/launchSettings.json](TVBookingMVC/Pr
 - Connection string in [TVBookingMVC/appsettings.json](TVBookingMVC/appsettings.json) uses local SQL Server with trusted connection.
 - Admin checks use Identity roles (see [TVBookingMVC/Constants/RoleNames.cs](TVBookingMVC/Constants/RoleNames.cs)).
 
-## Behavior and pitfalls
-
-- Booking rules enforced in [TVBookingMVC/Controllers/BookingController.cs](TVBookingMVC/Controllers/BookingController.cs) (no overlaps, end after start, future-only).
-- Seed data uses DateTime.Now and random values in [TVBookingMVC/Areas/Identity/Data/ApplicationDbContext.cs](TVBookingMVC/Areas/Identity/Data/ApplicationDbContext.cs); expect nondeterministic data between runs.
-- Selenium tests assume the app is already running on https://localhost:7233.
