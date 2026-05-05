@@ -1,3 +1,27 @@
+:root {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3d3d3d;
+  --bg-hover: #404040;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-muted: #707070;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
+  --accent-subtle: rgba(34, 197, 94, 0.15);
+  --border-color: #404040;
+  --border-light: #505050;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --navbar-bg: #252525;
+  --card-border-radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 14px;
 }
@@ -8,15 +32,777 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--border-color);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224, 224, 224, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Cards */
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+}
+
+.card-header {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.card-body {
+  color: var(--text-primary);
+}
+
+.card-body table,
+.card-body .dataTables_wrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Buttons */
+.btn:focus, .btn:active:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem var(--accent-subtle);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #000;
+}
+
+.btn-outline-primary {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Forms */
+.form-control, .form-select {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  background: var(--bg-tertiary);
+  border-color: var(--accent);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem var(--accent-subtle);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-control:read-only {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.form-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+}
+
+.form-floating > label {
+  color: var(--text-secondary);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--accent);
+}
+
+.form-check-label {
+  color: var(--text-secondary);
+}
+
+.form-check-input {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+.form-check-input:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.form-check-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem var(--accent-subtle);
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 0.25em;
+}
+
+/* Floating labels */
+.form-floating > .form-control:focus,
+.form-floating > .form-select {
+  border-color: var(--accent);
+}
+
+.form-floating > .form-control:not(:placeholder-shown) {
+  background: var(--bg-tertiary);
+}
+
+/* Validation */
+.text-danger {
+  color: #f87171 !important;
+}
+
+.is-invalid {
+  border-color: var(--danger) !important;
+}
+
+.invalid-feedback {
+  color: #f87171;
+}
+
+/* Tables */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text-primary);
+  --bs-table-striped-bg: var(--bg-secondary);
+  --bs-table-striped-color: var(--text-primary);
+  --bs-table-hover-bg: var(--bg-tertiary);
+  --bs-table-hover-color: var(--text-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.table thead th {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.15s ease;
+}
+
+.table tbody td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+/* DataTables */
+.dataTables_wrapper {
+  color: var(--text-primary);
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: var(--text-primary);
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.dataTables_length select:focus,
+.dataTables_filter input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--accent-subtle);
+}
+
+.dataTables_info {
+  color: var(--text-secondary);
+}
+
+.dataTables_paginate {
+  color: var(--text-primary);
+}
+
+.paginate_button {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary) !important;
+  padding: 0.375rem 0.75rem;
+  margin: 0 0.125rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-block;
+  min-width: 2.25rem;
+  text-align: center;
+}
+
+.paginate_button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000 !important;
+}
+
+.paginate_button.current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.paginate_button.disabled {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-muted) !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ellipsis {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--text-muted) !important;
+  cursor: default;
+}
+
+.first,
+.last {
+  min-width: 3.5rem;
+}
+
+.previous,
+.next {
+  min-width: 3.5rem;
+}
+
+/* Force dark pagination */
+table.dataTable + .dataTables_paginate,
+.dataTables_wrapper + .dataTables_paginate {
+  background: transparent;
+}
+
+.dataTables_paginate {
+  color: var(--text-primary);
+  background: transparent;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.dataTables_paginate .paginate_button {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #000 !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #000 !important;
+}
+
+.dataTables_paginate .paginate_button.disabled {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+  opacity: 0.5;
+}
+
+/* Bootstrap5 DataTables pagination overrides */
+.table + .dataTables_paginate > .pagination,
+.dataTables_wrapper .dataTables_paginate .pagination {
+  --bs-pagination-bg: var(--bg-tertiary);
+  --bs-pagination-border-color: var(--border-color);
+  --bs-pagination-color: var(--text-primary);
+  --bs-pagination-hover-bg: var(--accent);
+  --bs-pagination-hover-border-color: var(--accent);
+  --bs-pagination-hover-color: #000;
+  --bs-pagination-active-bg: var(--accent);
+  --bs-pagination-active-border-color: var(--accent);
+  --bs-pagination-active-color: #000;
+  --bs-pagination-disabled-bg: var(--bg-secondary);
+  --bs-pagination-disabled-border-color: var(--border-color);
+  --bs-pagination-disabled-color: var(--text-muted);
+}
+
+.page-link {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.page-link:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.page-item.active .page-link {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.page-item.disabled .page-link {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+.dataTables_filter label {
+  color: var(--text-secondary);
+}
+
+table.dataTable thead th {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+table.dataTable tbody tr {
+  background: var(--bg-secondary);
+}
+
+table.dataTable tbody tr:hover {
+  background: var(--bg-tertiary);
+}
+
+table.dataTable tbody td {
+  border-color: var(--border-color);
+}
+
+/* Sorting arrows for DataTables */
+table.dataTable thead th.sorting:before,
+table.dataTable thead th.sorting:after {
+  opacity: 0.5;
+}
+
+table.dataTable thead th.sorting_asc:before,
+table.dataTable thead th.sorting_desc:after {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* Checkbox filter */
+.filter-checks label {
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.filter-checks input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+  border-radius: 0.25rem;
+}
+
+.badge.bg-primary {
+  background: var(--accent) !important;
+  color: #000;
+}
+
+.badge.bg-secondary {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 1rem 0;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.dropdown-item {
+  color: var(--text-secondary);
+}
+
+.dropdown-item:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.dropdown-item:focus {
+  background: var(--bg-tertiary);
+}
+
+.dropdown-divider {
+  border-color: var(--border-color);
+}
+
+/* Toastr notifications - Dark theme */
+.toast-container {
+  color: var(--text-primary);
+}
+
+#toast-container > .toast {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 0.375rem;
+}
+
+#toast-container > .toast.toast-success {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+#toast-container > .toast.toast-error {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+#toast-container > .toast.toast-warning {
+  background: var(--warning);
+  border-color: var(--warning);
+  color: #000;
+}
+
+#toast-container > .toast.toast-info {
+  background: var(--info);
+  border-color: var(--info);
+  color: #fff;
+}
+
+.toast-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.toast-message {
+  color: var(--text-secondary);
+}
+
+.toast-close-button {
+  color: var(--text-secondary) !important;
+  opacity: 0.7;
+}
+
+.toast-close-button:hover {
+  opacity: 1;
+  color: #fff !important;
+}
+
+/* Alert messages */
+.alert {
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+}
+
+.alert-success {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: var(--danger);
+  color: #f87171;
+}
+
+.alert-warning {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.alert-info {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--info);
+  color: var(--info);
+}
+
+/* Validation summary */
+.validation-summary-errors {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.validation-summary-errors ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.validation-summary-errors li {
+  color: #f87171;
+}
+
+/* Page headers */
+.page-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header h1 {
+  margin-bottom: 0;
+}
+
+/* Action buttons in tables */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-buttons .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Stats cards */
+.stat-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  padding: 1.25rem;
+}
+
+.stat-card h3 {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-value {
+  color: var(--accent);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Charts */
+canvas {
+  max-width: 100%;
+}
+
+/* Login/Register page specific */
+.auth-card {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+}
+
+.auth-card .card-header {
+  background: transparent;
+  border-bottom: none;
+  padding: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.auth-card .card-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.demo-credentials {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.demo-credentials h5 {
+  color: var(--accent);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.demo-credentials p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Section titles */
+.section-title {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Container adjustments */
+.container {
+  max-width: 1200px;
+}
+
+<!-- Main content area -->
+main {
+  min-height: calc(100vh - 200px);
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.page-content {
+  margin-bottom: 2rem;
+}
+
+/* DataTables pagination */
+.dataTables_paginate {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Utility classes */
+.bg-dark-custom {
+  background: var(--bg-secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.border-accent {
+  border-color: var(--accent) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.875rem;
+  }
+  
+  .table thead th,
+  .table tbody td {
+    padding: 0.5rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-card .stat-value {
+    font-size: 1.5rem;
+  }
 }
