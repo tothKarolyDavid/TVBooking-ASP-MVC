@@ -11,7 +11,7 @@ using TVBookingMVC.Areas.Identity.Data;
 namespace TVBookingMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260505125206_Init")]
+    [Migration("20260505151229_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -262,10 +262,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 10,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 5, 5, 9, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 57",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -273,7 +273,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 11,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 5, 4, 8, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -284,10 +284,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 12,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 3, 8, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 76",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -295,10 +295,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 13,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 2, 9, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 83",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -306,10 +306,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 14,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 2, 14, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 92",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 2, 13, 0, 0, 0, DateTimeKind.Local)
@@ -317,10 +317,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 15,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 2, 15, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 51",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 2, 14, 0, 0, 0, DateTimeKind.Local)
@@ -328,10 +328,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 16,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 5, 2, 15, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 45",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 2, 14, 0, 0, 0, DateTimeKind.Local)
@@ -339,7 +339,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 17,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 30, 9, 30, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -350,10 +350,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 18,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 30, 12, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 32",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 30, 11, 0, 0, 0, DateTimeKind.Local)
@@ -361,7 +361,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 19,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 30, 19, 16, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -372,7 +372,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 20,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 30, 23, 52, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -383,10 +383,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 21,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 29, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 67",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -394,10 +394,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 22,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 28, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 58",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -405,7 +405,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 23,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 28, 13, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -416,10 +416,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 24,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 26, 9, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 96",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -427,7 +427,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 25,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 26, 11, 30, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -438,7 +438,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 26,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 26, 15, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -449,10 +449,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 27,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 26, 18, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 98",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 26, 17, 0, 0, 0, DateTimeKind.Local)
@@ -460,10 +460,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 28,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 25, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 67",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -471,10 +471,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 29,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 25, 18, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 13",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 25, 17, 0, 0, 0, DateTimeKind.Local)
@@ -482,10 +482,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 30,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 24, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 64",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -493,10 +493,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 31,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 24, 12, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 97",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 24, 11, 0, 0, 0, DateTimeKind.Local)
@@ -504,10 +504,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 32,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 24, 13, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 58",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 24, 12, 0, 0, 0, DateTimeKind.Local)
@@ -515,10 +515,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 33,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 24, 18, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 20",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 24, 17, 0, 0, 0, DateTimeKind.Local)
@@ -526,7 +526,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 34,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 23, 8, 51, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -537,10 +537,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 35,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 23, 17, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 6",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 23, 16, 0, 0, 0, DateTimeKind.Local)
@@ -548,10 +548,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 36,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 22, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 22",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -559,10 +559,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 37,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 22, 19, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 66",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 22, 18, 0, 0, 0, DateTimeKind.Local)
@@ -570,10 +570,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 38,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 21, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 17",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -581,10 +581,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 39,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 20, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 52",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -592,10 +592,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 40,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 20, 12, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 70",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 20, 11, 0, 0, 0, DateTimeKind.Local)
@@ -603,10 +603,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 41,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 18, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 33",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -614,10 +614,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 42,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 18, 13, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 80",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 18, 13, 0, 0, 0, DateTimeKind.Local)
@@ -625,10 +625,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 43,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 17, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 50",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -636,10 +636,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 44,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 17, 12, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 34",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 17, 11, 0, 0, 0, DateTimeKind.Local)
@@ -647,7 +647,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 45,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 17, 19, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -658,10 +658,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 46,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 4, 17, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 2",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -669,7 +669,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 47,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 15, 9, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -680,10 +680,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 48,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 14, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 58",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -691,10 +691,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 49,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 14, 17, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 46",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 14, 17, 0, 0, 0, DateTimeKind.Local)
@@ -702,10 +702,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 50,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 13, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 8",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -713,10 +713,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 51,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 13, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 20",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -724,10 +724,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 52,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 13, 8, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 89",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -735,10 +735,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 53,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 13, 14, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 48",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 13, 14, 0, 0, 0, DateTimeKind.Local)
@@ -746,10 +746,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 54,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 12, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 47",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -757,10 +757,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 55,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 12, 14, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 75",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 12, 13, 0, 0, 0, DateTimeKind.Local)
@@ -768,10 +768,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 56,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 12, 11, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 82",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 12, 10, 0, 0, 0, DateTimeKind.Local)
@@ -779,7 +779,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 57,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 11, 9, 25, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -790,10 +790,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 58,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 9, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 83",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -801,10 +801,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 59,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 9, 13, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 52",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 9, 12, 0, 0, 0, DateTimeKind.Local)
@@ -812,7 +812,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 60,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 8, 8, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -823,10 +823,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 61,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 8, 13, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 63",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 8, 12, 0, 0, 0, DateTimeKind.Local)
@@ -834,10 +834,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 62,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 8, 19, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 39",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 8, 18, 0, 0, 0, DateTimeKind.Local)
@@ -845,10 +845,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 63,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 8, 18, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 73",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 8, 17, 0, 0, 0, DateTimeKind.Local)
@@ -856,10 +856,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 64,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 7, 8, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 31",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -867,10 +867,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 65,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 7, 13, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 73",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 7, 12, 0, 0, 0, DateTimeKind.Local)
@@ -878,10 +878,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 66,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 7, 19, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 36",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 7, 18, 0, 0, 0, DateTimeKind.Local)
@@ -889,10 +889,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 67,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 7, 14, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 87",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 7, 14, 0, 0, 0, DateTimeKind.Local)
@@ -900,10 +900,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 68,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 6, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 19",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -911,10 +911,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 69,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 6, 11, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 63",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 4, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -922,10 +922,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 70,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 6, 9, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 18",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -933,10 +933,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 71,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 7, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 32",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -944,10 +944,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 72,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 7, 13, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 49",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 7, 13, 0, 0, 0, DateTimeKind.Local)
@@ -955,10 +955,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 73,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 5, 8, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 4",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -966,10 +966,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 74,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 8, 17, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 66",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 8, 16, 0, 0, 0, DateTimeKind.Local)
@@ -977,10 +977,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 75,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 5, 9, 9, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 27",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -988,10 +988,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 76,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 5, 11, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 87",
                             RoomNumber = 2,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -999,10 +999,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 77,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 5, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 63",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1010,7 +1010,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 78,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 5, 8, 40, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -1021,10 +1021,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 79,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 5, 23, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 16",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 5, 22, 0, 0, 0, DateTimeKind.Local)
@@ -1032,10 +1032,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 80,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 5, 4, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 21",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1043,10 +1043,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 81,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 4, 9, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 32",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 4, 9, 0, 0, 0, DateTimeKind.Local)
@@ -1054,10 +1054,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 82,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 3, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 96",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1065,10 +1065,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 83,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 3, 15, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 13",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 3, 15, 0, 0, 0, DateTimeKind.Local)
@@ -1076,10 +1076,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 84,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 5, 2, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 4",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1087,10 +1087,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 85,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 5, 2, 20, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 47",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 2, 19, 0, 0, 0, DateTimeKind.Local)
@@ -1098,7 +1098,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 86,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 1, 9, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -1109,10 +1109,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 87,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 5, 1, 13, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 64",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 1, 12, 0, 0, 0, DateTimeKind.Local)
@@ -1120,10 +1120,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 88,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 1, 14, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 16",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 1, 14, 0, 0, 0, DateTimeKind.Local)
@@ -1131,10 +1131,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 89,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 1, 17, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 14",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 1, 17, 0, 0, 0, DateTimeKind.Local)
@@ -1142,10 +1142,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 90,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 30, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 5",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1153,10 +1153,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 91,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 30, 10, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 93",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 30, 9, 0, 0, 0, DateTimeKind.Local)
@@ -1164,10 +1164,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 92,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 30, 23, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 16",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 30, 22, 0, 0, 0, DateTimeKind.Local)
@@ -1175,7 +1175,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 93,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 29, 9, 23, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -1186,10 +1186,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 94,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 29, 11, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 46",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 29, 10, 0, 0, 0, DateTimeKind.Local)
@@ -1197,10 +1197,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 95,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 29, 15, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 22",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 29, 14, 0, 0, 0, DateTimeKind.Local)
@@ -1208,10 +1208,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 96,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 29, 17, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 85",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 29, 17, 0, 0, 0, DateTimeKind.Local)
@@ -1219,10 +1219,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 97,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 28, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 33",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1230,10 +1230,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 98,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 28, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 74",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 28, 9, 0, 0, 0, DateTimeKind.Local)
@@ -1241,10 +1241,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 99,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 28, 11, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 95",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 28, 10, 0, 0, 0, DateTimeKind.Local)
@@ -1252,7 +1252,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 100,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 27, 9, 40, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -1263,10 +1263,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 101,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 27, 10, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 2",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 27, 9, 0, 0, 0, DateTimeKind.Local)
@@ -1274,10 +1274,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 102,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 25, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 23",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1285,10 +1285,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 103,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 24, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 39",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1296,7 +1296,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 104,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 24, 11, 28, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -1307,10 +1307,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 105,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 23, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 46",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1318,7 +1318,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 106,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 23, 16, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -1329,7 +1329,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 107,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 23, 8, 38, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -1340,10 +1340,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 108,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 22, 9, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 3",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1351,7 +1351,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 109,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 22, 19, 3, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -1362,10 +1362,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 110,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 21, 8, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 51",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1373,10 +1373,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 111,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 21, 16, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 33",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 21, 15, 0, 0, 0, DateTimeKind.Local)
@@ -1384,7 +1384,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 112,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 21, 20, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -1395,10 +1395,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 113,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 20, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 21",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1406,10 +1406,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 114,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 20, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 83",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1417,7 +1417,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 115,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 4, 20, 19, 21, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -1428,10 +1428,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 116,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 19, 8, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 83",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1439,10 +1439,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 117,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 19, 12, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 86",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 19, 11, 0, 0, 0, DateTimeKind.Local)
@@ -1450,10 +1450,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 118,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 18, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 70",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1461,10 +1461,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 119,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 18, 9, 12, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 4",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1472,7 +1472,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 120,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 18, 17, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -1483,10 +1483,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 121,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 18, 12, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 77",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 18, 11, 0, 0, 0, DateTimeKind.Local)
@@ -1494,10 +1494,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 122,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 16, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 75",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1505,10 +1505,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 123,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 16, 11, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 18",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 16, 10, 0, 0, 0, DateTimeKind.Local)
@@ -1516,10 +1516,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 124,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 16, 8, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 72",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1527,10 +1527,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 125,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 17, 0, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 23",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 16, 23, 0, 0, 0, DateTimeKind.Local)
@@ -1538,10 +1538,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 126,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 14, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 20",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1549,10 +1549,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 127,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 14, 14, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 32",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 14, 13, 0, 0, 0, DateTimeKind.Local)
@@ -1560,10 +1560,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 128,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 13, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 38",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1571,10 +1571,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 129,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 13, 11, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 89",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 13, 10, 0, 0, 0, DateTimeKind.Local)
@@ -1582,10 +1582,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 130,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 13, 12, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 46",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 13, 12, 0, 0, 0, DateTimeKind.Local)
@@ -1593,7 +1593,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 131,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 13, 20, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -1604,10 +1604,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 132,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 12, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 2",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1615,10 +1615,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 133,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 12, 10, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 6",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 12, 9, 0, 0, 0, DateTimeKind.Local)
@@ -1626,7 +1626,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 134,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 12, 15, 18, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -1637,10 +1637,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 135,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 11, 9, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 39",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1648,10 +1648,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 136,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 10, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 67",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1659,10 +1659,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 137,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 10, 18, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 87",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 10, 17, 0, 0, 0, DateTimeKind.Local)
@@ -1670,10 +1670,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 138,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 9, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 69",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1681,10 +1681,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 139,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 9, 18, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 73",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 9, 18, 0, 0, 0, DateTimeKind.Local)
@@ -1692,7 +1692,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 140,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 8, 9, 23, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -1703,10 +1703,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 141,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 8, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 68",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1714,10 +1714,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 142,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 8, 21, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 77",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 8, 20, 0, 0, 0, DateTimeKind.Local)
@@ -1725,10 +1725,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 143,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 6, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 76",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1736,10 +1736,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 144,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 5, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 69",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1747,10 +1747,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 145,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 5, 6, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 48",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1758,10 +1758,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 146,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 8, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 16",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1769,10 +1769,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 147,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 5, 8, 19, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 15",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 8, 18, 0, 0, 0, DateTimeKind.Local)
@@ -1780,10 +1780,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 148,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 11, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 29",
                             RoomNumber = 3,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1791,10 +1791,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 149,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 5, 5, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 33",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1802,10 +1802,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 150,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 5, 5, 19, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 45",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 5, 19, 0, 0, 0, DateTimeKind.Local)
@@ -1813,10 +1813,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 151,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 4, 8, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 52",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1824,7 +1824,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 152,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 4, 13, 4, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -1835,7 +1835,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 153,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 4, 21, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -1846,7 +1846,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 154,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 5, 3, 9, 21, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -1857,10 +1857,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 155,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 3, 12, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 35",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 3, 11, 0, 0, 0, DateTimeKind.Local)
@@ -1868,10 +1868,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 156,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 3, 18, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 20",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 3, 18, 0, 0, 0, DateTimeKind.Local)
@@ -1879,10 +1879,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 157,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Minimax",
                             End = new DateTime(2026, 5, 3, 12, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 64",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 3, 11, 0, 0, 0, DateTimeKind.Local)
@@ -1890,10 +1890,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 158,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 2, 8, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 1",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1901,10 +1901,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 159,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 2, 8, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 79",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1912,10 +1912,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 160,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 2, 17, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 32",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 2, 16, 0, 0, 0, DateTimeKind.Local)
@@ -1923,10 +1923,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 161,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 2, 14, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 81",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 2, 14, 0, 0, 0, DateTimeKind.Local)
@@ -1934,10 +1934,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 162,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 30, 9, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 43",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1945,7 +1945,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 163,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 30, 13, 21, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -1956,10 +1956,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 164,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 30, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 39",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1967,10 +1967,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 165,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 30, 14, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 92",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 30, 14, 0, 0, 0, DateTimeKind.Local)
@@ -1978,10 +1978,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 166,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 29, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 51",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -1989,7 +1989,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 167,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 29, 14, 24, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -2000,10 +2000,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 168,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 29, 21, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 74",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 29, 20, 0, 0, 0, DateTimeKind.Local)
@@ -2011,10 +2011,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 169,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 28, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 81",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2022,10 +2022,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 170,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 28, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 8",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2033,10 +2033,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 171,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 28, 10, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 69",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 28, 10, 0, 0, 0, DateTimeKind.Local)
@@ -2044,7 +2044,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 172,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 28, 11, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -2055,10 +2055,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 173,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 25, 9, 12, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 38",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2066,10 +2066,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 174,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 25, 10, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 74",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 25, 9, 0, 0, 0, DateTimeKind.Local)
@@ -2077,10 +2077,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 175,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 25, 10, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 95",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 25, 10, 0, 0, 0, DateTimeKind.Local)
@@ -2088,10 +2088,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 176,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 26, 0, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 36",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 25, 23, 0, 0, 0, DateTimeKind.Local)
@@ -2099,10 +2099,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 177,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 24, 9, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 46",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2110,10 +2110,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 178,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 24, 19, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 98",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 24, 18, 0, 0, 0, DateTimeKind.Local)
@@ -2121,10 +2121,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 179,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 23, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 59",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2132,10 +2132,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 180,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 23, 16, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 66",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 23, 15, 0, 0, 0, DateTimeKind.Local)
@@ -2143,10 +2143,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 181,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 20, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 43",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2154,10 +2154,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 182,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 19, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 85",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2165,10 +2165,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 183,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 19, 8, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 79",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2176,10 +2176,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 184,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 19, 17, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 30",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 19, 16, 0, 0, 0, DateTimeKind.Local)
@@ -2187,10 +2187,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 185,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 20, 0, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 85",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 19, 23, 0, 0, 0, DateTimeKind.Local)
@@ -2198,10 +2198,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 186,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 18, 9, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 62",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2209,10 +2209,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 187,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 18, 15, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 22",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 18, 15, 0, 0, 0, DateTimeKind.Local)
@@ -2220,10 +2220,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 188,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 17, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 15",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2231,10 +2231,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 189,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 17, 15, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 14",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 17, 14, 0, 0, 0, DateTimeKind.Local)
@@ -2242,7 +2242,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 190,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 17, 19, 1, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -2253,7 +2253,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 191,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 15, 9, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -2264,10 +2264,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 192,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 15, 10, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 42",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 15, 9, 0, 0, 0, DateTimeKind.Local)
@@ -2275,10 +2275,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 193,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 15, 8, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 36",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2286,7 +2286,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 194,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 15, 8, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -2297,10 +2297,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 195,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 14, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 20",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2308,7 +2308,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 196,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 14, 11, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -2319,10 +2319,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 197,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 14, 19, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 50",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 14, 18, 0, 0, 0, DateTimeKind.Local)
@@ -2330,10 +2330,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 198,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 14, 17, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 2",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 14, 17, 0, 0, 0, DateTimeKind.Local)
@@ -2341,10 +2341,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 199,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 13, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 18",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2352,10 +2352,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 200,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 13, 14, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 26",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 13, 13, 0, 0, 0, DateTimeKind.Local)
@@ -2363,10 +2363,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 201,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 13, 12, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 79",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 13, 12, 0, 0, 0, DateTimeKind.Local)
@@ -2374,7 +2374,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 202,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 13, 18, 31, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -2385,10 +2385,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 203,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 12, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 87",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2396,7 +2396,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 204,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 12, 16, 25, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -2407,10 +2407,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 205,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 12, 8, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 32",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2418,10 +2418,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 206,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 11, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 90",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2429,10 +2429,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 207,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 11, 14, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 48",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 11, 13, 0, 0, 0, DateTimeKind.Local)
@@ -2440,10 +2440,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 208,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 11, 15, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 64",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 11, 14, 0, 0, 0, DateTimeKind.Local)
@@ -2451,10 +2451,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 209,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 10, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 50",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2462,10 +2462,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 210,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 10, 11, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 61",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 10, 10, 0, 0, 0, DateTimeKind.Local)
@@ -2473,10 +2473,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 211,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 10, 15, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 46",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 10, 14, 0, 0, 0, DateTimeKind.Local)
@@ -2484,7 +2484,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 212,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 8, 9, 19, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -2495,7 +2495,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 213,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 8, 15, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -2506,10 +2506,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 214,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 8, 20, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 35",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 8, 20, 0, 0, 0, DateTimeKind.Local)
@@ -2517,10 +2517,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 215,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 7, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 47",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2528,10 +2528,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 216,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 7, 12, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 99",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 7, 12, 0, 0, 0, DateTimeKind.Local)
@@ -2539,10 +2539,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 217,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 7, 9, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 50",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2550,10 +2550,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 218,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 7, 11, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 50",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 7, 11, 0, 0, 0, DateTimeKind.Local)
@@ -2561,10 +2561,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 219,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 6, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 7",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2572,10 +2572,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 220,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 6, 13, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 95",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 4, 6, 13, 0, 0, 0, DateTimeKind.Local)
@@ -2583,7 +2583,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 221,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 5, 5, 9, 25, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -2594,10 +2594,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 222,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 5, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 44",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2605,10 +2605,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 223,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 6, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 82",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2616,10 +2616,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 224,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 6, 15, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 98",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 6, 14, 0, 0, 0, DateTimeKind.Local)
@@ -2627,10 +2627,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 225,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 5, 7, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 68",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2638,10 +2638,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 226,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 7, 15, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 16",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 7, 14, 0, 0, 0, DateTimeKind.Local)
@@ -2649,10 +2649,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 227,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 8, 8, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 38",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2660,7 +2660,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 228,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 5, 10, 8, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -2671,10 +2671,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 229,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 5, 10, 14, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 76",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 10, 14, 0, 0, 0, DateTimeKind.Local)
@@ -2682,10 +2682,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 230,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 11, 8, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 38",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2693,10 +2693,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 231,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 11, 11, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 77",
                             RoomNumber = 4,
                             Start = new DateTime(2026, 5, 11, 10, 0, 0, 0, DateTimeKind.Local)
@@ -2704,7 +2704,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 232,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 5, 9, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -2715,10 +2715,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 233,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 5, 12, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 1",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 5, 11, 0, 0, 0, DateTimeKind.Local)
@@ -2726,10 +2726,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 234,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 5, 17, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 64",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 5, 16, 0, 0, 0, DateTimeKind.Local)
@@ -2737,10 +2737,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 235,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 5, 17, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 51",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 5, 17, 0, 0, 0, DateTimeKind.Local)
@@ -2748,10 +2748,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 236,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 4, 8, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 67",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2759,7 +2759,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 237,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 4, 20, 4, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -2770,10 +2770,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 238,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 5, 3, 9, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 76",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2781,10 +2781,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 239,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 5, 3, 8, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 57",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2792,7 +2792,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 240,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 3, 12, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -2803,10 +2803,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 241,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 5, 3, 9, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 1",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2814,10 +2814,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 242,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 1, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 88",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2825,7 +2825,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 243,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 1, 11, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -2836,10 +2836,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 244,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 5, 1, 11, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 70",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 1, 10, 0, 0, 0, DateTimeKind.Local)
@@ -2847,10 +2847,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 245,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 5, 1, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 55",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2858,10 +2858,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 246,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 30, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 24",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2869,10 +2869,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 247,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 30, 13, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 84",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 30, 13, 0, 0, 0, DateTimeKind.Local)
@@ -2880,10 +2880,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 248,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 30, 17, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 44",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 30, 16, 0, 0, 0, DateTimeKind.Local)
@@ -2891,7 +2891,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 249,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 30, 9, 10, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -2902,10 +2902,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 250,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 29, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 91",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2913,10 +2913,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 251,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 28, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 67",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2924,7 +2924,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 252,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 28, 9, 2, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -2935,7 +2935,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 253,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 28, 15, 18, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -2946,10 +2946,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 254,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 28, 20, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 27",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 28, 20, 0, 0, 0, DateTimeKind.Local)
@@ -2957,10 +2957,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 255,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 27, 9, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 39",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2968,10 +2968,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 256,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 27, 12, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 64",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 27, 12, 0, 0, 0, DateTimeKind.Local)
@@ -2979,10 +2979,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 257,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 27, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 88",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -2990,10 +2990,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 258,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 26, 9, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 95",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3001,10 +3001,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 259,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 26, 15, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 71",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 26, 15, 0, 0, 0, DateTimeKind.Local)
@@ -3012,10 +3012,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 260,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 26, 15, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 65",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 26, 14, 0, 0, 0, DateTimeKind.Local)
@@ -3023,7 +3023,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 261,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 25, 8, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -3034,10 +3034,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 262,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 25, 10, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 77",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 25, 9, 0, 0, 0, DateTimeKind.Local)
@@ -3045,10 +3045,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 263,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 25, 15, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 37",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 25, 14, 0, 0, 0, DateTimeKind.Local)
@@ -3056,10 +3056,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 264,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 23, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 60",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3067,10 +3067,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 265,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 21, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 47",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3078,10 +3078,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 266,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 21, 11, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 22",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 21, 11, 0, 0, 0, DateTimeKind.Local)
@@ -3089,7 +3089,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 267,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 21, 21, 41, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3100,7 +3100,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 268,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 20, 8, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3111,10 +3111,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 269,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 20, 14, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 10",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 20, 13, 0, 0, 0, DateTimeKind.Local)
@@ -3122,7 +3122,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 270,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 20, 9, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -3133,10 +3133,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 271,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 19, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 74",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3144,7 +3144,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 272,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 19, 17, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3155,10 +3155,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 273,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 18, 9, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 59",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3166,10 +3166,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 274,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 17, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 70",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3177,7 +3177,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 275,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 17, 16, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -3188,7 +3188,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 276,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 16, 9, 20, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -3199,10 +3199,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 277,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 16, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 38",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3210,7 +3210,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 278,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 14, 9, 2, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3221,10 +3221,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 279,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 4, 14, 19, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 82",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 14, 18, 0, 0, 0, DateTimeKind.Local)
@@ -3232,7 +3232,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 280,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 13, 9, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -3243,10 +3243,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 281,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 13, 13, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 98",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 13, 12, 0, 0, 0, DateTimeKind.Local)
@@ -3254,10 +3254,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 282,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 12, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 9",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3265,7 +3265,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 283,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 12, 10, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -3276,10 +3276,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 284,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 12, 15, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 19",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 12, 14, 0, 0, 0, DateTimeKind.Local)
@@ -3287,10 +3287,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 285,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 12, 21, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 54",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 12, 20, 0, 0, 0, DateTimeKind.Local)
@@ -3298,10 +3298,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 286,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 11, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 34",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3309,10 +3309,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 287,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 11, 13, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 58",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 11, 12, 0, 0, 0, DateTimeKind.Local)
@@ -3320,7 +3320,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 288,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 11, 13, 12, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -3331,10 +3331,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 289,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 11, 21, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 7",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 11, 20, 0, 0, 0, DateTimeKind.Local)
@@ -3342,10 +3342,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 290,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 10, 9, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 90",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3353,7 +3353,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 291,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 10, 11, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -3364,10 +3364,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 292,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 9, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 9",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3375,10 +3375,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 293,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 8, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 28",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3386,10 +3386,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 294,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 8, 13, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 16",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 8, 13, 0, 0, 0, DateTimeKind.Local)
@@ -3397,7 +3397,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 295,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 8, 19, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -3408,7 +3408,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 296,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 8, 18, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -3419,10 +3419,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 297,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 7, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 10",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3430,10 +3430,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 298,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 7, 10, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 94",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 7, 9, 0, 0, 0, DateTimeKind.Local)
@@ -3441,10 +3441,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 299,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 6, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 18",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3452,10 +3452,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 300,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 6, 16, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 5",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 4, 6, 15, 0, 0, 0, DateTimeKind.Local)
@@ -3463,10 +3463,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 301,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 5, 6, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 78",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3474,10 +3474,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 302,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 6, 16, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 45",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 6, 15, 0, 0, 0, DateTimeKind.Local)
@@ -3485,10 +3485,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 303,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 5, 9, 8, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 13",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3496,10 +3496,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 304,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 5, 9, 14, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 90",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 9, 13, 0, 0, 0, DateTimeKind.Local)
@@ -3507,7 +3507,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 305,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 10, 9, 24, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -3518,10 +3518,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 306,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 5, 11, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 46",
                             RoomNumber = 5,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3529,10 +3529,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 307,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 5, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 85",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3540,10 +3540,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 308,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 5, 5, 11, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 35",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 5, 10, 0, 0, 0, DateTimeKind.Local)
@@ -3551,10 +3551,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 309,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 4, 9, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 88",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3562,10 +3562,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 310,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 4, 8, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 65",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3573,7 +3573,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 311,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 5, 4, 11, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -3584,7 +3584,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 312,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 5, 4, 20, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3595,10 +3595,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 313,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 3, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 83",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3606,10 +3606,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 314,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 2, 9, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 4",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3617,7 +3617,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 315,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 5, 2, 9, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -3628,10 +3628,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 316,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 5, 2, 13, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 97",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 2, 12, 0, 0, 0, DateTimeKind.Local)
@@ -3639,7 +3639,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 317,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 2, 18, 1, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -3650,7 +3650,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 318,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 5, 1, 9, 38, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -3661,10 +3661,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 319,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 1, 10, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 83",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 1, 10, 0, 0, 0, DateTimeKind.Local)
@@ -3672,7 +3672,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 320,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 5, 1, 12, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3683,10 +3683,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 321,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 1, 21, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 99",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 1, 20, 0, 0, 0, DateTimeKind.Local)
@@ -3694,10 +3694,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 322,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 30, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 80",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3705,10 +3705,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 323,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 30, 13, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 6",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 30, 12, 0, 0, 0, DateTimeKind.Local)
@@ -3716,10 +3716,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 324,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 30, 16, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 5",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 30, 16, 0, 0, 0, DateTimeKind.Local)
@@ -3727,10 +3727,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 325,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 30, 15, 12, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 50",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 30, 14, 0, 0, 0, DateTimeKind.Local)
@@ -3738,10 +3738,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 326,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 28, 9, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 58",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3749,10 +3749,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 327,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 27, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 85",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3760,10 +3760,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 328,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 27, 13, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 59",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 27, 12, 0, 0, 0, DateTimeKind.Local)
@@ -3771,10 +3771,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 329,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 27, 11, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 53",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 27, 10, 0, 0, 0, DateTimeKind.Local)
@@ -3782,10 +3782,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 330,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 27, 15, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 96",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 27, 14, 0, 0, 0, DateTimeKind.Local)
@@ -3793,10 +3793,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 331,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 26, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 19",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3804,10 +3804,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 332,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 26, 13, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 25",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 26, 13, 0, 0, 0, DateTimeKind.Local)
@@ -3815,10 +3815,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 333,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 26, 19, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 36",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 26, 18, 0, 0, 0, DateTimeKind.Local)
@@ -3826,10 +3826,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 334,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 26, 9, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 74",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3837,10 +3837,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 335,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 25, 9, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 44",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3848,10 +3848,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 336,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 25, 9, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 7",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3859,10 +3859,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 337,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 24, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 14",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3870,7 +3870,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 338,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 24, 12, 55, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -3881,10 +3881,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 339,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 23, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 74",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3892,7 +3892,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 340,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 21, 9, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -3903,10 +3903,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 341,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 21, 10, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 15",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 21, 9, 0, 0, 0, DateTimeKind.Local)
@@ -3914,10 +3914,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 342,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 21, 15, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 32",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 21, 14, 0, 0, 0, DateTimeKind.Local)
@@ -3925,7 +3925,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 343,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 19, 8, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -3936,7 +3936,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 344,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 18, 8, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -3947,10 +3947,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 345,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 18, 18, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 45",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 18, 17, 0, 0, 0, DateTimeKind.Local)
@@ -3958,10 +3958,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 346,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 17, 8, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 80",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -3969,10 +3969,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 347,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 17, 18, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 2",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 17, 17, 0, 0, 0, DateTimeKind.Local)
@@ -3980,7 +3980,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 348,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 16, 9, 23, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -3991,10 +3991,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 349,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 15, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 88",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4002,7 +4002,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 350,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 15, 16, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -4013,10 +4013,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 351,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 13, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 68",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4024,7 +4024,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 352,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 13, 13, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -4035,10 +4035,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 353,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 13, 19, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 23",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 13, 18, 0, 0, 0, DateTimeKind.Local)
@@ -4046,10 +4046,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 354,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 12, 9, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 87",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4057,10 +4057,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 355,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 12, 10, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 6",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 12, 9, 0, 0, 0, DateTimeKind.Local)
@@ -4068,10 +4068,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 356,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 12, 19, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 29",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 12, 18, 0, 0, 0, DateTimeKind.Local)
@@ -4079,7 +4079,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 357,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 12, 11, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -4090,10 +4090,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 358,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 11, 8, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 66",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4101,10 +4101,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 359,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 11, 10, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 58",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 11, 9, 0, 0, 0, DateTimeKind.Local)
@@ -4112,10 +4112,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 360,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 11, 15, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 22",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 11, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4123,10 +4123,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 361,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 11, 11, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 90",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 11, 11, 0, 0, 0, DateTimeKind.Local)
@@ -4134,10 +4134,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 362,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 10, 9, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 89",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4145,10 +4145,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 363,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 10, 14, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 87",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 10, 13, 0, 0, 0, DateTimeKind.Local)
@@ -4156,7 +4156,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 364,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 10, 18, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -4167,10 +4167,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 365,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 9, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 72",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4178,10 +4178,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 366,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 6, 8, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 68",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4189,10 +4189,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 367,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 6, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 31",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4200,10 +4200,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 368,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 6, 9, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 2",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4211,10 +4211,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 369,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 6, 20, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 49",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 4, 6, 20, 0, 0, 0, DateTimeKind.Local)
@@ -4222,10 +4222,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 370,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 5, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 90",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4233,7 +4233,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 371,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 5, 15, 23, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -4244,10 +4244,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 372,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 6, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 84",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4255,7 +4255,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 373,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 6, 12, 31, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -4266,10 +4266,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 374,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 5, 8, 9, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 61",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4277,10 +4277,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 375,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 8, 18, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 12",
                             RoomNumber = 6,
                             Start = new DateTime(2026, 5, 8, 17, 0, 0, 0, DateTimeKind.Local)
@@ -4288,7 +4288,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 376,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 10, 8, 54, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -4299,7 +4299,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 377,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 5, 10, 15, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -4310,10 +4310,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 378,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 5, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 20",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4321,10 +4321,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 379,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 3, 8, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 43",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4332,10 +4332,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 380,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 3, 15, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 18",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 3, 15, 0, 0, 0, DateTimeKind.Local)
@@ -4343,10 +4343,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 381,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 3, 23, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 80",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 3, 22, 0, 0, 0, DateTimeKind.Local)
@@ -4354,7 +4354,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 382,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 5, 2, 9, 55, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -4365,10 +4365,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 383,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 1, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 69",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4376,10 +4376,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 384,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 5, 1, 18, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 91",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 1, 17, 0, 0, 0, DateTimeKind.Local)
@@ -4387,10 +4387,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 385,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 30, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 89",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4398,10 +4398,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 386,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 30, 14, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 45",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 30, 13, 0, 0, 0, DateTimeKind.Local)
@@ -4409,10 +4409,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 387,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 30, 13, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 33",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 30, 12, 0, 0, 0, DateTimeKind.Local)
@@ -4420,7 +4420,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 388,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 30, 8, 54, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -4431,10 +4431,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 389,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 28, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 47",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4442,10 +4442,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 390,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 28, 9, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 23",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 28, 9, 0, 0, 0, DateTimeKind.Local)
@@ -4453,10 +4453,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 391,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 28, 14, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 57",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 28, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4464,10 +4464,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 392,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 28, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 52",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4475,10 +4475,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 393,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 27, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 64",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4486,10 +4486,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 394,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 26, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 74",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4497,7 +4497,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 395,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 26, 12, 27, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -4508,10 +4508,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 396,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 25, 9, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 62",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4519,10 +4519,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 397,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 24, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 67",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4530,10 +4530,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 398,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 24, 13, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 86",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 24, 12, 0, 0, 0, DateTimeKind.Local)
@@ -4541,7 +4541,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 399,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 24, 23, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -4552,7 +4552,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 400,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 23, 9, 13, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -4563,10 +4563,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 401,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 23, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 13",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 23, 9, 0, 0, 0, DateTimeKind.Local)
@@ -4574,10 +4574,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 402,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 22, 9, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 91",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4585,10 +4585,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 403,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 22, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 95",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4596,10 +4596,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 404,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 22, 13, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 67",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 22, 12, 0, 0, 0, DateTimeKind.Local)
@@ -4607,10 +4607,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 405,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 21, 9, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 6",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4618,7 +4618,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 406,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 21, 13, 33, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -4629,10 +4629,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 407,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 21, 14, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 71",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 21, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4640,10 +4640,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 408,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 20, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 60",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4651,10 +4651,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 409,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 20, 13, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 51",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 20, 11, 0, 0, 0, DateTimeKind.Local)
@@ -4662,7 +4662,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 410,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 20, 19, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -4673,10 +4673,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 411,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 19, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 32",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4684,10 +4684,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 412,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 19, 15, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 92",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 19, 15, 0, 0, 0, DateTimeKind.Local)
@@ -4695,10 +4695,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 413,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 17, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 50",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4706,10 +4706,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 414,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 17, 15, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 21",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 17, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4717,10 +4717,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 415,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 16, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 88",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4728,10 +4728,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 416,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 15, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 37",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4739,10 +4739,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 417,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 15, 15, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 97",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 15, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4750,10 +4750,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 418,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 14, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 43",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4761,10 +4761,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 419,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 14, 13, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 96",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 14, 13, 0, 0, 0, DateTimeKind.Local)
@@ -4772,10 +4772,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 420,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 14, 14, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 37",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 14, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4783,10 +4783,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 421,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 14, 21, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 39",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 14, 20, 0, 0, 0, DateTimeKind.Local)
@@ -4794,10 +4794,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 422,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 13, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 44",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4805,10 +4805,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 423,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 13, 12, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 46",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 13, 11, 0, 0, 0, DateTimeKind.Local)
@@ -4816,10 +4816,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 424,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 13, 13, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 9",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 13, 12, 0, 0, 0, DateTimeKind.Local)
@@ -4827,10 +4827,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 425,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 13, 15, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 22",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 13, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4838,10 +4838,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 426,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 12, 9, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 30",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4849,10 +4849,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 427,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 12, 12, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 6",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 12, 11, 0, 0, 0, DateTimeKind.Local)
@@ -4860,10 +4860,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 428,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 12, 12, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 35",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 12, 12, 0, 0, 0, DateTimeKind.Local)
@@ -4871,10 +4871,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 429,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 12, 21, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 23",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 12, 20, 0, 0, 0, DateTimeKind.Local)
@@ -4882,10 +4882,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 430,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 10, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 43",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4893,10 +4893,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 431,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 10, 14, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 61",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 10, 13, 0, 0, 0, DateTimeKind.Local)
@@ -4904,10 +4904,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 432,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 10, 17, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 62",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 10, 16, 0, 0, 0, DateTimeKind.Local)
@@ -4915,10 +4915,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 433,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 10, 15, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 60",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 10, 14, 0, 0, 0, DateTimeKind.Local)
@@ -4926,10 +4926,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 434,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 7, 9, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 69",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4937,7 +4937,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 435,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 7, 12, 35, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -4948,10 +4948,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 436,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 7, 19, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 70",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 7, 18, 0, 0, 0, DateTimeKind.Local)
@@ -4959,7 +4959,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 437,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 7, 21, 16, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -4970,10 +4970,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 438,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 6, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 53",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -4981,7 +4981,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 439,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 6, 12, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -4992,10 +4992,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 440,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 5, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 64",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5003,7 +5003,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 441,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 5, 6, 9, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -5014,7 +5014,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 442,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 6, 12, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -5025,10 +5025,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 443,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 5, 7, 9, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 65",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5036,10 +5036,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 444,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 5, 7, 20, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 73",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 7, 19, 0, 0, 0, DateTimeKind.Local)
@@ -5047,10 +5047,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 445,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 8, 9, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 57",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5058,10 +5058,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 446,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 8, 9, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 92",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5069,10 +5069,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 447,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 9, 8, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 90",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5080,10 +5080,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 448,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 9, 17, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 12",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 9, 16, 0, 0, 0, DateTimeKind.Local)
@@ -5091,10 +5091,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 449,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 10, 8, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 50",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5102,10 +5102,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 450,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 5, 11, 9, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 51",
                             RoomNumber = 7,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5113,10 +5113,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 451,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 5, 5, 9, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 94",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5124,7 +5124,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 452,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 5, 8, 39, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -5135,7 +5135,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 453,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 5, 15, 19, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -5146,7 +5146,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 454,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 5, 4, 8, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -5157,10 +5157,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 455,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 5, 4, 13, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 80",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 4, 13, 0, 0, 0, DateTimeKind.Local)
@@ -5168,10 +5168,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 456,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 5, 4, 20, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 97",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 4, 20, 0, 0, 0, DateTimeKind.Local)
@@ -5179,10 +5179,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 457,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 2, 8, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 58",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5190,10 +5190,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 458,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Prime",
                             End = new DateTime(2026, 5, 2, 11, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 62",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 2, 10, 0, 0, 0, DateTimeKind.Local)
@@ -5201,7 +5201,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 459,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 2, 17, 28, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -5212,10 +5212,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 460,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 5, 1, 8, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 5",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5223,10 +5223,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 461,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 1, 11, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 30",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 1, 10, 0, 0, 0, DateTimeKind.Local)
@@ -5234,10 +5234,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 462,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 1, 15, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 54",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 1, 14, 0, 0, 0, DateTimeKind.Local)
@@ -5245,10 +5245,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 463,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 29, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 1",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5256,7 +5256,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 464,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 29, 18, 39, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -5267,10 +5267,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 465,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 27, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 63",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5278,10 +5278,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 466,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 27, 20, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 97",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 27, 19, 0, 0, 0, DateTimeKind.Local)
@@ -5289,10 +5289,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 467,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 26, 9, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 47",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5300,10 +5300,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 468,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 25, 9, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 70",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5311,10 +5311,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 469,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 25, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 29",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5322,10 +5322,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 470,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 24, 8, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 24",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5333,10 +5333,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 471,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 23, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 77",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5344,10 +5344,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 472,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 23, 12, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 23",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 23, 12, 0, 0, 0, DateTimeKind.Local)
@@ -5355,10 +5355,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 473,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 23, 15, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 54",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 23, 14, 0, 0, 0, DateTimeKind.Local)
@@ -5366,10 +5366,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 474,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 22, 8, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 39",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5377,10 +5377,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 475,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 20, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 44",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5388,10 +5388,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 476,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 20, 18, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 91",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 20, 18, 0, 0, 0, DateTimeKind.Local)
@@ -5399,10 +5399,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 477,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 19, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 82",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5410,10 +5410,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 478,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 18, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 31",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5421,10 +5421,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 479,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 17, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 92",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5432,10 +5432,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 480,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 15, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 52",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5443,10 +5443,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 481,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 14, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 63",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5454,10 +5454,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 482,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 14, 13, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 92",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 14, 12, 0, 0, 0, DateTimeKind.Local)
@@ -5465,10 +5465,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 483,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 14, 19, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 5",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 14, 18, 0, 0, 0, DateTimeKind.Local)
@@ -5476,10 +5476,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 484,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 13, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 99",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5487,7 +5487,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 485,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 12, 9, 0, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -5498,7 +5498,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 486,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 11, 9, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -5509,10 +5509,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 487,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 11, 11, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 70",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 11, 10, 0, 0, 0, DateTimeKind.Local)
@@ -5520,10 +5520,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 488,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 11, 21, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 42",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 11, 20, 0, 0, 0, DateTimeKind.Local)
@@ -5531,10 +5531,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 489,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 10, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 91",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5542,10 +5542,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 490,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 10, 9, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 73",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5553,10 +5553,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 491,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 10, 16, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 5",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 10, 16, 0, 0, 0, DateTimeKind.Local)
@@ -5564,10 +5564,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 492,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 10, 21, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 15",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 10, 20, 0, 0, 0, DateTimeKind.Local)
@@ -5575,7 +5575,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 493,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 9, 8, 43, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -5586,10 +5586,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 494,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 9, 19, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 64",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 9, 18, 0, 0, 0, DateTimeKind.Local)
@@ -5597,10 +5597,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 495,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 8, 9, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 59",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5608,7 +5608,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 496,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 8, 12, 26, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -5619,10 +5619,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 497,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 5, 5, 9, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 11",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5630,10 +5630,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 498,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 5, 6, 9, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 75",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5641,10 +5641,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 499,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 6, 11, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 37",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -5652,10 +5652,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 500,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 5, 9, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 28",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5663,10 +5663,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 501,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 5, 11, 8, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 96",
                             RoomNumber = 8,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5674,7 +5674,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 502,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 11, 20, 0, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -5685,10 +5685,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 503,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 5, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 23",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5696,10 +5696,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 504,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 5, 13, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 29",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 5, 13, 0, 0, 0, DateTimeKind.Local)
@@ -5707,10 +5707,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 505,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 5, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 31",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5718,10 +5718,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 506,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 6, 0, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 80",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 5, 23, 0, 0, 0, DateTimeKind.Local)
@@ -5729,10 +5729,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 507,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 4, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 13",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5740,10 +5740,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 508,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 4, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 46",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 4, 9, 0, 0, 0, DateTimeKind.Local)
@@ -5751,10 +5751,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 509,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 4, 11, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 79",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 4, 10, 0, 0, 0, DateTimeKind.Local)
@@ -5762,10 +5762,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 510,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 5, 3, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 73",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5773,10 +5773,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 511,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 5, 1, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 90",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5784,10 +5784,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 512,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 30, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 41",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5795,7 +5795,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 513,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 30, 14, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -5806,10 +5806,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 514,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 30, 17, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 26",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 30, 16, 0, 0, 0, DateTimeKind.Local)
@@ -5817,7 +5817,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 515,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 30, 8, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -5828,10 +5828,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 516,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 28, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 6",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5839,7 +5839,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 517,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 28, 8, 52, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -5850,7 +5850,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 518,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 28, 10, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -5861,10 +5861,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 519,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 29, 0, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 34",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 28, 23, 0, 0, 0, DateTimeKind.Local)
@@ -5872,10 +5872,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 520,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 27, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 56",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5883,10 +5883,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 521,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 26, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 51",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5894,10 +5894,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 522,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 26, 11, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 64",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 26, 10, 0, 0, 0, DateTimeKind.Local)
@@ -5905,10 +5905,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 523,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 26, 15, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 89",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 26, 14, 0, 0, 0, DateTimeKind.Local)
@@ -5916,10 +5916,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 524,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 24, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 67",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5927,7 +5927,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 525,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 24, 10, 16, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -5938,7 +5938,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 526,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 24, 15, 29, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -5949,7 +5949,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 527,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 24, 11, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -5960,10 +5960,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 528,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 23, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 84",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -5971,10 +5971,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 529,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 23, 16, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 84",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 23, 16, 0, 0, 0, DateTimeKind.Local)
@@ -5982,7 +5982,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 530,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 22, 9, 48, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -5993,10 +5993,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 531,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 22, 18, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 72",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 22, 17, 0, 0, 0, DateTimeKind.Local)
@@ -6004,10 +6004,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 532,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 21, 8, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 92",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6015,10 +6015,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 533,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 21, 15, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 45",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 21, 14, 0, 0, 0, DateTimeKind.Local)
@@ -6026,7 +6026,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 534,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 20, 8, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -6037,10 +6037,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 535,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 19, 8, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 78",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6048,10 +6048,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 536,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 19, 13, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 20",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 19, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6059,7 +6059,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 537,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 19, 13, 48, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -6070,10 +6070,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 538,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 19, 14, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 58",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 19, 14, 0, 0, 0, DateTimeKind.Local)
@@ -6081,10 +6081,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 539,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 18, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 53",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6092,10 +6092,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 540,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 17, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 43",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6103,7 +6103,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 541,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 17, 14, 33, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -6114,10 +6114,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 542,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 17, 14, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 18",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 17, 14, 0, 0, 0, DateTimeKind.Local)
@@ -6125,10 +6125,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 543,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 17, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 20",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6136,7 +6136,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 544,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 16, 8, 35, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -6147,10 +6147,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 545,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 16, 8, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 42",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6158,10 +6158,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 546,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 16, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 98",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6169,10 +6169,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 547,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 14, 8, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 16",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6180,10 +6180,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 548,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 12, 8, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 8",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6191,10 +6191,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 549,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 12, 12, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 28",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 12, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6202,7 +6202,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 550,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 12, 18, 54, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -6213,10 +6213,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 551,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 9, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 12",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6224,10 +6224,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 552,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 8, 8, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 80",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6235,10 +6235,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 553,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 7, 9, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 71",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6246,10 +6246,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 554,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 7, 13, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 78",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 7, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6257,10 +6257,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 555,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 7, 23, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 75",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 4, 7, 22, 0, 0, 0, DateTimeKind.Local)
@@ -6268,10 +6268,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 556,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 5, 8, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 96",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6279,10 +6279,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 557,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 7, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 27",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6290,10 +6290,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 558,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 7, 13, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 99",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 7, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6301,10 +6301,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 559,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 8, 8, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 38",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6312,10 +6312,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 560,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 5, 9, 8, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 54",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6323,10 +6323,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 561,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 10, 9, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 34",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6334,10 +6334,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 562,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 5, 10, 19, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 6",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 10, 18, 0, 0, 0, DateTimeKind.Local)
@@ -6345,10 +6345,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 563,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 11, 9, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 43",
                             RoomNumber = 9,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6356,10 +6356,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 564,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 5, 5, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 58",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6367,10 +6367,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 565,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 5, 13, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 56",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 5, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6378,10 +6378,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 566,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 5, 5, 11, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 71",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 5, 10, 0, 0, 0, DateTimeKind.Local)
@@ -6389,7 +6389,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 567,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 5, 3, 9, 14, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -6400,10 +6400,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 568,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 5, 3, 13, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 14",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 3, 13, 0, 0, 0, DateTimeKind.Local)
@@ -6411,10 +6411,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 569,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 3, 14, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 33",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 3, 14, 0, 0, 0, DateTimeKind.Local)
@@ -6422,10 +6422,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 570,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 3, 15, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 46",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 3, 14, 0, 0, 0, DateTimeKind.Local)
@@ -6433,10 +6433,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 571,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 5, 2, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 10",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6444,10 +6444,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 572,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 2, 12, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 58",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 2, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6455,10 +6455,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 573,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 5, 1, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 7",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6466,10 +6466,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 574,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 1, 9, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 28",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6477,10 +6477,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 575,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 30, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 92",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6488,7 +6488,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 576,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 30, 16, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -6499,10 +6499,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 577,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 29, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 89",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6510,10 +6510,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 578,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 29, 13, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 60",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 29, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6521,7 +6521,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 579,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 29, 13, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -6532,10 +6532,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 580,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 29, 9, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 29",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6543,10 +6543,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 581,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "History",
                             End = new DateTime(2026, 4, 28, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 50",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6554,10 +6554,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 582,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 28, 13, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 41",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 28, 13, 0, 0, 0, DateTimeKind.Local)
@@ -6565,10 +6565,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 583,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 28, 14, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 56",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 28, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6576,10 +6576,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 584,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 27, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 60",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6587,10 +6587,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 585,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 27, 14, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 64",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 27, 13, 0, 0, 0, DateTimeKind.Local)
@@ -6598,10 +6598,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 586,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 26, 9, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 31",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6609,10 +6609,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 587,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 26, 20, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 19",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 26, 19, 0, 0, 0, DateTimeKind.Local)
@@ -6620,7 +6620,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 588,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 25, 8, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -6631,10 +6631,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 589,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 25, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 90",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6642,10 +6642,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 590,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 25, 11, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 4",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 25, 10, 0, 0, 0, DateTimeKind.Local)
@@ -6653,10 +6653,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 591,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 25, 9, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 60",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6664,10 +6664,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 592,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 24, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 53",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6675,10 +6675,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 593,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 24, 11, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 21",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 24, 10, 0, 0, 0, DateTimeKind.Local)
@@ -6686,7 +6686,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 594,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 24, 19, 24, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -6697,10 +6697,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 595,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 24, 12, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 15",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 24, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6708,10 +6708,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 596,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 23, 8, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 38",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6719,7 +6719,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 597,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 23, 16, 29, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -6730,10 +6730,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 598,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 22, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 45",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6741,10 +6741,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 599,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 22, 10, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 58",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 22, 9, 0, 0, 0, DateTimeKind.Local)
@@ -6752,10 +6752,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 600,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 20, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 63",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6763,10 +6763,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 601,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 20, 12, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 20",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 20, 12, 0, 0, 0, DateTimeKind.Local)
@@ -6774,10 +6774,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 602,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 20, 16, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 17",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 20, 16, 0, 0, 0, DateTimeKind.Local)
@@ -6785,7 +6785,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 603,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 20, 9, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -6796,10 +6796,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 604,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 18, 9, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 99",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6807,7 +6807,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 605,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 18, 10, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -6818,10 +6818,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 606,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 18, 16, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 20",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 18, 16, 0, 0, 0, DateTimeKind.Local)
@@ -6829,10 +6829,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 607,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 17, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 11",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6840,10 +6840,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 608,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 16, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 8",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6851,10 +6851,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 609,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 16, 12, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 45",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 16, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6862,10 +6862,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 610,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 16, 8, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 75",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6873,10 +6873,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 611,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 15, 9, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 36",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6884,10 +6884,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 612,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 15, 12, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 96",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 15, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6895,10 +6895,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 613,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 15, 16, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 23",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 15, 16, 0, 0, 0, DateTimeKind.Local)
@@ -6906,10 +6906,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 614,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 13, 8, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 23",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6917,7 +6917,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 615,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 13, 10, 43, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -6928,10 +6928,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 616,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 12, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 41",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -6939,10 +6939,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 617,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 12, 12, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 28",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 12, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6950,7 +6950,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 618,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 10, 9, 41, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -6961,10 +6961,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 619,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 10, 11, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 79",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 10, 11, 0, 0, 0, DateTimeKind.Local)
@@ -6972,10 +6972,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 620,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 10, 18, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 34",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 10, 18, 0, 0, 0, DateTimeKind.Local)
@@ -6983,7 +6983,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 621,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 10, 9, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -6994,7 +6994,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 622,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 8, 8, 48, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7005,10 +7005,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 623,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 8, 8, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 40",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7016,10 +7016,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 624,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 8, 12, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 61",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 8, 12, 0, 0, 0, DateTimeKind.Local)
@@ -7027,10 +7027,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 625,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 8, 17, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 96",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 8, 17, 0, 0, 0, DateTimeKind.Local)
@@ -7038,7 +7038,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 626,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 4, 7, 9, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -7049,10 +7049,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 627,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 6, 8, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 83",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7060,10 +7060,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 628,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 6, 9, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 42",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7071,10 +7071,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 629,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 6, 11, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 64",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 4, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -7082,10 +7082,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 630,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 5, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 90",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7093,10 +7093,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 631,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 5, 5, 19, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 36",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 5, 19, 0, 0, 0, DateTimeKind.Local)
@@ -7104,10 +7104,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 632,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 5, 6, 8, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 53",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7115,10 +7115,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 633,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 7, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 3",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7126,10 +7126,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 634,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 9, 8, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 46",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7137,10 +7137,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 635,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 5, 11, 8, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 15",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7148,10 +7148,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 636,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 11, 13, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 14",
                             RoomNumber = 10,
                             Start = new DateTime(2026, 5, 11, 12, 0, 0, 0, DateTimeKind.Local)
@@ -7159,10 +7159,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 637,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "HBO",
                             End = new DateTime(2026, 5, 5, 8, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 52",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7170,10 +7170,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 638,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 5, 15, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 67",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 5, 14, 0, 0, 0, DateTimeKind.Local)
@@ -7181,7 +7181,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 639,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 5, 5, 15, 13, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -7192,7 +7192,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 640,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 5, 4, 9, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -7203,10 +7203,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 641,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 3, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 67",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7214,7 +7214,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 642,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 5, 2, 9, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7225,10 +7225,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 643,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 1, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 15",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7236,10 +7236,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 644,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 1, 13, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 61",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 1, 12, 0, 0, 0, DateTimeKind.Local)
@@ -7247,10 +7247,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 645,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 5, 1, 8, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 83",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7258,10 +7258,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 646,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 1, 18, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 84",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 1, 17, 0, 0, 0, DateTimeKind.Local)
@@ -7269,10 +7269,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 647,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 28, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 11",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7280,10 +7280,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 648,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 28, 10, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 31",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 28, 10, 0, 0, 0, DateTimeKind.Local)
@@ -7291,10 +7291,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 649,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 28, 22, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 50",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 28, 22, 0, 0, 0, DateTimeKind.Local)
@@ -7302,10 +7302,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 650,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 27, 9, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 55",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7313,10 +7313,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 651,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 25, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 49",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7324,10 +7324,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 652,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 24, 9, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 51",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7335,10 +7335,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 653,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 24, 15, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 52",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 24, 14, 0, 0, 0, DateTimeKind.Local)
@@ -7346,10 +7346,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 654,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 24, 19, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 34",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 24, 18, 0, 0, 0, DateTimeKind.Local)
@@ -7357,10 +7357,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 655,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 23, 9, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 10",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7368,7 +7368,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 656,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 23, 13, 0, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7379,10 +7379,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 657,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 23, 10, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 44",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 23, 10, 0, 0, 0, DateTimeKind.Local)
@@ -7390,7 +7390,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 658,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 23, 20, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7401,10 +7401,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 659,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 22, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 99",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7412,10 +7412,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 660,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 17, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 38",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7423,10 +7423,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 661,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 17, 13, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 70",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 17, 12, 0, 0, 0, DateTimeKind.Local)
@@ -7434,10 +7434,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 662,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 16, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 38",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7445,10 +7445,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 663,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 15, 8, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 18",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7456,7 +7456,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 664,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 15, 9, 48, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7467,7 +7467,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 665,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 15, 11, 10, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7478,10 +7478,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 666,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 14, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 40",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7489,10 +7489,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 667,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 14, 8, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 3",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7500,10 +7500,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 668,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 14, 17, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 23",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 14, 16, 0, 0, 0, DateTimeKind.Local)
@@ -7511,7 +7511,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 669,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 14, 18, 13, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -7522,10 +7522,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 670,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 13, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 52",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7533,7 +7533,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 671,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 13, 10, 51, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7544,10 +7544,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 672,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 13, 8, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 73",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7555,10 +7555,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 673,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 12, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 31",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7566,10 +7566,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 674,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 12, 9, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 10",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 12, 9, 0, 0, 0, DateTimeKind.Local)
@@ -7577,10 +7577,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 675,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 12, 19, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 48",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 12, 18, 0, 0, 0, DateTimeKind.Local)
@@ -7588,7 +7588,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 676,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 12, 17, 40, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7599,10 +7599,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 677,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 11, 8, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 70",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7610,10 +7610,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 678,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 11, 13, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 34",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 11, 13, 0, 0, 0, DateTimeKind.Local)
@@ -7621,10 +7621,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 679,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 10, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 10",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7632,10 +7632,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 680,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 10, 11, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 39",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 10, 10, 0, 0, 0, DateTimeKind.Local)
@@ -7643,10 +7643,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 681,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 9, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 75",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7654,7 +7654,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 682,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 9, 10, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7665,10 +7665,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 683,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 9, 16, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 60",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 9, 16, 0, 0, 0, DateTimeKind.Local)
@@ -7676,10 +7676,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 684,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 9, 12, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 35",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 9, 11, 0, 0, 0, DateTimeKind.Local)
@@ -7687,10 +7687,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 685,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 8, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 67",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7698,7 +7698,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 686,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 8, 13, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7709,10 +7709,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 687,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 8, 8, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 30",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7720,7 +7720,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 688,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 8, 15, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7731,10 +7731,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 689,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 7, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 95",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7742,10 +7742,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 690,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 7, 12, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 77",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 7, 11, 0, 0, 0, DateTimeKind.Local)
@@ -7753,10 +7753,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 691,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 6, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 28",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7764,10 +7764,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 692,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 6, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 3",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7775,10 +7775,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 693,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 5, 6, 9, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 10",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7786,7 +7786,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 694,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 7, 8, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7797,7 +7797,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 695,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 5, 7, 13, 21, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -7808,10 +7808,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 696,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 8, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 12",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7819,10 +7819,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 697,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 5, 8, 13, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 72",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 8, 12, 0, 0, 0, DateTimeKind.Local)
@@ -7830,7 +7830,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 698,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 5, 9, 8, 39, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -7841,7 +7841,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 699,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 9, 13, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -7852,10 +7852,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 700,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 11, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 16",
                             RoomNumber = 11,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7863,10 +7863,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 701,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 4, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 22",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7874,7 +7874,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 702,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 4, 8, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -7885,10 +7885,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 703,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 5, 1, 8, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 62",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7896,10 +7896,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 704,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 1, 10, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 80",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 1, 9, 0, 0, 0, DateTimeKind.Local)
@@ -7907,7 +7907,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 705,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 1, 15, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -7918,10 +7918,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 706,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 1, 21, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 38",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 1, 20, 0, 0, 0, DateTimeKind.Local)
@@ -7929,10 +7929,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 707,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 29, 9, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 26",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7940,10 +7940,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 708,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 29, 16, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 31",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 29, 15, 0, 0, 0, DateTimeKind.Local)
@@ -7951,7 +7951,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 709,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 28, 8, 38, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -7962,10 +7962,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 710,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 28, 12, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 44",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 28, 12, 0, 0, 0, DateTimeKind.Local)
@@ -7973,10 +7973,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 711,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 28, 14, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 28",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 28, 14, 0, 0, 0, DateTimeKind.Local)
@@ -7984,10 +7984,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 712,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 28, 8, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 82",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -7995,10 +7995,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 713,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 27, 9, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 34",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8006,10 +8006,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 714,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 27, 10, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 26",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 27, 9, 0, 0, 0, DateTimeKind.Local)
@@ -8017,10 +8017,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 715,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 27, 18, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 82",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 27, 18, 0, 0, 0, DateTimeKind.Local)
@@ -8028,10 +8028,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 716,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 26, 9, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 90",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8039,10 +8039,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 717,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 24, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 83",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8050,10 +8050,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 718,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 24, 12, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 79",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 24, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8061,7 +8061,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 719,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 24, 18, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -8072,10 +8072,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 720,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 24, 15, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 56",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 24, 14, 0, 0, 0, DateTimeKind.Local)
@@ -8083,10 +8083,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 721,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 22, 8, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 72",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8094,10 +8094,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 722,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 22, 13, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 94",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 22, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8105,10 +8105,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 723,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 22, 11, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 22",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 22, 10, 0, 0, 0, DateTimeKind.Local)
@@ -8116,10 +8116,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 724,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 21, 8, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 36",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8127,10 +8127,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 725,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 21, 13, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 59",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 21, 13, 0, 0, 0, DateTimeKind.Local)
@@ -8138,10 +8138,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 726,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 21, 18, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 10",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 21, 18, 0, 0, 0, DateTimeKind.Local)
@@ -8149,10 +8149,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 727,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 21, 17, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 48",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 21, 17, 0, 0, 0, DateTimeKind.Local)
@@ -8160,10 +8160,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 728,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 20, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 42",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8171,10 +8171,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 729,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 20, 14, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 61",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 20, 13, 0, 0, 0, DateTimeKind.Local)
@@ -8182,10 +8182,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 730,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 20, 21, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 89",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 20, 20, 0, 0, 0, DateTimeKind.Local)
@@ -8193,7 +8193,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 731,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 19, 9, 2, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -8204,10 +8204,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 732,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 19, 13, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 41",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 19, 13, 0, 0, 0, DateTimeKind.Local)
@@ -8215,10 +8215,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 733,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 19, 11, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 94",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 19, 10, 0, 0, 0, DateTimeKind.Local)
@@ -8226,10 +8226,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 734,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 19, 15, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 2",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 19, 14, 0, 0, 0, DateTimeKind.Local)
@@ -8237,7 +8237,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 735,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 18, 9, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -8248,7 +8248,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 736,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 16, 9, 35, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -8259,10 +8259,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 737,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 16, 12, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 69",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 16, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8270,10 +8270,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 738,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 12, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 25",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8281,10 +8281,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 739,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 12, 16, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 20",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 12, 15, 0, 0, 0, DateTimeKind.Local)
@@ -8292,10 +8292,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 740,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 11, 8, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 15",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8303,10 +8303,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 741,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 11, 15, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 67",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 11, 14, 0, 0, 0, DateTimeKind.Local)
@@ -8314,10 +8314,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 742,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 11, 12, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 85",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 11, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8325,10 +8325,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 743,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 10, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 57",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8336,10 +8336,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 744,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 10, 16, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 65",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 10, 15, 0, 0, 0, DateTimeKind.Local)
@@ -8347,10 +8347,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 745,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 9, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 90",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8358,10 +8358,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 746,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 9, 20, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 91",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 9, 19, 0, 0, 0, DateTimeKind.Local)
@@ -8369,10 +8369,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 747,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 6, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 62",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8380,10 +8380,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 748,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 6, 10, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 21",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 6, 9, 0, 0, 0, DateTimeKind.Local)
@@ -8391,10 +8391,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 749,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 6, 17, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 47",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 4, 6, 16, 0, 0, 0, DateTimeKind.Local)
@@ -8402,10 +8402,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 750,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 5, 8, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 42",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8413,10 +8413,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 751,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 5, 7, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 66",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8424,10 +8424,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 752,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 5, 8, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 92",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8435,10 +8435,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 753,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 5, 8, 18, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 69",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 8, 17, 0, 0, 0, DateTimeKind.Local)
@@ -8446,7 +8446,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 754,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 9, 8, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -8457,10 +8457,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 755,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 10, 9, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 58",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8468,10 +8468,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 756,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 10, 18, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 25",
                             RoomNumber = 12,
                             Start = new DateTime(2026, 5, 10, 18, 0, 0, 0, DateTimeKind.Local)
@@ -8479,10 +8479,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 757,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 5, 9, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 30",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8490,10 +8490,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 758,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 5, 11, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 72",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 5, 10, 0, 0, 0, DateTimeKind.Local)
@@ -8501,10 +8501,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 759,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 5, 5, 21, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 12",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 5, 20, 0, 0, 0, DateTimeKind.Local)
@@ -8512,10 +8512,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 760,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 4, 8, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 76",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8523,10 +8523,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 761,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 4, 12, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 27",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 4, 11, 0, 0, 0, DateTimeKind.Local)
@@ -8534,10 +8534,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 762,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 5, 4, 13, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 2",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 4, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8545,10 +8545,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 763,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 5, 4, 12, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 64",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 4, 11, 0, 0, 0, DateTimeKind.Local)
@@ -8556,7 +8556,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 764,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 5, 3, 9, 13, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -8567,10 +8567,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 765,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 3, 16, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 39",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 3, 15, 0, 0, 0, DateTimeKind.Local)
@@ -8578,10 +8578,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 766,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 2, 9, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 17",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8589,10 +8589,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 767,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 2, 16, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 82",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 2, 16, 0, 0, 0, DateTimeKind.Local)
@@ -8600,10 +8600,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 768,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 5, 1, 8, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 23",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8611,10 +8611,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 769,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 1, 8, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 42",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8622,7 +8622,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 770,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 1, 8, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -8633,7 +8633,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 771,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 5, 1, 23, 40, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -8644,10 +8644,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 772,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 30, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 90",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8655,7 +8655,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 773,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 29, 8, 41, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -8666,10 +8666,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 774,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 29, 12, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 60",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 29, 11, 0, 0, 0, DateTimeKind.Local)
@@ -8677,10 +8677,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 775,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 28, 9, 12, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 72",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8688,10 +8688,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 776,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 28, 12, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 24",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 28, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8699,7 +8699,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 777,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 28, 15, 23, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -8710,10 +8710,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 778,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 28, 18, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 64",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 28, 17, 0, 0, 0, DateTimeKind.Local)
@@ -8721,10 +8721,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 779,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 27, 9, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 22",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8732,7 +8732,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 780,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 27, 14, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -8743,7 +8743,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 781,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 27, 22, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -8754,10 +8754,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 782,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 25, 8, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 47",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8765,7 +8765,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 783,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 25, 11, 15, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -8776,10 +8776,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 784,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 24, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 24",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8787,10 +8787,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 785,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 24, 9, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 32",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8798,10 +8798,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 786,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 24, 13, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 65",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 24, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8809,10 +8809,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 787,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 25, 0, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 46",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 24, 23, 0, 0, 0, DateTimeKind.Local)
@@ -8820,7 +8820,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 788,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 23, 9, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -8831,10 +8831,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 789,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 22, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 99",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8842,10 +8842,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 790,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 20, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 13",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8853,7 +8853,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 791,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 20, 18, 11, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -8864,10 +8864,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 792,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 19, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 36",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8875,10 +8875,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 793,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 19, 16, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 30",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 19, 15, 0, 0, 0, DateTimeKind.Local)
@@ -8886,10 +8886,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 794,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 19, 13, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 47",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 19, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8897,10 +8897,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 795,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 18, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 41",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8908,10 +8908,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 796,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 18, 14, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 78",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 18, 13, 0, 0, 0, DateTimeKind.Local)
@@ -8919,10 +8919,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 797,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 18, 13, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 37",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 18, 12, 0, 0, 0, DateTimeKind.Local)
@@ -8930,10 +8930,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 798,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 17, 8, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 39",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8941,10 +8941,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 799,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 17, 18, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 56",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 17, 18, 0, 0, 0, DateTimeKind.Local)
@@ -8952,10 +8952,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 800,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 14, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 20",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8963,10 +8963,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 801,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 14, 11, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 48",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 14, 11, 0, 0, 0, DateTimeKind.Local)
@@ -8974,10 +8974,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 802,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 14, 17, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 46",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 14, 16, 0, 0, 0, DateTimeKind.Local)
@@ -8985,10 +8985,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 803,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 12, 8, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 12",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -8996,10 +8996,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 804,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 12, 15, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 16",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 12, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9007,10 +9007,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 805,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 12, 15, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 56",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 12, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9018,10 +9018,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 806,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 11, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 57",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9029,7 +9029,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 807,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 11, 15, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -9040,10 +9040,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 808,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 11, 23, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 86",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 11, 22, 0, 0, 0, DateTimeKind.Local)
@@ -9051,7 +9051,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 809,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 9, 9, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -9062,10 +9062,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 810,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 9, 14, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 97",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 9, 13, 0, 0, 0, DateTimeKind.Local)
@@ -9073,10 +9073,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 811,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 9, 9, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 39",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9084,7 +9084,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 812,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 8, 9, 1, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -9095,7 +9095,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 813,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 8, 11, 52, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -9106,10 +9106,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 814,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 8, 14, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 85",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 8, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9117,10 +9117,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 815,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 6, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 22",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9128,10 +9128,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 816,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 6, 11, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 43",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -9139,10 +9139,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 817,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 6, 21, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 19",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 4, 6, 20, 0, 0, 0, DateTimeKind.Local)
@@ -9150,10 +9150,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 818,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 5, 8, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 42",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9161,10 +9161,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 819,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 5, 12, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 90",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 5, 11, 0, 0, 0, DateTimeKind.Local)
@@ -9172,10 +9172,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 820,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 5, 6, 9, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 1",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9183,10 +9183,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 821,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 5, 6, 12, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 88",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 6, 11, 0, 0, 0, DateTimeKind.Local)
@@ -9194,10 +9194,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 822,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 5, 7, 9, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 57",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9205,7 +9205,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 823,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 8, 8, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -9216,10 +9216,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 824,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 5, 9, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 56",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9227,10 +9227,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 825,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 5, 10, 9, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 79",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9238,10 +9238,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 826,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 10, 13, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 1",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 10, 12, 0, 0, 0, DateTimeKind.Local)
@@ -9249,10 +9249,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 827,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 11, 8, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 72",
                             RoomNumber = 13,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9260,7 +9260,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 828,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 11, 11, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -9271,10 +9271,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 829,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 5, 5, 9, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 11",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9282,7 +9282,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 830,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 5, 10, 31, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -9293,10 +9293,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 831,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 5, 10, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 75",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 5, 10, 0, 0, 0, DateTimeKind.Local)
@@ -9304,7 +9304,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 832,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 5, 15, 9, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -9315,10 +9315,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 833,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 4, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 52",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9326,7 +9326,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 834,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 5, 3, 9, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -9337,10 +9337,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 835,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 2, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 8",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9348,7 +9348,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 836,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 5, 2, 13, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -9359,7 +9359,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 837,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 2, 8, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -9370,7 +9370,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 838,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 2, 15, 3, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -9381,10 +9381,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 839,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 1, 9, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 35",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9392,7 +9392,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 840,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 30, 9, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -9403,10 +9403,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 841,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 30, 12, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 95",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 30, 11, 0, 0, 0, DateTimeKind.Local)
@@ -9414,10 +9414,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 842,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 30, 17, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 93",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 30, 16, 0, 0, 0, DateTimeKind.Local)
@@ -9425,10 +9425,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 843,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 29, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 29",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9436,10 +9436,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 844,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 29, 15, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 15",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 29, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9447,10 +9447,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 845,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 29, 20, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 37",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 29, 20, 0, 0, 0, DateTimeKind.Local)
@@ -9458,10 +9458,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 846,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 28, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 55",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9469,10 +9469,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 847,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 28, 15, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 64",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 28, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9480,10 +9480,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 848,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 27, 8, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 18",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9491,10 +9491,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 849,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 27, 12, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 99",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 27, 12, 0, 0, 0, DateTimeKind.Local)
@@ -9502,7 +9502,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 850,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 27, 19, 14, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -9513,10 +9513,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 851,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 26, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 97",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9524,10 +9524,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 852,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 26, 12, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 89",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 26, 12, 0, 0, 0, DateTimeKind.Local)
@@ -9535,10 +9535,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 853,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 26, 13, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 71",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 26, 12, 0, 0, 0, DateTimeKind.Local)
@@ -9546,10 +9546,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 854,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 26, 18, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 12",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 26, 17, 0, 0, 0, DateTimeKind.Local)
@@ -9557,7 +9557,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 855,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 25, 9, 20, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -9568,10 +9568,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 856,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 25, 10, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 74",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 25, 9, 0, 0, 0, DateTimeKind.Local)
@@ -9579,10 +9579,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 857,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 25, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 94",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9590,10 +9590,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 858,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 26, 0, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 14",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 25, 23, 0, 0, 0, DateTimeKind.Local)
@@ -9601,10 +9601,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 859,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 24, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 30",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9612,10 +9612,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 860,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 23, 8, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 14",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9623,10 +9623,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 861,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 23, 16, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 79",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 23, 15, 0, 0, 0, DateTimeKind.Local)
@@ -9634,10 +9634,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 862,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 22, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 59",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9645,10 +9645,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 863,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 22, 14, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 54",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 22, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9656,10 +9656,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 864,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 21, 8, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 26",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9667,10 +9667,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 865,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 21, 9, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 15",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9678,10 +9678,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 866,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 21, 10, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 10",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 21, 10, 0, 0, 0, DateTimeKind.Local)
@@ -9689,7 +9689,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 867,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 21, 15, 33, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -9700,10 +9700,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 868,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 20, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 28",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9711,7 +9711,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 869,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 20, 11, 3, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -9722,10 +9722,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 870,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 20, 14, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 80",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 20, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9733,10 +9733,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 871,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 20, 18, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 63",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 20, 17, 0, 0, 0, DateTimeKind.Local)
@@ -9744,10 +9744,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 872,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 19, 9, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 30",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9755,10 +9755,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 873,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 19, 15, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 80",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 19, 14, 0, 0, 0, DateTimeKind.Local)
@@ -9766,7 +9766,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 874,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 16, 9, 9, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -9777,10 +9777,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 875,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 16, 13, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 2",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 16, 12, 0, 0, 0, DateTimeKind.Local)
@@ -9788,10 +9788,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 876,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 16, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 55",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9799,7 +9799,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 877,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 16, 18, 38, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -9810,7 +9810,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 878,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 14, 9, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -9821,10 +9821,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 879,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 14, 11, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 70",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 14, 10, 0, 0, 0, DateTimeKind.Local)
@@ -9832,10 +9832,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 880,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 14, 11, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 9",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 14, 10, 0, 0, 0, DateTimeKind.Local)
@@ -9843,10 +9843,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 881,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 14, 21, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 41",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 14, 20, 0, 0, 0, DateTimeKind.Local)
@@ -9854,7 +9854,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 882,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 13, 8, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -9865,10 +9865,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 883,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 13, 12, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 37",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 13, 11, 0, 0, 0, DateTimeKind.Local)
@@ -9876,10 +9876,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 884,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 13, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 33",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9887,10 +9887,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 885,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 13, 12, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 88",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 13, 11, 0, 0, 0, DateTimeKind.Local)
@@ -9898,10 +9898,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 886,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 12, 8, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 53",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9909,10 +9909,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 887,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 12, 14, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 30",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 12, 13, 0, 0, 0, DateTimeKind.Local)
@@ -9920,7 +9920,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 888,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 11, 9, 29, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -9931,10 +9931,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 889,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 11, 19, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 67",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 11, 18, 0, 0, 0, DateTimeKind.Local)
@@ -9942,10 +9942,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 890,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 9, 8, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 21",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9953,7 +9953,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 891,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 8, 8, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -9964,10 +9964,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 892,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 8, 10, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 32",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 8, 9, 0, 0, 0, DateTimeKind.Local)
@@ -9975,10 +9975,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 893,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 8, 23, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 58",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 8, 22, 0, 0, 0, DateTimeKind.Local)
@@ -9986,10 +9986,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 894,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 7, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 76",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -9997,10 +9997,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 895,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 7, 10, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 43",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 7, 9, 0, 0, 0, DateTimeKind.Local)
@@ -10008,10 +10008,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 896,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 7, 13, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 87",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 4, 7, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10019,10 +10019,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 897,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 5, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 73",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10030,10 +10030,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 898,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 5, 6, 9, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 72",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10041,10 +10041,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 899,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 6, 13, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 92",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 6, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10052,7 +10052,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 900,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 7, 9, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -10063,10 +10063,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 901,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 7, 8, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 92",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10074,10 +10074,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 902,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 8, 9, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 55",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10085,7 +10085,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 903,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 5, 8, 9, 2, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -10096,10 +10096,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 904,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 9, 8, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 93",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10107,10 +10107,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 905,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 9, 12, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 34",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 9, 11, 0, 0, 0, DateTimeKind.Local)
@@ -10118,10 +10118,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 906,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 5, 10, 8, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 56",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10129,7 +10129,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 907,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 10, 17, 5, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -10140,10 +10140,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 908,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 11, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 33",
                             RoomNumber = 14,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10151,10 +10151,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 909,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 5, 9, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 39",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10162,10 +10162,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 910,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 4, 9, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 42",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10173,10 +10173,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 911,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 4, 18, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 44",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 4, 17, 0, 0, 0, DateTimeKind.Local)
@@ -10184,10 +10184,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 912,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 3, 9, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 99",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10195,10 +10195,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 913,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 3, 12, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 5",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 3, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10206,7 +10206,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 914,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 3, 19, 12, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -10217,10 +10217,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 915,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 3, 18, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 96",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 3, 17, 0, 0, 0, DateTimeKind.Local)
@@ -10228,10 +10228,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 916,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 5, 2, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 34",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10239,10 +10239,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 917,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 5, 1, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 82",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10250,10 +10250,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 918,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 30, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 57",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10261,7 +10261,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 919,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 30, 19, 48, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -10272,10 +10272,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 920,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 29, 9, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 46",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10283,10 +10283,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 921,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 29, 15, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 3",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 29, 14, 0, 0, 0, DateTimeKind.Local)
@@ -10294,10 +10294,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 922,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 29, 11, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 73",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 29, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10305,10 +10305,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 923,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 28, 8, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 40",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10316,10 +10316,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 924,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 28, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 10",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10327,10 +10327,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 925,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 28, 19, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 76",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 28, 18, 0, 0, 0, DateTimeKind.Local)
@@ -10338,10 +10338,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 926,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 28, 12, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 32",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 28, 11, 0, 0, 0, DateTimeKind.Local)
@@ -10349,10 +10349,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 927,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 27, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 87",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10360,10 +10360,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 928,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 27, 14, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 76",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 27, 13, 0, 0, 0, DateTimeKind.Local)
@@ -10371,10 +10371,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 929,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 25, 9, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 57",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10382,10 +10382,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 930,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 25, 12, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 90",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 25, 11, 0, 0, 0, DateTimeKind.Local)
@@ -10393,10 +10393,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 931,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 25, 12, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 66",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 25, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10404,7 +10404,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 932,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 24, 9, 30, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -10415,7 +10415,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 933,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 24, 18, 46, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -10426,10 +10426,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 934,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 23, 9, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 13",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10437,7 +10437,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 935,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 23, 9, 10, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -10448,10 +10448,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 936,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 23, 18, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 42",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 23, 18, 0, 0, 0, DateTimeKind.Local)
@@ -10459,10 +10459,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 937,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 22, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 82",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10470,10 +10470,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 938,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 20, 8, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 24",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10481,10 +10481,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 939,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 20, 8, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 49",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10492,10 +10492,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 940,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 19, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 49",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10503,10 +10503,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 941,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 17, 9, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 78",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10514,7 +10514,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 942,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 17, 19, 58, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -10525,10 +10525,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 943,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 16, 8, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 68",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10536,10 +10536,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 944,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 15, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 21",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10547,10 +10547,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 945,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 15, 11, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 33",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 15, 11, 0, 0, 0, DateTimeKind.Local)
@@ -10558,10 +10558,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 946,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 13, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 46",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10569,10 +10569,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 947,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 13, 9, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 7",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 13, 9, 0, 0, 0, DateTimeKind.Local)
@@ -10580,10 +10580,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 948,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 13, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 49",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10591,10 +10591,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 949,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 13, 9, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 44",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10602,10 +10602,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 950,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 12, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 8",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10613,10 +10613,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 951,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 12, 13, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 57",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 12, 13, 0, 0, 0, DateTimeKind.Local)
@@ -10624,10 +10624,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 952,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 12, 11, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 76",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 12, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10635,10 +10635,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 953,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 12, 18, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 98",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 12, 17, 0, 0, 0, DateTimeKind.Local)
@@ -10646,10 +10646,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 954,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 11, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 12",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10657,10 +10657,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 955,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 11, 16, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 42",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 11, 15, 0, 0, 0, DateTimeKind.Local)
@@ -10668,10 +10668,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 956,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 11, 19, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 18",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 11, 18, 0, 0, 0, DateTimeKind.Local)
@@ -10679,10 +10679,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 957,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 9, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 1",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10690,10 +10690,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 958,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 9, 11, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 86",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 9, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10701,10 +10701,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 959,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 7, 8, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 51",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10712,10 +10712,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 960,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 7, 11, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 81",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 4, 7, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10723,10 +10723,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 961,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 5, 5, 9, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 89",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10734,10 +10734,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 962,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 5, 5, 16, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 85",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 5, 15, 0, 0, 0, DateTimeKind.Local)
@@ -10745,10 +10745,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 963,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 5, 6, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 43",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10756,10 +10756,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 964,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 9, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 62",
                             RoomNumber = 15,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10767,10 +10767,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 965,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 5, 5, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 60",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10778,10 +10778,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 966,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 5, 5, 11, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 41",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 5, 11, 0, 0, 0, DateTimeKind.Local)
@@ -10789,10 +10789,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 967,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 5, 16, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 39",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 5, 16, 0, 0, 0, DateTimeKind.Local)
@@ -10800,10 +10800,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 968,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 5, 18, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 54",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 5, 17, 0, 0, 0, DateTimeKind.Local)
@@ -10811,10 +10811,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 969,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 3, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 76",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10822,10 +10822,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 970,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 5, 3, 12, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 40",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 3, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10833,10 +10833,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 971,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 3, 11, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 61",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 3, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10844,7 +10844,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 972,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 3, 23, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -10855,10 +10855,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 973,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 2, 8, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 47",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10866,7 +10866,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 974,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 1, 9, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -10877,10 +10877,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 975,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 5, 1, 14, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 46",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 1, 14, 0, 0, 0, DateTimeKind.Local)
@@ -10888,10 +10888,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 976,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 30, 9, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 6",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10899,10 +10899,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 977,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 30, 13, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 99",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 30, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10910,10 +10910,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 978,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 30, 12, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 31",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 30, 12, 0, 0, 0, DateTimeKind.Local)
@@ -10921,10 +10921,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 979,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 30, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 42",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10932,7 +10932,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 980,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 29, 9, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -10943,10 +10943,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 981,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 27, 8, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 95",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10954,10 +10954,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 982,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 27, 11, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 91",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 27, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10965,10 +10965,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 983,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 27, 10, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 54",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 27, 10, 0, 0, 0, DateTimeKind.Local)
@@ -10976,10 +10976,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 984,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 4, 28, 0, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 3",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 27, 23, 0, 0, 0, DateTimeKind.Local)
@@ -10987,10 +10987,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 985,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 26, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 12",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -10998,10 +10998,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 986,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 26, 13, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 35",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 26, 12, 0, 0, 0, DateTimeKind.Local)
@@ -11009,10 +11009,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 987,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 25, 9, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 82",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11020,10 +11020,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 988,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 25, 10, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 98",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 25, 9, 0, 0, 0, DateTimeKind.Local)
@@ -11031,10 +11031,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 989,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 25, 11, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 3",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 25, 10, 0, 0, 0, DateTimeKind.Local)
@@ -11042,10 +11042,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 990,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 25, 12, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 86",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 25, 11, 0, 0, 0, DateTimeKind.Local)
@@ -11053,7 +11053,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 991,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 24, 9, 10, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11064,7 +11064,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 992,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 24, 13, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -11075,7 +11075,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 993,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 24, 13, 8, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -11086,10 +11086,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 994,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 24, 12, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 25",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 24, 11, 0, 0, 0, DateTimeKind.Local)
@@ -11097,10 +11097,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 995,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 23, 9, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 58",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11108,10 +11108,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 996,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 22, 9, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 61",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11119,10 +11119,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 997,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 22, 15, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 36",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 22, 14, 0, 0, 0, DateTimeKind.Local)
@@ -11130,7 +11130,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 998,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 21, 8, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11141,10 +11141,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 999,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 21, 13, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 19",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 21, 12, 0, 0, 0, DateTimeKind.Local)
@@ -11152,10 +11152,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1000,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 21, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 95",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11163,7 +11163,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1001,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 21, 18, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11174,10 +11174,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1002,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 19, 8, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 64",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11185,10 +11185,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1003,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 19, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 35",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11196,7 +11196,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1004,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 19, 15, 40, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11207,7 +11207,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1005,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 19, 8, 33, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -11218,10 +11218,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1006,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 18, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 34",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11229,10 +11229,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1007,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 18, 13, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 10",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 18, 13, 0, 0, 0, DateTimeKind.Local)
@@ -11240,7 +11240,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1008,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 18, 17, 35, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11251,10 +11251,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1009,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 18, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 27",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11262,10 +11262,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1010,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 17, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 73",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11273,7 +11273,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1011,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 17, 15, 43, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -11284,10 +11284,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1012,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 14, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 76",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11295,10 +11295,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1013,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 14, 13, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 81",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 14, 13, 0, 0, 0, DateTimeKind.Local)
@@ -11306,10 +11306,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1014,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 14, 19, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 12",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 14, 18, 0, 0, 0, DateTimeKind.Local)
@@ -11317,10 +11317,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1015,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 14, 21, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 5",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 14, 20, 0, 0, 0, DateTimeKind.Local)
@@ -11328,7 +11328,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1016,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 12, 9, 34, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -11339,7 +11339,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1017,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 12, 13, 51, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11350,10 +11350,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1018,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 11, 8, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 46",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11361,7 +11361,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1019,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 11, 12, 13, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -11372,10 +11372,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1020,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 11, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 34",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11383,10 +11383,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1021,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 10, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 3",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11394,7 +11394,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1022,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 10, 13, 24, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -11405,10 +11405,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1023,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 10, 13, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 60",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 10, 12, 0, 0, 0, DateTimeKind.Local)
@@ -11416,10 +11416,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1024,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 10, 18, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 54",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 10, 17, 0, 0, 0, DateTimeKind.Local)
@@ -11427,10 +11427,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1025,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 9, 9, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 54",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11438,10 +11438,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1026,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 8, 9, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 99",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11449,10 +11449,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1027,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 8, 12, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 14",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 8, 11, 0, 0, 0, DateTimeKind.Local)
@@ -11460,10 +11460,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1028,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 8, 16, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 16",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 8, 16, 0, 0, 0, DateTimeKind.Local)
@@ -11471,10 +11471,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1029,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 8, 15, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 8",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 8, 14, 0, 0, 0, DateTimeKind.Local)
@@ -11482,10 +11482,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1030,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 7, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 62",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11493,10 +11493,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1031,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 6, 9, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 64",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11504,10 +11504,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1032,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 6, 13, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 2",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 6, 13, 0, 0, 0, DateTimeKind.Local)
@@ -11515,10 +11515,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1033,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 6, 11, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 1",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 4, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -11526,10 +11526,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1034,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 5, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 89",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11537,7 +11537,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1035,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 5, 6, 8, 54, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -11548,10 +11548,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1036,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 6, 11, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 71",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -11559,10 +11559,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1037,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 5, 9, 9, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 75",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11570,10 +11570,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1038,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 5, 11, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 30",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11581,10 +11581,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1039,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 11, 15, 12, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 64",
                             RoomNumber = 16,
                             Start = new DateTime(2026, 5, 11, 14, 0, 0, 0, DateTimeKind.Local)
@@ -11592,7 +11592,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1040,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 5, 5, 9, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -11603,10 +11603,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1041,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 5, 19, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 66",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 5, 18, 0, 0, 0, DateTimeKind.Local)
@@ -11614,10 +11614,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1042,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 5, 4, 8, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 34",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11625,10 +11625,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1043,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 5, 4, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 33",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 4, 9, 0, 0, 0, DateTimeKind.Local)
@@ -11636,10 +11636,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1044,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 4, 11, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 90",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 4, 10, 0, 0, 0, DateTimeKind.Local)
@@ -11647,7 +11647,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1045,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 3, 8, 55, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -11658,10 +11658,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1046,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 3, 12, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 72",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 3, 11, 0, 0, 0, DateTimeKind.Local)
@@ -11669,10 +11669,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1047,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 5, 3, 12, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 30",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 3, 12, 0, 0, 0, DateTimeKind.Local)
@@ -11680,10 +11680,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1048,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 5, 3, 11, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 70",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 3, 11, 0, 0, 0, DateTimeKind.Local)
@@ -11691,10 +11691,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1049,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 2, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 11",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11702,7 +11702,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1050,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 5, 2, 10, 30, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -11713,10 +11713,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1051,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 5, 2, 15, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 24",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 2, 14, 0, 0, 0, DateTimeKind.Local)
@@ -11724,10 +11724,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1052,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 2, 12, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 49",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 2, 11, 0, 0, 0, DateTimeKind.Local)
@@ -11735,10 +11735,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1053,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 1, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 35",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11746,7 +11746,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1054,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 5, 1, 17, 15, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -11757,10 +11757,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1055,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 28, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 41",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11768,10 +11768,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1056,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 28, 13, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 89",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 28, 12, 0, 0, 0, DateTimeKind.Local)
@@ -11779,10 +11779,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1057,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 28, 19, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 16",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 28, 18, 0, 0, 0, DateTimeKind.Local)
@@ -11790,10 +11790,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1058,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 28, 9, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 96",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11801,10 +11801,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1059,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 27, 9, 49, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 42",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11812,7 +11812,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1060,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 27, 13, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -11823,10 +11823,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1061,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 27, 19, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 94",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 27, 18, 0, 0, 0, DateTimeKind.Local)
@@ -11834,10 +11834,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1062,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 28, 0, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 16",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 27, 23, 0, 0, 0, DateTimeKind.Local)
@@ -11845,10 +11845,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1063,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 26, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 96",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11856,7 +11856,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1064,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 25, 8, 30, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -11867,7 +11867,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1065,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 25, 14, 20, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -11878,10 +11878,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1066,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 25, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 85",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11889,10 +11889,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1067,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 25, 15, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 63",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 25, 14, 0, 0, 0, DateTimeKind.Local)
@@ -11900,10 +11900,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1068,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 24, 9, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 58",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11911,7 +11911,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1069,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 24, 11, 6, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -11922,10 +11922,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1070,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 24, 15, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 63",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 24, 14, 0, 0, 0, DateTimeKind.Local)
@@ -11933,10 +11933,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1071,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 24, 18, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 18",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 24, 17, 0, 0, 0, DateTimeKind.Local)
@@ -11944,10 +11944,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1072,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 23, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 78",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11955,7 +11955,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1073,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 4, 23, 10, 8, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -11966,10 +11966,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1074,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 23, 17, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 41",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 23, 16, 0, 0, 0, DateTimeKind.Local)
@@ -11977,10 +11977,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1075,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 23, 18, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 27",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 23, 17, 0, 0, 0, DateTimeKind.Local)
@@ -11988,10 +11988,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1076,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 22, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 47",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -11999,7 +11999,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1077,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 20, 9, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -12010,10 +12010,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1078,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 20, 12, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 22",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 20, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12021,10 +12021,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1079,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 20, 12, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 89",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 20, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12032,10 +12032,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1080,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 20, 18, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 79",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 20, 17, 0, 0, 0, DateTimeKind.Local)
@@ -12043,10 +12043,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1081,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 19, 9, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 51",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12054,10 +12054,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1082,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 19, 13, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 28",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 19, 13, 0, 0, 0, DateTimeKind.Local)
@@ -12065,10 +12065,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1083,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 19, 12, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 69",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 19, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12076,10 +12076,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1084,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 18, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 92",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12087,7 +12087,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1085,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 18, 9, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -12098,7 +12098,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1086,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 17, 9, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -12109,10 +12109,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1087,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 17, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 42",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12120,10 +12120,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1088,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 17, 13, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 37",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 17, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12131,10 +12131,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1089,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 18, 0, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 82",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 17, 23, 0, 0, 0, DateTimeKind.Local)
@@ -12142,10 +12142,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1090,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 16, 9, 16, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 20",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12153,10 +12153,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1091,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 16, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 26",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 16, 9, 0, 0, 0, DateTimeKind.Local)
@@ -12164,10 +12164,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1092,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 15, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 24",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12175,7 +12175,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1093,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 14, 8, 45, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -12186,10 +12186,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1094,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 13, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 83",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12197,10 +12197,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1095,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 13, 12, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 66",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 13, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12208,10 +12208,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1096,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 12, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 73",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12219,10 +12219,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1097,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 12, 10, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 88",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 12, 9, 0, 0, 0, DateTimeKind.Local)
@@ -12230,7 +12230,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1098,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 12, 15, 1, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -12241,10 +12241,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1099,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 13, 0, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 88",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 12, 23, 0, 0, 0, DateTimeKind.Local)
@@ -12252,10 +12252,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1100,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 11, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 12",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12263,10 +12263,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1101,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 4, 10, 8, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 37",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12274,10 +12274,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1102,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 10, 16, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 4",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 10, 15, 0, 0, 0, DateTimeKind.Local)
@@ -12285,7 +12285,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1103,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 10, 9, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -12296,10 +12296,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1104,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 9, 9, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 39",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12307,10 +12307,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1105,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 8, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 51",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12318,10 +12318,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1106,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 8, 16, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 9",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 8, 15, 0, 0, 0, DateTimeKind.Local)
@@ -12329,10 +12329,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1107,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 8, 17, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 47",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 8, 16, 0, 0, 0, DateTimeKind.Local)
@@ -12340,10 +12340,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1108,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 4, 7, 8, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 32",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12351,7 +12351,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1109,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 7, 15, 21, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -12362,10 +12362,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1110,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 6, 8, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 62",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12373,10 +12373,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1111,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 6, 8, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 51",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12384,10 +12384,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1112,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 5, 5, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 33",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12395,10 +12395,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1113,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 5, 12, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 91",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 5, 11, 0, 0, 0, DateTimeKind.Local)
@@ -12406,7 +12406,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1114,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 6, 9, 37, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -12417,10 +12417,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1115,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 6, 10, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 42",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 6, 9, 0, 0, 0, DateTimeKind.Local)
@@ -12428,10 +12428,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1116,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 5, 7, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 97",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12439,10 +12439,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1117,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "HBO",
                             End = new DateTime(2026, 5, 7, 15, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 49",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 7, 14, 0, 0, 0, DateTimeKind.Local)
@@ -12450,10 +12450,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1118,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 8, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 78",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12461,10 +12461,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1119,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 5, 8, 9, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 32",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12472,10 +12472,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1120,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 10, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 41",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12483,10 +12483,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1121,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Prime",
                             End = new DateTime(2026, 5, 10, 15, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 1",
                             RoomNumber = 17,
                             Start = new DateTime(2026, 5, 10, 15, 0, 0, 0, DateTimeKind.Local)
@@ -12494,10 +12494,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1122,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 5, 5, 9, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 18",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12505,10 +12505,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1123,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 5, 5, 12, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 34",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 5, 11, 0, 0, 0, DateTimeKind.Local)
@@ -12516,10 +12516,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1124,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 5, 16, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 55",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 5, 16, 0, 0, 0, DateTimeKind.Local)
@@ -12527,10 +12527,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1125,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 5, 9, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 83",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12538,10 +12538,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1126,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 3, 9, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 91",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12549,10 +12549,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1127,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 3, 8, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 14",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12560,10 +12560,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1128,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 5, 2, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 21",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12571,7 +12571,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1129,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 2, 11, 6, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -12582,7 +12582,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1130,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 5, 2, 18, 42, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -12593,10 +12593,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1131,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 5, 1, 9, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 43",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12604,10 +12604,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1132,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 1, 11, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 38",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 1, 10, 0, 0, 0, DateTimeKind.Local)
@@ -12615,10 +12615,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1133,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 5, 1, 15, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 27",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 1, 14, 0, 0, 0, DateTimeKind.Local)
@@ -12626,10 +12626,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1134,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 1, 15, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 18",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 1, 14, 0, 0, 0, DateTimeKind.Local)
@@ -12637,10 +12637,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1135,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 28, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 25",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12648,7 +12648,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1136,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 28, 10, 20, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -12659,10 +12659,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1137,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 28, 14, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 3",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 28, 14, 0, 0, 0, DateTimeKind.Local)
@@ -12670,7 +12670,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1138,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 4, 28, 9, 2, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -12681,7 +12681,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1139,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 27, 9, 40, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -12692,10 +12692,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1140,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 27, 11, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 83",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 27, 11, 0, 0, 0, DateTimeKind.Local)
@@ -12703,7 +12703,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1141,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 27, 11, 7, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -12714,10 +12714,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1142,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 27, 23, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 8",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 27, 23, 0, 0, 0, DateTimeKind.Local)
@@ -12725,10 +12725,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1143,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 26, 8, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 51",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12736,10 +12736,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1144,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 26, 19, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 88",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 26, 18, 0, 0, 0, DateTimeKind.Local)
@@ -12747,10 +12747,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1145,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 25, 8, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 16",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12758,10 +12758,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1146,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 25, 11, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 94",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 25, 10, 0, 0, 0, DateTimeKind.Local)
@@ -12769,7 +12769,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1147,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 25, 10, 53, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -12780,10 +12780,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1148,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 24, 9, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 78",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12791,10 +12791,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1149,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 22, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 51",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12802,10 +12802,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1150,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 22, 12, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 26",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 22, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12813,10 +12813,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1151,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 22, 13, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 35",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 22, 12, 0, 0, 0, DateTimeKind.Local)
@@ -12824,10 +12824,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1152,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 22, 23, 47, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 99",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 22, 23, 0, 0, 0, DateTimeKind.Local)
@@ -12835,10 +12835,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1153,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 21, 8, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 99",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12846,10 +12846,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1154,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 21, 19, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 12",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 21, 18, 0, 0, 0, DateTimeKind.Local)
@@ -12857,10 +12857,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1155,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 20, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 34",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12868,10 +12868,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1156,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 20, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 8",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12879,10 +12879,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1157,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 20, 17, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 53",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 20, 16, 0, 0, 0, DateTimeKind.Local)
@@ -12890,10 +12890,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1158,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 20, 11, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 80",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 20, 11, 0, 0, 0, DateTimeKind.Local)
@@ -12901,10 +12901,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1159,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 18, 8, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 36",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 18, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12912,10 +12912,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1160,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 18, 14, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 36",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 18, 13, 0, 0, 0, DateTimeKind.Local)
@@ -12923,10 +12923,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1161,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 18, 20, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 62",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 18, 20, 0, 0, 0, DateTimeKind.Local)
@@ -12934,10 +12934,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1162,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TLC",
                             End = new DateTime(2026, 4, 17, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 45",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12945,10 +12945,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1163,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 17, 12, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 12",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 17, 11, 0, 0, 0, DateTimeKind.Local)
@@ -12956,10 +12956,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1164,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 16, 9, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 97",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -12967,10 +12967,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1165,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 16, 17, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 26",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 16, 16, 0, 0, 0, DateTimeKind.Local)
@@ -12978,7 +12978,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1166,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 15, 8, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -12989,10 +12989,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1167,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 15, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 36",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13000,10 +13000,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1168,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 4, 14, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 1",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13011,10 +13011,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1169,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 14, 12, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 5",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 14, 11, 0, 0, 0, DateTimeKind.Local)
@@ -13022,7 +13022,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1170,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 13, 8, 41, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -13033,10 +13033,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1171,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 13, 10, 8, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 45",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 13, 9, 0, 0, 0, DateTimeKind.Local)
@@ -13044,10 +13044,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1172,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 13, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 41",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13055,10 +13055,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1173,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 14, 0, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 58",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 13, 23, 0, 0, 0, DateTimeKind.Local)
@@ -13066,10 +13066,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1174,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 12, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 65",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13077,10 +13077,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1175,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 12, 19, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 24",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 12, 18, 0, 0, 0, DateTimeKind.Local)
@@ -13088,10 +13088,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1176,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Animal Planet",
                             End = new DateTime(2026, 4, 11, 9, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 85",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13099,10 +13099,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1177,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 10, 9, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 91",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13110,10 +13110,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1178,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 10, 9, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 97",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 10, 9, 0, 0, 0, DateTimeKind.Local)
@@ -13121,10 +13121,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1179,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 9, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 81",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13132,7 +13132,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1180,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 9, 10, 38, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -13143,10 +13143,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1181,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 9, 9, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 60",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13154,10 +13154,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1182,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 9, 12, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 8",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 9, 11, 0, 0, 0, DateTimeKind.Local)
@@ -13165,10 +13165,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1183,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 8, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 2",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13176,10 +13176,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1184,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 8, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 9",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 8, 9, 0, 0, 0, DateTimeKind.Local)
@@ -13187,7 +13187,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1185,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 8, 11, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -13198,10 +13198,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1186,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 6, 9, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 78",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13209,10 +13209,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1187,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 6, 11, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 80",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 4, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13220,10 +13220,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1188,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 5, 9, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 34",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13231,10 +13231,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1189,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 5, 6, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 45",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13242,10 +13242,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1190,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 7, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 77",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13253,10 +13253,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1191,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "History",
                             End = new DateTime(2026, 5, 8, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 82",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13264,7 +13264,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1192,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 5, 10, 9, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -13275,10 +13275,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1193,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 5, 11, 9, 19, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 78",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13286,10 +13286,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1194,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 11, 9, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 76",
                             RoomNumber = 18,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13297,10 +13297,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1195,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 5, 5, 8, 41, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 71",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13308,10 +13308,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1196,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 5, 15, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 51",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 5, 14, 0, 0, 0, DateTimeKind.Local)
@@ -13319,10 +13319,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1197,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 5, 5, 15, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 42",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 5, 14, 0, 0, 0, DateTimeKind.Local)
@@ -13330,10 +13330,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1198,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 5, 4, 9, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 75",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 4, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13341,10 +13341,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1199,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 4, 15, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 63",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 4, 14, 0, 0, 0, DateTimeKind.Local)
@@ -13352,10 +13352,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1200,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 4, 17, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 79",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 4, 16, 0, 0, 0, DateTimeKind.Local)
@@ -13363,7 +13363,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1201,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 5, 3, 8, 55, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -13374,10 +13374,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1202,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 3, 14, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 38",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 3, 14, 0, 0, 0, DateTimeKind.Local)
@@ -13385,10 +13385,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1203,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 5, 1, 9, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 10",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13396,7 +13396,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1204,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 29, 9, 8, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -13407,10 +13407,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1205,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 28, 9, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 2",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13418,10 +13418,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1206,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 28, 12, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 91",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 28, 12, 0, 0, 0, DateTimeKind.Local)
@@ -13429,10 +13429,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1207,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 4, 28, 11, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 68",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 28, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13440,10 +13440,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1208,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 28, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 75",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13451,10 +13451,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1209,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 27, 9, 52, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 35",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13462,10 +13462,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1210,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 27, 10, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 32",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 27, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13473,10 +13473,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1211,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TV2 Comedy",
                             End = new DateTime(2026, 4, 27, 10, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 62",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 27, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13484,7 +13484,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1212,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 27, 18, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -13495,10 +13495,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1213,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 26, 8, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 40",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13506,10 +13506,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1214,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 26, 11, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 95",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 26, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13517,7 +13517,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1215,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 26, 11, 36, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -13528,10 +13528,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1216,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 25, 9, 28, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 89",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 25, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13539,7 +13539,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1217,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 25, 12, 54, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -13550,7 +13550,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1218,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 25, 19, 31, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -13561,10 +13561,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1219,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 24, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 65",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13572,10 +13572,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1220,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Eurosport 2",
                             End = new DateTime(2026, 4, 24, 14, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 67",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 24, 13, 0, 0, 0, DateTimeKind.Local)
@@ -13583,10 +13583,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1221,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 24, 19, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 16",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 24, 18, 0, 0, 0, DateTimeKind.Local)
@@ -13594,10 +13594,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1222,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 24, 11, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 63",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 24, 11, 0, 0, 0, DateTimeKind.Local)
@@ -13605,10 +13605,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1223,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 23, 8, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 73",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 23, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13616,10 +13616,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1224,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "HBO",
                             End = new DateTime(2026, 4, 22, 8, 30, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 88",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13627,10 +13627,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1225,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 21, 8, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 68",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13638,10 +13638,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1226,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 21, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 35",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 21, 9, 0, 0, 0, DateTimeKind.Local)
@@ -13649,10 +13649,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1227,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 20, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 49",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13660,10 +13660,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1228,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 20, 14, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 46",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 20, 13, 0, 0, 0, DateTimeKind.Local)
@@ -13671,10 +13671,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1229,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 4, 20, 11, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 26",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 20, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13682,10 +13682,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1230,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spektrum",
                             End = new DateTime(2026, 4, 20, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 8",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13693,10 +13693,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1231,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 17, 9, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 89",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13704,10 +13704,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1232,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 17, 14, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Romantikus",
+                            Genre = "Romantic",
                             Program = "Program 86",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 17, 13, 0, 0, 0, DateTimeKind.Local)
@@ -13715,10 +13715,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1233,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 17, 11, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 96",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 17, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13726,10 +13726,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1234,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 16, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 27",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13737,10 +13737,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1235,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 16, 9, 18, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 99",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13748,7 +13748,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1236,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 16, 21, 20, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -13759,10 +13759,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1237,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 15, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 60",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13770,10 +13770,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1238,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 15, 12, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 53",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 15, 11, 0, 0, 0, DateTimeKind.Local)
@@ -13781,10 +13781,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1239,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Minimax",
                             End = new DateTime(2026, 4, 15, 13, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 20",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 15, 12, 0, 0, 0, DateTimeKind.Local)
@@ -13792,10 +13792,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1240,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 15, 17, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 7",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 15, 17, 0, 0, 0, DateTimeKind.Local)
@@ -13803,10 +13803,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1241,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 4, 14, 9, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 30",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13814,7 +13814,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1242,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 4, 14, 10, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -13825,7 +13825,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1243,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 14, 19, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -13836,10 +13836,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1244,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 4, 14, 23, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 13",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 14, 23, 0, 0, 0, DateTimeKind.Local)
@@ -13847,10 +13847,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1245,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 13, 8, 35, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 69",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13858,10 +13858,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1246,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 12, 9, 59, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 56",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13869,10 +13869,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1247,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Fishing and Hunting",
                             End = new DateTime(2026, 4, 12, 9, 24, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 84",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13880,10 +13880,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1248,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 4, 10, 9, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 59",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13891,10 +13891,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1249,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 10, 10, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 4",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 10, 10, 0, 0, 0, DateTimeKind.Local)
@@ -13902,10 +13902,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1250,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 10, 21, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 11",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 10, 20, 0, 0, 0, DateTimeKind.Local)
@@ -13913,10 +13913,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1251,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 8, 9, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 31",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13924,10 +13924,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1252,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Cartoon Network",
                             End = new DateTime(2026, 4, 8, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 5",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13935,10 +13935,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1253,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 8, 13, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 63",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 8, 12, 0, 0, 0, DateTimeKind.Local)
@@ -13946,7 +13946,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1254,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "RTL Kettő",
                             End = new DateTime(2026, 4, 7, 9, 22, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -13957,10 +13957,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1255,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Hír TV",
                             End = new DateTime(2026, 4, 6, 8, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 89",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -13968,10 +13968,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1256,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 6, 9, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 41",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 6, 9, 0, 0, 0, DateTimeKind.Local)
@@ -13979,7 +13979,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1257,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 6, 13, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -13990,10 +13990,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1258,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "TeenNick",
                             End = new DateTime(2026, 4, 7, 0, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 15",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 4, 6, 23, 0, 0, 0, DateTimeKind.Local)
@@ -14001,10 +14001,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1259,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "VIASAT3",
                             End = new DateTime(2026, 5, 6, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 13",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14012,7 +14012,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1260,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 5, 8, 9, 57, 0, 0, DateTimeKind.Local),
                             Genre = "Reality",
@@ -14023,10 +14023,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1261,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 5, 8, 16, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 96",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 8, 15, 0, 0, 0, DateTimeKind.Local)
@@ -14034,10 +14034,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1262,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 5, 9, 8, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 22",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14045,7 +14045,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1263,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 5, 10, 9, 0, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -14056,10 +14056,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1264,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 5, 10, 13, 51, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 18",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 10, 13, 0, 0, 0, DateTimeKind.Local)
@@ -14067,10 +14067,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1265,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 5, 11, 8, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 5",
                             RoomNumber = 19,
                             Start = new DateTime(2026, 5, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14078,10 +14078,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1266,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 5, 5, 9, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 71",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 5, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14089,7 +14089,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1267,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M5",
                             End = new DateTime(2026, 5, 3, 8, 41, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -14100,7 +14100,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1268,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 2, 9, 20, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -14111,10 +14111,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1269,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 5, 2, 12, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 13",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 2, 11, 0, 0, 0, DateTimeKind.Local)
@@ -14122,10 +14122,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1270,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "NickToons",
                             End = new DateTime(2026, 5, 2, 23, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 10",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 2, 22, 0, 0, 0, DateTimeKind.Local)
@@ -14133,10 +14133,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1271,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M1",
                             End = new DateTime(2026, 5, 1, 8, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 53",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14144,10 +14144,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1272,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 30, 9, 7, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 26",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 30, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14155,10 +14155,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1273,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 29, 9, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 27",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14166,10 +14166,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1274,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 26, 8, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 75",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 26, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14177,10 +14177,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1275,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "National Geographic Wild",
                             End = new DateTime(2026, 4, 26, 11, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 13",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 26, 10, 0, 0, 0, DateTimeKind.Local)
@@ -14188,10 +14188,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1276,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 24, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 85",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 24, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14199,10 +14199,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1277,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2",
                             End = new DateTime(2026, 4, 24, 15, 37, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 60",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 24, 15, 0, 0, 0, DateTimeKind.Local)
@@ -14210,10 +14210,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1278,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 24, 20, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 22",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 24, 20, 0, 0, 0, DateTimeKind.Local)
@@ -14221,10 +14221,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1279,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "History",
                             End = new DateTime(2026, 4, 22, 8, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 72",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14232,10 +14232,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1280,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 22, 9, 25, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 9",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14243,10 +14243,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1281,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 22, 17, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 49",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 22, 16, 0, 0, 0, DateTimeKind.Local)
@@ -14254,10 +14254,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1282,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 22, 8, 55, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 98",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14265,10 +14265,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1283,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 21, 8, 48, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 37",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14276,7 +14276,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1284,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 21, 11, 49, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -14287,10 +14287,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1285,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 21, 13, 45, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 11",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 21, 12, 0, 0, 0, DateTimeKind.Local)
@@ -14298,10 +14298,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1286,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 22, 0, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 46",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 21, 23, 0, 0, 0, DateTimeKind.Local)
@@ -14309,10 +14309,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1287,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 20, 8, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 79",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14320,10 +14320,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1288,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M2",
                             End = new DateTime(2026, 4, 20, 14, 27, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 78",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 20, 13, 0, 0, 0, DateTimeKind.Local)
@@ -14331,10 +14331,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1289,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 17, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 25",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14342,7 +14342,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1290,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 17, 9, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -14353,10 +14353,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1291,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "M5",
                             End = new DateTime(2026, 4, 17, 12, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 70",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 17, 12, 0, 0, 0, DateTimeKind.Local)
@@ -14364,7 +14364,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1292,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 16, 9, 54, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -14375,10 +14375,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1293,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 16, 14, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 13",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 16, 13, 0, 0, 0, DateTimeKind.Local)
@@ -14386,10 +14386,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1294,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 15, 9, 46, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 24",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14397,10 +14397,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1295,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 15, 11, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 88",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 15, 10, 0, 0, 0, DateTimeKind.Local)
@@ -14408,10 +14408,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1296,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "ATV Spirit",
                             End = new DateTime(2026, 4, 15, 15, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 63",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 15, 14, 0, 0, 0, DateTimeKind.Local)
@@ -14419,7 +14419,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1297,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 14, 8, 50, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -14430,10 +14430,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1298,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 14, 16, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 14",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 14, 15, 0, 0, 0, DateTimeKind.Local)
@@ -14441,10 +14441,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1299,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 13, 9, 13, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 8",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14452,10 +14452,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1300,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 13, 17, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 80",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 13, 17, 0, 0, 0, DateTimeKind.Local)
@@ -14463,10 +14463,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1301,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 12, 8, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 52",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14474,7 +14474,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1302,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 12, 11, 59, 0, 0, DateTimeKind.Local),
                             Genre = "Fantasy",
@@ -14485,10 +14485,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1303,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 4, 12, 9, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 22",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 12, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14496,10 +14496,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1304,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Kids",
                             End = new DateTime(2026, 4, 11, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 80",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 11, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14507,10 +14507,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1305,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 10, 9, 53, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 83",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14518,10 +14518,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1306,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 10, 11, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 58",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 10, 10, 0, 0, 0, DateTimeKind.Local)
@@ -14529,7 +14529,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1307,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 10, 15, 55, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -14540,10 +14540,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1308,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 9, 9, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 48",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14551,7 +14551,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1309,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 9, 10, 35, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -14562,7 +14562,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1310,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 9, 15, 16, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -14573,10 +14573,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1311,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 4, 8, 9, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 95",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14584,10 +14584,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1312,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Viasat Explore",
                             End = new DateTime(2026, 4, 8, 10, 36, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 57",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 8, 10, 0, 0, 0, DateTimeKind.Local)
@@ -14595,10 +14595,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1313,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 4, 8, 16, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 48",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 8, 16, 0, 0, 0, DateTimeKind.Local)
@@ -14606,10 +14606,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1314,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nick Jr.",
                             End = new DateTime(2026, 4, 7, 8, 32, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 48",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14617,10 +14617,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1315,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M1",
                             End = new DateTime(2026, 4, 6, 9, 14, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 37",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14628,7 +14628,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1316,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT2",
                             End = new DateTime(2026, 4, 6, 15, 24, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -14639,10 +14639,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1317,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 6, 21, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 40",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 4, 6, 20, 0, 0, 0, DateTimeKind.Local)
@@ -14650,7 +14650,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1318,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FIXHD (Kizárólag online)",
                             End = new DateTime(2026, 5, 6, 8, 56, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -14661,10 +14661,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1319,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 5, 6, 11, 26, 0, 0, DateTimeKind.Local),
-                            Genre = "Mesefilm",
+                            Genre = "Animated Film",
                             Program = "Program 94",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 6, 10, 0, 0, 0, DateTimeKind.Local)
@@ -14672,10 +14672,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1320,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 5, 7, 9, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 20",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14683,10 +14683,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1321,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 5, 7, 15, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 29",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 7, 14, 0, 0, 0, DateTimeKind.Local)
@@ -14694,10 +14694,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1322,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 9, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 62",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 9, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14705,10 +14705,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1323,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "AXN",
                             End = new DateTime(2026, 5, 10, 9, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 22",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14716,10 +14716,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1324,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 10, 11, 43, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 80",
                             RoomNumber = 20,
                             Start = new DateTime(2026, 5, 10, 11, 0, 0, 0, DateTimeKind.Local)
@@ -14727,7 +14727,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1325,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 11, 9, 22, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -14738,7 +14738,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1326,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Discovery Channel",
                             End = new DateTime(2026, 5, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -14749,7 +14749,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1327,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Prime",
                             End = new DateTime(2026, 5, 5, 16, 7, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -14760,10 +14760,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1328,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Moziverzum",
                             End = new DateTime(2026, 5, 5, 13, 39, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 74",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 5, 12, 0, 0, 0, DateTimeKind.Local)
@@ -14771,10 +14771,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1329,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Disney Channel",
                             End = new DateTime(2026, 5, 3, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 49",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 3, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14782,10 +14782,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1330,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 5, 3, 16, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Családi",
+                            Genre = "Family",
                             Program = "Program 34",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 3, 16, 0, 0, 0, DateTimeKind.Local)
@@ -14793,10 +14793,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1331,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "HBO",
                             End = new DateTime(2026, 5, 2, 9, 1, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 43",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 2, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14804,10 +14804,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1332,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "M4 Sport",
                             End = new DateTime(2026, 5, 2, 12, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 14",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 2, 12, 0, 0, 0, DateTimeKind.Local)
@@ -14815,10 +14815,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1333,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Nickelodeon",
                             End = new DateTime(2026, 5, 2, 10, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 31",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 2, 10, 0, 0, 0, DateTimeKind.Local)
@@ -14826,10 +14826,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1334,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 1, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 56",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 1, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14837,10 +14837,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1335,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 5, 1, 12, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 75",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 1, 11, 0, 0, 0, DateTimeKind.Local)
@@ -14848,10 +14848,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1336,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Prime",
                             End = new DateTime(2026, 5, 1, 14, 58, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 75",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 1, 14, 0, 0, 0, DateTimeKind.Local)
@@ -14859,10 +14859,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1337,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Comedy Central",
                             End = new DateTime(2026, 5, 1, 18, 5, 0, 0, DateTimeKind.Local),
-                            Genre = "Komédia",
+                            Genre = "Comedy",
                             Program = "Program 42",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 1, 17, 0, 0, 0, DateTimeKind.Local)
@@ -14870,10 +14870,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1338,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 29, 9, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 8",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 29, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14881,10 +14881,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1339,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "AXN",
                             End = new DateTime(2026, 4, 29, 12, 15, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 16",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 29, 11, 0, 0, 0, DateTimeKind.Local)
@@ -14892,10 +14892,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1340,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 28, 9, 22, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 83",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 28, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14903,10 +14903,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1341,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 28, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 41",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 28, 9, 0, 0, 0, DateTimeKind.Local)
@@ -14914,7 +14914,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1342,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL",
                             End = new DateTime(2026, 4, 28, 22, 0, 0, 0, DateTimeKind.Local),
                             Genre = "Show",
@@ -14925,10 +14925,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1343,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 27, 9, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 87",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 27, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14936,7 +14936,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1344,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "Izaura TV",
                             End = new DateTime(2026, 4, 24, 9, 51, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -14947,10 +14947,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1345,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "National Geographic",
                             End = new DateTime(2026, 4, 24, 13, 44, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 58",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 24, 12, 0, 0, 0, DateTimeKind.Local)
@@ -14958,10 +14958,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1346,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Viasat History",
                             End = new DateTime(2026, 4, 24, 17, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 16",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 24, 16, 0, 0, 0, DateTimeKind.Local)
@@ -14969,7 +14969,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1347,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Eurosport 1",
                             End = new DateTime(2026, 4, 24, 17, 44, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -14980,10 +14980,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1348,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 22, 9, 21, 0, 0, DateTimeKind.Local),
-                            Genre = "Mese",
+                            Genre = "Fairy Tale",
                             Program = "Program 66",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 22, 8, 0, 0, 0, DateTimeKind.Local)
@@ -14991,10 +14991,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1349,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 21, 8, 56, 0, 0, DateTimeKind.Local),
-                            Genre = "Krimi",
+                            Genre = "Crime",
                             Program = "Program 94",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 21, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15002,10 +15002,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1350,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 4, 20, 9, 2, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 76",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 20, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15013,10 +15013,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1351,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 20, 11, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 71",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 20, 10, 0, 0, 0, DateTimeKind.Local)
@@ -15024,10 +15024,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1352,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "ATV",
                             End = new DateTime(2026, 4, 19, 9, 6, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 95",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 19, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15035,10 +15035,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1353,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Duna World",
                             End = new DateTime(2026, 4, 19, 14, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 36",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 19, 14, 0, 0, 0, DateTimeKind.Local)
@@ -15046,7 +15046,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1354,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 18, 9, 21, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -15057,10 +15057,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1355,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "FEM3",
                             End = new DateTime(2026, 4, 17, 9, 31, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 84",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 17, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15068,10 +15068,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1356,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Super TV2",
                             End = new DateTime(2026, 4, 16, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Dokumentum",
+                            Genre = "Documentary",
                             Program = "Program 21",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 16, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15079,7 +15079,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1357,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 16, 20, 32, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -15090,10 +15090,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1358,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Investigation Discovery",
                             End = new DateTime(2026, 4, 15, 10, 0, 0, 0, DateTimeKind.Local),
-                            Genre = "Koncert",
+                            Genre = "Concert",
                             Program = "Program 19",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 15, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15101,10 +15101,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1359,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Turbo Extra",
                             End = new DateTime(2026, 4, 15, 16, 10, 0, 0, DateTimeKind.Local),
-                            Genre = "Képregény",
+                            Genre = "Comic",
                             Program = "Program 25",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 15, 15, 0, 0, 0, DateTimeKind.Local)
@@ -15112,10 +15112,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1360,
-                            AgeLimit = "Kizárólag felnőttek számára ajánlott",
+                            AgeLimit = "Adults Only",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 15, 13, 38, 0, 0, DateTimeKind.Local),
-                            Genre = "Kaland",
+                            Genre = "Adventure",
                             Program = "Program 41",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 15, 12, 0, 0, 0, DateTimeKind.Local)
@@ -15123,10 +15123,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1361,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 14, 9, 29, 0, 0, DateTimeKind.Local),
-                            Genre = "Dráma",
+                            Genre = "Drama",
                             Program = "Program 10",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15134,7 +15134,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1362,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Sláger TV",
                             End = new DateTime(2026, 4, 14, 11, 38, 0, 0, DateTimeKind.Local),
                             Genre = "Horror",
@@ -15145,10 +15145,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1363,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Da Vinci",
                             End = new DateTime(2026, 4, 14, 9, 50, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 36",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 14, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15156,10 +15156,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1364,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "TV2 Séf",
                             End = new DateTime(2026, 4, 13, 9, 3, 0, 0, DateTimeKind.Local),
-                            Genre = "Gyerek",
+                            Genre = "Children",
                             Program = "Program 15",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15167,10 +15167,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1365,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "RTL Gold",
                             End = new DateTime(2026, 4, 13, 9, 17, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 45",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 13, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15178,10 +15178,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1366,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "History",
                             End = new DateTime(2026, 4, 13, 17, 23, 0, 0, DateTimeKind.Local),
-                            Genre = "Hír",
+                            Genre = "News",
                             Program = "Program 97",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 13, 16, 0, 0, 0, DateTimeKind.Local)
@@ -15189,10 +15189,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1367,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "VIASAT6",
                             End = new DateTime(2026, 4, 10, 9, 33, 0, 0, DateTimeKind.Local),
-                            Genre = "Szórakoztató",
+                            Genre = "Entertainment",
                             Program = "Program 43",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 10, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15200,10 +15200,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1368,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Spíler TV",
                             End = new DateTime(2026, 4, 10, 13, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Akció",
+                            Genre = "Action",
                             Program = "Program 33",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 10, 12, 0, 0, 0, DateTimeKind.Local)
@@ -15211,10 +15211,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1369,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Discovery Science",
                             End = new DateTime(2026, 4, 8, 9, 11, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 35",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15222,10 +15222,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1370,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "NickToons",
                             End = new DateTime(2026, 4, 8, 16, 42, 0, 0, DateTimeKind.Local),
-                            Genre = "Sport",
+                            Genre = "Sports",
                             Program = "Program 2",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 8, 15, 0, 0, 0, DateTimeKind.Local)
@@ -15233,7 +15233,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1371,
-                            AgeLimit = "18 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 18 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 7, 9, 47, 0, 0, DateTimeKind.Local),
                             Genre = "Sitcom",
@@ -15244,10 +15244,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1372,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Paramount Network",
                             End = new DateTime(2026, 4, 7, 10, 4, 0, 0, DateTimeKind.Local),
-                            Genre = "Talkshow",
+                            Genre = "Talk Show",
                             Program = "Program 66",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 7, 9, 0, 0, 0, DateTimeKind.Local)
@@ -15255,10 +15255,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1373,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "History",
                             End = new DateTime(2026, 4, 6, 9, 57, 0, 0, DateTimeKind.Local),
-                            Genre = "Játék",
+                            Genre = "Game Show",
                             Program = "Program 12",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 6, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15266,10 +15266,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1374,
-                            AgeLimit = "12 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 12 not recommended",
                             Channel = "Prime",
                             End = new DateTime(2026, 4, 6, 14, 40, 0, 0, DateTimeKind.Local),
-                            Genre = "Egyéb",
+                            Genre = "Other",
                             Program = "Program 38",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 4, 6, 13, 0, 0, 0, DateTimeKind.Local)
@@ -15277,7 +15277,7 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1375,
-                            AgeLimit = "Gyermekbarát program",
+                            AgeLimit = "Child-friendly Program",
                             Channel = "Zenebutik",
                             End = new DateTime(2026, 5, 5, 9, 33, 0, 0, DateTimeKind.Local),
                             Genre = "Sci-fi",
@@ -15288,10 +15288,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1376,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna World",
                             End = new DateTime(2026, 5, 7, 9, 34, 0, 0, DateTimeKind.Local),
-                            Genre = "Életmód",
+                            Genre = "Lifestyle",
                             Program = "Program 31",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15299,10 +15299,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1377,
-                            AgeLimit = "6 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 6 not recommended",
                             Channel = "Viasat Nature",
                             End = new DateTime(2026, 5, 7, 9, 9, 0, 0, DateTimeKind.Local),
-                            Genre = "Ismeretterjesztő",
+                            Genre = "Educational",
                             Program = "Program 93",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 7, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15310,10 +15310,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1378,
-                            AgeLimit = "16 éven aluliak számára nem ajánlott",
+                            AgeLimit = "Under 16 not recommended",
                             Channel = "Duna",
                             End = new DateTime(2026, 5, 8, 9, 54, 0, 0, DateTimeKind.Local),
-                            Genre = "Film",
+                            Genre = "Movie",
                             Program = "Program 49",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 8, 8, 0, 0, 0, DateTimeKind.Local)
@@ -15321,10 +15321,10 @@ namespace TVBookingMVC.Migrations
                         new
                         {
                             Id = 1379,
-                            AgeLimit = "Korhatárra való tekintet nélkül megtekinthető",
+                            AgeLimit = "General Audience",
                             Channel = "TLC",
                             End = new DateTime(2026, 5, 8, 20, 20, 0, 0, DateTimeKind.Local),
-                            Genre = "Animációs",
+                            Genre = "Animation",
                             Program = "Program 3",
                             RoomNumber = 21,
                             Start = new DateTime(2026, 5, 8, 19, 0, 0, 0, DateTimeKind.Local)
