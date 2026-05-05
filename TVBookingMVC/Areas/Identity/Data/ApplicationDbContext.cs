@@ -40,11 +40,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                     {
                         Id = bookingId++,
                         Program = $"Program {rng.Next(1, 100)}",
-                        Channel = Globals.Channels[rng.Next(0, Globals.Channels.Length)],
-                        Genre = Globals.Genres[rng.Next(0, Globals.Genres.Length)],
+                        Channel = BookingReferenceData.Channels[rng.Next(0, BookingReferenceData.Channels.Length)],
+                        Genre = BookingReferenceData.Genres[rng.Next(0, BookingReferenceData.Genres.Length)],
                         Start = start,
                         End = start.AddMinutes(rng.Next(30, 121)),
-                        AgeLimit = Globals.AgeLimits[rng.Next(0, Globals.AgeLimits.Length)],
+                        AgeLimit = BookingReferenceData.AgeLimits[rng.Next(0, BookingReferenceData.AgeLimits.Length)],
                         RoomNumber = i,
                     });
                 }
@@ -62,11 +62,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                     {
                         Id = bookingId++,
                         Program = $"Program {rng.Next(1, 100)}",
-                        Channel = Globals.Channels[rng.Next(0, Globals.Channels.Length)],
-                        Genre = Globals.Genres[rng.Next(0, Globals.Genres.Length)],
+                        Channel = BookingReferenceData.Channels[rng.Next(0, BookingReferenceData.Channels.Length)],
+                        Genre = BookingReferenceData.Genres[rng.Next(0, BookingReferenceData.Genres.Length)],
                         Start = start,
                         End = start.AddMinutes(rng.Next(30, 121)),
-                        AgeLimit = Globals.AgeLimits[rng.Next(0, Globals.AgeLimits.Length)],
+                        AgeLimit = BookingReferenceData.AgeLimits[rng.Next(0, BookingReferenceData.AgeLimits.Length)],
                         RoomNumber = i,
                     });
                 }
