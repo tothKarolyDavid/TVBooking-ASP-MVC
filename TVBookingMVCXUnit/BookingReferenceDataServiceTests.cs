@@ -10,8 +10,8 @@ public class BookingReferenceDataServiceTests
         var service = new BookingReferenceDataService();
 
         Assert.NotEmpty(service.AgeLimits);
-        Assert.Contains("Gyermekbarát program", service.AgeLimits);
-        Assert.Contains("18 éven aluliak számára nem ajánlott", service.AgeLimits);
+        Assert.Contains("Child-friendly Program", service.AgeLimits);
+        Assert.Contains("Under 18 not recommended", service.AgeLimits);
     }
 
     [Fact]
@@ -31,9 +31,9 @@ public class BookingReferenceDataServiceTests
         var service = new BookingReferenceDataService();
 
         Assert.NotEmpty(service.Genres);
-        Assert.Contains("Akció", service.Genres);
-        Assert.Contains("Dokumentum", service.Genres);
-        Assert.Contains("Sport", service.Genres);
+        Assert.Contains("Action", service.Genres);
+        Assert.Contains("Documentary", service.Genres);
+        Assert.Contains("Sports", service.Genres);
     }
 
     [Fact]

@@ -3,13 +3,13 @@
     public static class BookingReferenceData
     {
         public static string[] AgeLimits = [
-            "Gyermekbarát program",
-            "Korhatárra való tekintet nélkül megtekinthető",
-            "6 éven aluliak számára nem ajánlott",
-            "12 éven aluliak számára nem ajánlott",
-            "16 éven aluliak számára nem ajánlott",
-            "18 éven aluliak számára nem ajánlott",
-            "Kizárólag felnőttek számára ajánlott",
+            "Child-friendly Program",
+            "General Audience",
+            "Under 6 not recommended",
+            "Under 12 not recommended",
+            "Under 16 not recommended",
+            "Under 18 not recommended",
+            "Adults Only",
         ];
 
         public static string[] Channels = [
@@ -75,35 +75,35 @@
 
         public static string[] Genres =
         [
-            "Akció",
-            "Animációs",
-            "Családi",
-            "Dokumentum",
-            "Dráma",
-            "Életmód",
+            "Action",
+            "Animation",
+            "Family",
+            "Documentary",
+            "Drama",
+            "Lifestyle",
             "Fantasy",
-            "Film",
-            "Gyerek",
-            "Hír",
+            "Movie",
+            "Children",
+            "News",
             "Horror",
-            "Ismeretterjesztő",
-            "Játék",
-            "Kaland",
-            "Képregény",
-            "Komédia",
-            "Koncert",
-            "Krimi",
-            "Mese",
-            "Mesefilm",
+            "Educational",
+            "Game Show",
+            "Adventure",
+            "Comic",
+            "Comedy",
+            "Concert",
+            "Crime",
+            "Fairy Tale",
+            "Animated Film",
             "Reality",
-            "Romantikus",
+            "Romantic",
             "Sci-fi",
             "Show",
             "Sitcom",
-            "Sport",
-            "Szórakoztató",
-            "Talkshow",
-            "Egyéb"
+            "Sports",
+            "Entertainment",
+            "Talk Show",
+            "Other"
         ];
     }
 }
