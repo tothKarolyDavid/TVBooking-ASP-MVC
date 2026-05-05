@@ -71,14 +71,25 @@ public class BookingController : Controller
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
 
+        var now = DateTime.Now;
+        var startTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(1);
+        var endTime = startTime.AddHours(1);
+
+        var defaultBooking = new Booking
+        {
+            Start = startTime,
+            End = endTime
+        };
+
         if (User.IsInRole(RoleNames.Admin))
         {
-            return View();
+            return View(defaultBooking);
         }
         else
         {
             var roomNumber = _context.Users.Where(u => User.Identity != null && u.UserName == User.Identity.Name).Select(u => u.RoomNumber).FirstOrDefault();
-            return View(new Booking { RoomNumber = roomNumber });
+            defaultBooking.RoomNumber = roomNumber;
+            return View(defaultBooking);
         }
     }
 
@@ -338,15 +349,12 @@ public class BookingController : Controller
         });
 
         var fileName = $"bookings_{date:yyyy-MM-dd}.xml";
-        using var stream = new MemoryStream();
+        var stream = new MemoryStream();
         doc.Save(stream);
         stream.Position = 0;
 
         var count = bookings.Count;
-        var file = File(stream, "application/xml", fileName);
-        
-        TempData["Message"] = $"Successfully exported {count} bookings to XML";
-        return file;
+        return File(stream, "application/xml", fileName);
     }
 
     private async Task<int?> GetCurrentUserRoomNumberAsync()
