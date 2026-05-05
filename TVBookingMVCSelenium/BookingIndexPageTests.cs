@@ -1,23 +1,53 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using TVBookingMVC;
 
 namespace TVBookingMVCSelenium;
 
-public class BookingIndexPageTests
+public class SeleniumWebApplicationFactory : WebApplicationFactory<Program>
 {
-    private const string BaseUrl = "http://localhost:7233/";
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
+    {
+        builder.UseEnvironment("Testing");
+    }
+}
 
-    private static IWebDriver CreateDriver()
+public class BookingIndexPageTests : IClassFixture<SeleniumWebApplicationFactory>
+{
+    private readonly SeleniumWebApplicationFactory _factory;
+    private string _baseUrl = null!;
+
+    public BookingIndexPageTests(SeleniumWebApplicationFactory factory)
+    {
+        _factory = factory;
+    }
+
+    private IWebDriver CreateDriver()
     {
         var options = new ChromeOptions();
+        options.AddArgument("--headless");
+        options.AddArgument("--no-sandbox");
+        options.AddArgument("--disable-dev-shm-usage");
         return new ChromeDriver(options);
+    }
+
+    private string GetBaseUrl()
+    {
+        if (_baseUrl == null)
+        {
+            var server = _factory.Server;
+            _baseUrl = server.BaseAddress.ToString().TrimEnd('/');
+        }
+        return _baseUrl;
     }
 
     [Fact]
     public void IndexBookingsTableHasRows()
     {
         using var driver = CreateDriver();
-        driver.Navigate().GoToUrl(BaseUrl);
+        driver.Navigate().GoToUrl(GetBaseUrl());
 
         var table = driver.FindElement(By.ClassName("table"));
         Assert.NotNull(table);
@@ -30,7 +60,7 @@ public class BookingIndexPageTests
     public void FilterBySingleAgeLimit_ReturnsOnlyMatchingRows()
     {
         using var driver = CreateDriver();
-        driver.Navigate().GoToUrl(BaseUrl);
+        driver.Navigate().GoToUrl(GetBaseUrl());
 
         driver.FindElement(By.XPath("//input[@value='Gyermekbarát program']")).Click();
         driver.FindElement(By.XPath("//input[@value='Filter']")).Click();
@@ -49,7 +79,7 @@ public class BookingIndexPageTests
     public void FilterByMultipleAgeLimits_ReturnsAllMatchingRows()
     {
         using var driver = CreateDriver();
-        driver.Navigate().GoToUrl(BaseUrl);
+        driver.Navigate().GoToUrl(GetBaseUrl());
 
         driver.FindElement(By.XPath("//input[@value='Gyermekbarát program']")).Click();
         driver.FindElement(By.XPath("//input[@value='Korhatárra való tekintet nélkül megtekinthető']")).Click();
