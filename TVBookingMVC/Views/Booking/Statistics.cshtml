@@ -5,26 +5,44 @@
     Layout = "_Layout";
 }
 
-<h2>Statistics</h2>
+<div class="page-header page-content">
+    <h1><i class="bi bi-bar-chart"></i> @ViewBag.Title</h1>
+    <p class="text-muted">Booking analytics and insights</p>
+</div>
 
-<h3>Viewers by channel</h3>
-<div class="row mb-3">
-    <div class="col-md-6">
-        <canvas id="channelViewers" width="400" height="400"></canvas>
+<div class="row mb-4">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Viewers by Channel</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="channelViewers" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Viewers by Genre</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="genreViewers" width="400" height="400"></canvas>
+            </div>
+        </div>
     </div>
 </div>
 
-<h3>Viewers by genre</h3>
-<div class="row mb-3">
-    <div class="col-md-6">
-        <canvas id="genreViewers" width="400" height="400"></canvas>
-    </div>
-</div>
-
-<h3>View duration in minutes in the last 30 days</h3>
-<div class="row mb-3">
-    <div class="col-md-12">
-        <canvas id="dateViewers" width="400" height="400"></canvas>
+<div class="row mb-4 mb-lg-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-graph-up me-2"></i>View Duration Over Time (Last 30 Days)</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="dateViewers" width="400" height="200"></canvas>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -32,4 +50,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script id="statistics-data" type="application/json">@Html.Raw(Json.Serialize(Model))</script>
     <script src="~/js/booking-statistics.js" asp-append-version="true"></script>
+    
+    <script>
+        Chart.defaults.color = '#a0a0a0';
+        Chart.defaults.borderColor = '#404040';
+    </script>
 }

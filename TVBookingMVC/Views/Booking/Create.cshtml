@@ -1,7 +1,7 @@
 ﻿@model TVBookingMVC.Models.Booking
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Booking";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     var channels = ViewBag.Channels as IEnumerable<string> ?? Array.Empty<string>();
@@ -9,77 +9,119 @@
     var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
 }
 
-<h1>Create</h1>
+<div class="page-header page-content">
+    <h1><i class="bi bi-calendar-plus"></i> @ViewData["Title"]</h1>
+</div>
 
-<h4>Booking</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Program" class="control-label"></label>
-                <input asp-for="Program" class="form-control" />
-                <span asp-validation-for="Program" class="text-danger"></span>
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Booking Details</h5>
             </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    
+                    <div class="form-floating mb-3">
+                        <input asp-for="Program" class="form-control" placeholder="Program name" />
+                        <label asp-for="Program" class="form-label">Program Name</label>
+                        <span asp-validation-for="Program" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group">
-                <label asp-for="Channel" class="control-label"></label>
-                <select asp-for="Channel" class="form-control" asp-items="@(new SelectList(channels))"></select>
-                <span asp-validation-for="Channel" class="text-danger"></span>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <select asp-for="Channel" class="form-select" asp-items="@(new SelectList(channels))">
+                                    <option value="">Select Channel</option>
+                                </select>
+                                <label asp-for="Channel" class="form-label">Channel</label>
+                                <span asp-validation-for="Channel" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <select asp-for="Genre" class="form-select" asp-items="@(new SelectList(genres))">
+                                    <option value="">Select Genre</option>
+                                </select>
+                                <label asp-for="Genre" class="form-label">Genre</label>
+                                <span asp-validation-for="Genre" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input asp-for="Start" class="form-control" type="datetime-local" />
+                                <label asp-for="Start" class="form-label">Start Time</label>
+                                <span asp-validation-for="Start" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input asp-for="End" class="form-control" type="datetime-local" />
+                                <label asp-for="End" class="form-label">End Time</label>
+                                <span asp-validation-for="End" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <select asp-for="AgeLimit" class="form-select" asp-items="@(new SelectList(ageLimits))">
+                                    <option value="">Select Age Limit</option>
+                                </select>
+                                <label asp-for="AgeLimit" class="form-label">Age Limit</label>
+                                <span asp-validation-for="AgeLimit" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                @if (User.IsInRole(RoleNames.Admin))
+                                {
+                                    <input asp-for="RoomNumber" class="form-control" placeholder="Room number" />
+                                }
+                                else
+                                {
+                                    <input asp-for="RoomNumber" class="form-control" readonly />
+                                }
+                                <label asp-for="RoomNumber" class="form-label">Room Number</label>
+                                <span asp-validation-for="RoomNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-lg me-2"></i>Create Booking
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-x-lg me-2"></i>Cancel
+                        </a>
+                    </div>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Genre" class="control-label"></label>
-                <select asp-for="Genre" class="form-control" asp-items="@(new SelectList(genres))"></select>
-                <span asp-validation-for="Genre" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-clock me-2"></i>Available Time Slots</h5>
             </div>
-
-
-            <div class="form-group">
-                <label asp-for="Start" class="control-label"></label>
-                <input asp-for="Start" class="form-control" type="datetime-local" />
-                <span asp-validation-for="Start" class="text-danger"></span>
+            <div class="card-body">
+                <p class="text-muted">View <a asp-action="FreeTimeSlots">available time slots</a> to find the best time for your booking.</p>
             </div>
-
-            <div class="form-group">
-                <label asp-for="End" class="control-label"></label>
-                <input asp-for="End" class="form-control" type="datetime-local" />
-                <span asp-validation-for="End" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="AgeLimit" class="control-label"></label>
-
-                <select asp-for="AgeLimit" class="form-control" asp-items="@(new SelectList(ageLimits))"></select>
-
-                <span asp-validation-for="AgeLimit" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="RoomNumber" class="control-label"></label>
-
-                @if (User.IsInRole(RoleNames.Admin))
-                {
-                    <input asp-for="RoomNumber" class="form-control" />
-                }
-                else
-                {
-                    <input asp-for="RoomNumber" class="form-control" readonly />
-                }
-
-                <span asp-validation-for="RoomNumber" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="mt-3">
+    <a asp-action="Index" class="btn btn-link">
+        <i class="bi bi-arrow-left me-1"></i>Back to List
+    </a>
 </div>
 
 @section Scripts {
