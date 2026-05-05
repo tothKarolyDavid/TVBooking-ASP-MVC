@@ -24,7 +24,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
 
         var rng = new Random(41205);
-        var baseDate = new DateTime(2024, 2, 1, 8, 0, 0, DateTimeKind.Unspecified);
+        var baseDate = DateTime.Today.AddHours(8);
         int bookingId = 10;
         for (int i = 2; i < 22; i++)
         {
