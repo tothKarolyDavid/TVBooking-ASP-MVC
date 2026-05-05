@@ -1,63 +1,66 @@
 ﻿# TV Booking System
 
-This is a simple TV booking system for a hotel that has only one TV in the common area.
-The system has two interfaces, one for the admin and one for the guests. 
-The admin can add new guests and bookings, and they can also view statistics about the bookings. 
-The guests can add new bookings to their own room and they can also view their own bookings.
+ASP.NET Core MVC app for booking a hotel's single communal TV. Guests reserve time slots from their room; admins manage everything.
+
+## Screenshots
+
+**Booking list**
+![Booking list](Docs/index.png)
+
+**Statistics dashboard**
+![Statistics](Docs/statistics.png)
 
 ## Features
 
-- Everyone:
-  - View all bookings
-  - View free time slots
-  - View bookings by age rating
+### Everyone
 
-- Admin:
-  - Add new guests
-  - Add new bookings to any room
-  - View statistics about the bookings
-  - Export all the bookings to an XML from a given day
+- Browse all bookings
+- View free time slots
+- Filter bookings by age rating
 
-- Guests:
-  - Login with their email and room number
-  - Add new bookings to their own room        
-  - View their own bookings
-  - Get a notification 15 minutes before the start of a booking
+### Admin
+
+- Register new guests
+- Create, edit, and delete any booking
+- Booking statistics dashboard (channel/genre breakdown, 30-day trends)
+- Export daily bookings to XML
+
+### Guests
+
+- Login with email + room number (no password needed)
+- Create bookings for their own room
+- View their bookings
+- On-page banner when a booking starts within 15 minutes
 
 ## Prerequisites
 
-- .NET 10 SDK
-- SQL Server (localdb or full instance)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+- SQLite (included, no install needed)
 
 ## Local setup
 
-1. Update the connection string in [TVBookingMVC/appsettings.json](TVBookingMVC/appsettings.json) if needed.
-2. Apply migrations and seed data:
-  - `dotnet ef database update --project TVBookingMVC`
+```sh
+dotnet ef database update --project TVBookingMVC
+dotnet run --project TVBookingMVC
+```
 
-Seeded identities:
-- Admin: `admin@hotel.com` (room 999)
-- Guest: `room2@hotel.com` (room 2)
+The app uses SQLite (`TVBookingMVC.db`) — no database server required.
 
-All seeded users use password `Password1!`.
+Seeded accounts:
 
-## Run
+| Role  | Email           | Room |
+| ----- | --------------- | ---- |
+| Admin | admin@hotel.com  | 999  |
+| Guest | room2@hotel.com  | 2    |
 
-`dotnet run --project TVBookingMVC`
-
-Default HTTPS URL is listed in [TVBookingMVC/Properties/launchSettings.json](TVBookingMVC/Properties/launchSettings.json).
+HTTPS URL is configured in [TVBookingMVC/Properties/launchSettings.json](TVBookingMVC/Properties/launchSettings.json).
 
 ## Tests
 
-- Unit tests: `dotnet test TVBookingMVCXUnit`
-- Selenium tests: `dotnet test TVBookingMVCSelenium`
+```sh
+# Unit tests
+dotnet test TVBookingMVCXUnit
 
-Selenium tests expect the app to already be running at the URL above and require Chrome/ChromeDriver.
-	
-## Screenshots
-
-### Home page
-![Home page](Docs/index.png)
-
-### Statistics page
-![Statistics page](Docs/statistics.png)
+# Selenium tests (app must be running, Chrome/ChromeDriver required)
+dotnet test TVBookingMVCSelenium
+```
