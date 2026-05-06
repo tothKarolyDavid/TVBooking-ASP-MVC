@@ -1,0 +1,50 @@
+@model TVBookingMVC.Models.Booking
+
+@{
+    ViewData["Title"] = "Booking Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header page-content">
+    <h1><i class="bi bi-info-circle"></i> @ViewData["Title"]</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-card-text me-2"></i>@Model.Program</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Program</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Program)</dd>
+
+                    <dt class="col-sm-4">Channel</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Channel)</dd>
+
+                    <dt class="col-sm-4">Genre</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Genre)</dd>
+
+                    <dt class="col-sm-4">Start</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Start)</dd>
+
+                    <dt class="col-sm-4">End</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.End)</dd>
+
+                    <dt class="col-sm-4">Age Limit</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.AgeLimit)</dd>
+
+                    <dt class="col-sm-4">Room Number</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.RoomNumber)</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Index" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i>Back to List
+    </a>
+</div>
