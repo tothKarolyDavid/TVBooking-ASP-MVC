@@ -17,8 +17,12 @@ public static class IdentitySeedingExtensions
             await roleManager.CreateAsync(new IdentityRole(RoleNames.Admin));
         }
 
-        await EnsureUserAsync(userManager, "admin@hotel.com", 999, assignAdmin: true);
+        await EnsureUserAsync(userManager, "admin@hotel.com", 0, assignAdmin: true);
         await EnsureUserAsync(userManager, "room2@hotel.com", 2, assignAdmin: false);
+        for (int room = 3; room <= 21; room++)
+        {
+            await EnsureUserAsync(userManager, $"room{room}@hotel.com", room, assignAdmin: false);
+        }
     }
 
     private static async Task EnsureUserAsync(UserManager<ApplicationUser> userManager, string email, int roomNumber, bool assignAdmin)
