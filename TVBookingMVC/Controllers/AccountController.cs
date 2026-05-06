@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
+using TVBookingMVC.Constants;
 using TVBookingMVC.Models;
 
 namespace TVBookingMVC.Controllers;
@@ -28,6 +29,11 @@ public class AccountController : Controller
     {
         var user = await _userManager.GetUserAsync(User);
         if (user == null)
+        {
+            return RedirectToAction("Index", "Booking");
+        }
+
+        if (await _userManager.IsInRoleAsync(user, RoleNames.Admin))
         {
             return RedirectToAction("Index", "Booking");
         }
