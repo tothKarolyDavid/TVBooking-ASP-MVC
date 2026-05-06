@@ -646,6 +646,20 @@ table.dataTable thead th.sorting_desc:after {
   color: var(--info);
 }
 
+.alert-upcoming {
+  background: #1e1e2e;
+  border-color: #45475a;
+  color: #cdd6f4;
+  border-radius: 0;
+}
+.alert-upcoming ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+.alert-upcoming .btn-close {
+  filter: invert(1);
+}
+
 /* Validation summary */
 .validation-summary-errors {
   background: rgba(239, 68, 68, 0.1);
@@ -769,7 +783,7 @@ canvas {
   max-width: 1200px;
 }
 
-<!-- Main content area -->
+/* Main content area */
 main {
   min-height: calc(100vh - 200px);
   padding-top: 1rem;

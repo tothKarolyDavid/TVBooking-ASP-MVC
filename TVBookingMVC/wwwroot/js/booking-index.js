@@ -37,15 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
     lines.push('</ul>');
 
     var alert = document.createElement('div');
-    alert.className = 'alert alert-warning alert-dismissible fade show';
+    alert.className = 'alert alert-upcoming alert-dismissible fade show mb-0 rounded-0';
     alert.setAttribute('role', 'alert');
     alert.innerHTML = lines.join('') + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-    alert.style.position = 'fixed';
-    alert.style.top = '1rem';
-    alert.style.right = '1rem';
-    alert.style.zIndex = '9999';
-    alert.style.maxWidth = '400px';
-    document.body.appendChild(alert);
+    var header = document.querySelector('header');
+    header.insertAdjacentElement('afterend', alert);
 
     setTimeout(function () {
         if (alert.parentNode) {
