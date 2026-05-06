@@ -9,6 +9,10 @@
     var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
 }
 
+@section Head {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+}
+
 <div class="page-header page-content">
     <h1><i class="bi bi-calendar-plus"></i> @ViewData["Title"]</h1>
 </div>
@@ -53,14 +57,14 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="form-floating">
-                                <input asp-for="Start" class="form-control" type="datetime-local" />
+                                <input asp-for="Start" class="form-control" type="text" asp-format="{0:yyyy/MM/dd HH:mm}" placeholder="yyyy/MM/dd HH:mm" />
                                 <label asp-for="Start" class="form-label">Start Time</label>
                                 <span asp-validation-for="Start" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-floating">
-                                <input asp-for="End" class="form-control" type="datetime-local" />
+                                <input asp-for="End" class="form-control" type="text" asp-format="{0:yyyy/MM/dd HH:mm}" placeholder="yyyy/MM/dd HH:mm" />
                                 <label asp-for="End" class="form-label">End Time</label>
                                 <span asp-validation-for="End" class="text-danger"></span>
                             </div>
@@ -128,7 +132,20 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
+        $.validator.methods.date = function(value, element) {
+            return this.optional(element) || /^\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}$/.test(value);
+        };
+
+        flatpickr('[name="Start"], [name="End"]', {
+            enableTime: true,
+            dateFormat: "Y/m/d H:i",
+            time_24hr: true,
+            minuteIncrement: 1,
+            allowInput: true
+        });
+
         function addValidationClasses() {
             var fields = ['Program', 'Channel', 'Genre', 'Start', 'End', 'AgeLimit', 'RoomNumber'];
             fields.forEach(function(field) {
