@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Free Time Slots";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var returnAgeLimits = ViewBag.ReturnAgeLimits as string[] ?? Array.Empty<string>();
+    var returnQuery = string.Join("&", returnAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
+    var returnQueryPrefix = !string.IsNullOrEmpty(returnQuery) ? "?" + returnQuery : "";
 }
 
 <div class="page-header page-content">
@@ -24,8 +28,8 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@item.Start.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@item.End.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@item.Start.ToString("yyyy/MM/dd HH:mm")</td>
+                        <td>@item.End.ToString("yyyy/MM/dd HH:mm")</td>
                         <td>
                             @{
                                 var duration = item.End - item.Start;
@@ -49,10 +53,10 @@
 </div>
 
 <div class="mt-3">
-    <a asp-action="Create" class="btn btn-primary">
+    <a asp-action="Create" asp-route-ageLimit="@ViewBag.ReturnAgeLimits" class="btn btn-primary">
         <i class="bi bi-plus-lg me-1"></i>Create Booking
     </a>
-    <a asp-action="Index" class="btn btn-outline-secondary">
+    <a href="@Url.Action("Index")@returnQueryPrefix" class="btn btn-outline-secondary">
         <i class="bi bi-arrow-left me-1"></i>Back to List
     </a>
 </div>
