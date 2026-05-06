@@ -46,13 +46,45 @@
     </div>
 </div>
 
+<div class="row mb-4 mb-lg-5">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-download me-2"></i>XML Export</h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Export bookings to XML for a specific date</p>
+                <form asp-action="XmlExport" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Date</label>
+                        <input class="form-control" type="text" name="Date" value="@DateTime.Now.ToString("yyyy/MM/dd")" placeholder="yyyy/MM/dd" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-download me-2"></i>Export to XML
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Head {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+}
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script id="statistics-data" type="application/json">@Html.Raw(Json.Serialize(Model))</script>
     <script src="~/js/booking-statistics.js" asp-append-version="true"></script>
     
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         Chart.defaults.color = '#a0a0a0';
         Chart.defaults.borderColor = '#404040';
+
+        flatpickr('[name="Date"]', {
+            dateFormat: "Y/m/d",
+            allowInput: true
+        });
     </script>
 }
