@@ -62,18 +62,45 @@ public class BookingQueryServiceTests
     }
 
     [Fact]
-    public async Task GetUserBookingsAsync_ReturnsOnlyBookingsForRoomNumber()
+    public async Task GetFilteredBookingsAsync_FiltersByRoomNumber()
     {
         var context = CreateInMemoryContext();
         var service = new BookingQueryService(context);
 
-        var result = await service.GetUserBookingsAsync(2);
+        var result = await service.GetFilteredBookingsAsync(roomNumber: 2);
 
         Assert.NotNull(result);
         foreach (var booking in result)
         {
             Assert.Equal(2, booking.RoomNumber);
         }
+    }
+
+    [Fact]
+    public async Task GetFilteredBookingsAsync_FiltersByAgeLimitsAndRoomNumber()
+    {
+        var context = CreateInMemoryContext();
+        var service = new BookingQueryService(context);
+
+        var result = await service.GetFilteredBookingsAsync(["Gyermekbarát program"], 2);
+
+        Assert.NotNull(result);
+        foreach (var booking in result)
+        {
+            Assert.Equal(2, booking.RoomNumber);
+            Assert.Equal("Gyermekbarát program", booking.AgeLimit);
+        }
+    }
+
+    [Fact]
+    public async Task GetFilteredBookingsAsync_WithNoFilters_ReturnsAllBookings()
+    {
+        var context = CreateInMemoryContext();
+        var service = new BookingQueryService(context);
+
+        var result = await service.GetFilteredBookingsAsync();
+
+        Assert.NotNull(result);
     }
 
     [Fact]

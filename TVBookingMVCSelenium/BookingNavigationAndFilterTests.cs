@@ -47,7 +47,7 @@ public class BookingNavigationAndFilterTests : IClassFixture<SeleniumWebApplicat
     }
 
     [Fact]
-    public void UserBookingsPageShowsOnlyCurrentRoomBookings()
+    public void MyBookingsFilterShowsOnlyCurrentRoomBookings()
     {
         using var driver = CreateDriver();
         driver.Navigate().GoToUrl(GetBaseUrl() + "/Identity/Account/Login");
@@ -56,7 +56,7 @@ public class BookingNavigationAndFilterTests : IClassFixture<SeleniumWebApplicat
         driver.FindElement(By.Id("roomnumber")).SendKeys("2");
         driver.FindElement(By.Id("login-submit")).Click();
 
-        driver.Navigate().GoToUrl(GetBaseUrl() + "/Booking/UserBookings");
+        driver.Navigate().GoToUrl(GetBaseUrl() + "/Booking?myBookings=true");
 
         var rows = driver.FindElements(By.CssSelector(".table tbody tr"));
 
