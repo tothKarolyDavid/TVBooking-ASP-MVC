@@ -345,9 +345,9 @@ public class BookingController : Controller
     }
 
     [Authorize(Roles = RoleNames.Admin)]
-    public async Task<IActionResult> Statistics()
+    public async Task<IActionResult> Statistics(DateTime? dateFrom = null, DateTime? dateTo = null)
     {
-        return View(await _bookingQueryService.GetStatisticsAsync());
+        return View(await _bookingQueryService.GetStatisticsAsync(dateFrom, dateTo));
     }
 
     [HttpPost, ActionName("XmlExport")]

@@ -10,37 +10,102 @@
     <p class="text-muted">Booking analytics and insights</p>
 </div>
 
-<div class="row mb-4">
-    <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Viewers by Channel</h5>
-            </div>
+<div class="row g-3 mb-4">
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card text-center h-100">
             <div class="card-body">
-                <canvas id="channelViewers" width="400" height="400"></canvas>
+                <h6 class="card-title text-muted mb-1">Total Bookings</h6>
+                <span class="fs-3 fw-bold">@Model.TotalBookings</span>
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Viewers by Genre</h5>
-            </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card text-center h-100">
             <div class="card-body">
-                <canvas id="genreViewers" width="400" height="400"></canvas>
+                <h6 class="card-title text-muted mb-1">Total Minutes</h6>
+                <span class="fs-3 fw-bold">@Model.TotalMinutes</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted mb-1">Active Channels</h6>
+                <span class="fs-3 fw-bold">@Model.ActiveChannels</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted mb-1">Genres</h6>
+                <span class="fs-3 fw-bold">@Model.GenreCount</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted mb-1">Popular Channel</h6>
+                <span class="fs-5 fw-bold d-block text-truncate" title="@Model.MostPopularChannel">@Model.MostPopularChannel</span>
+                <small class="text-muted">@Model.MostPopularChannelBookings bookings</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted mb-1">Popular Genre</h6>
+                <span class="fs-5 fw-bold d-block text-truncate" title="@Model.MostPopularGenre">@Model.MostPopularGenre</span>
+                <small class="text-muted">@Model.MostPopularGenreBookings bookings</small>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row mb-4 mb-lg-5">
-    <div class="col-12">
+<hr class="my-4" />
+
+<div class="row g-3 mb-4">
+    <div class="col-12 col-md-6 mb-4">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-graph-up me-2"></i>View Duration Over Time (Last 30 Days)</h5>
+                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Bookings by Channel</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="channelViewers" width="400" height="400"></canvas>
+                <p id="channelViewers-empty" class="text-muted text-center d-none">No data available</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Bookings by Genre</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="genreViewers" width="400" height="400"></canvas>
+                <p id="genreViewers-empty" class="text-muted text-center d-none">No data available</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-4 mb-lg-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <h5 class="mb-0"><i class="bi bi-graph-up me-2"></i>Minutes Booked Over Time</h5>
+                <form class="d-flex align-items-center gap-2" method="get">
+                    <label class="form-label mb-0 text-nowrap small">From</label>
+                    <input class="form-control form-control-sm flatpickr-input" type="text" name="dateFrom" value="@(Model.DateFrom?.ToString("yyyy/MM/dd"))" placeholder="yyyy/MM/dd" style="width:110px" />
+                    <label class="form-label mb-0 text-nowrap small">To</label>
+                    <input class="form-control form-control-sm flatpickr-input" type="text" name="dateTo" value="@(Model.DateTo?.ToString("yyyy/MM/dd"))" placeholder="yyyy/MM/dd" style="width:110px" />
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                </form>
             </div>
             <div class="card-body">
                 <canvas id="dateViewers" width="400" height="200"></canvas>
+                <p id="dateViewers-empty" class="text-muted text-center d-none">No data available</p>
             </div>
         </div>
     </div>
@@ -57,7 +122,7 @@
                 <form asp-action="XmlExport" method="post">
                     <div class="mb-3">
                         <label class="form-label">Date</label>
-                        <input class="form-control" type="text" name="Date" value="@DateTime.Now.ToString("yyyy/MM/dd")" placeholder="yyyy/MM/dd" />
+                        <input class="form-control flatpickr-input" type="text" name="Date" value="@DateTime.Now.ToString("yyyy/MM/dd")" placeholder="yyyy/MM/dd" />
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <i class="bi bi-download me-2"></i>Export to XML
@@ -76,13 +141,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script id="statistics-data" type="application/json">@Html.Raw(Json.Serialize(Model))</script>
     <script src="~/js/booking-statistics.js" asp-append-version="true"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         Chart.defaults.color = '#a0a0a0';
         Chart.defaults.borderColor = '#404040';
 
-        flatpickr('[name="Date"]', {
+        flatpickr('.flatpickr-input', {
             dateFormat: "Y/m/d",
             allowInput: true
         });

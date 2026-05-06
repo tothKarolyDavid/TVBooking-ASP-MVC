@@ -12,7 +12,7 @@ public interface IBookingQueryService
     Task<List<Booking>> GetBookingsByAgeLimitsAsync(IEnumerable<string> ageLimits);
     Task<List<Booking>> GetFilteredBookingsAsync(string[]? ageLimits = null, int? roomNumber = null);
     Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync();
-    Task<StatisticsViewModel> GetStatisticsAsync();
+    Task<StatisticsViewModel> GetStatisticsAsync(DateTime? dateFrom = null, DateTime? dateTo = null);
     Task<List<Booking>> GetBookingsForDateAsync(DateTime date);
 }
 
@@ -98,34 +98,60 @@ public sealed class BookingQueryService : IBookingQueryService
         return Task.FromResult(freeTimeSlots);
     }
 
-    public Task<StatisticsViewModel> GetStatisticsAsync()
+    public async Task<StatisticsViewModel> GetStatisticsAsync(DateTime? dateFrom = null, DateTime? dateTo = null)
     {
-        var bookings = _context.Bookings.ToList();
+        var from = (dateFrom ?? DateTime.Now.AddDays(-30)).Date;
+        var to = (dateTo ?? DateTime.Now).Date;
 
-        var channelViewers = bookings
+        var bookingsQuery = _context.Bookings.Where(b => b.Start.Date >= from && b.Start.Date <= to);
+
+        var channelViewers = await bookingsQuery
             .GroupBy(b => b.Channel)
             .Select(group => new ChannelViewer { Channel = group.Key, Viewers = group.Count() })
-            .ToList();
+            .ToListAsync();
 
-        var genreViewers = bookings
+        var genreViewers = await bookingsQuery
             .GroupBy(b => b.Genre)
             .Select(group => new GenreViewer { Genre = group.Key, Viewers = group.Count() })
+            .ToListAsync();
+
+        var filteredBookings = await bookingsQuery.ToListAsync();
+
+        var rawDateViewers = filteredBookings
+            .GroupBy(b => b.Start.Date)
+            .Select(g => new DateViewer { Date = g.Key, Minutes = (int)g.Sum(b => (b.End - b.Start).TotalMinutes) })
             .ToList();
 
         var dateViewers = new List<DateViewer>();
-        for (int i = 30; i >= 0; i--)
+        for (var date = from; date <= to; date = date.AddDays(1))
         {
-            var date = DateTime.Now.AddDays(-i).Date;
-            var minutes = bookings.Where(b => b.Start.Date == date).Sum(b => (b.End - b.Start).TotalMinutes);
-            dateViewers.Add(new DateViewer { Date = date, Minutes = (int)minutes });
+            var existing = rawDateViewers.FirstOrDefault(d => d.Date == date);
+            dateViewers.Add(new DateViewer
+            {
+                Date = date,
+                Minutes = existing?.Minutes ?? 0
+            });
         }
 
-        return Task.FromResult(new StatisticsViewModel
+        var orderedChannelViewers = channelViewers.OrderByDescending(cv => cv.Viewers).ToList();
+        var orderedGenreViewers = genreViewers.OrderByDescending(gv => gv.Viewers).ToList();
+
+        return new StatisticsViewModel
         {
-            ChannelViewers = channelViewers,
-            GenreViewers = genreViewers,
-            DateViewers = dateViewers
-        });
+            ChannelViewers = orderedChannelViewers,
+            GenreViewers = orderedGenreViewers,
+            DateViewers = dateViewers,
+            TotalBookings = channelViewers.Sum(cv => cv.Viewers),
+            TotalMinutes = dateViewers.Sum(dv => dv.Minutes),
+            ActiveChannels = channelViewers.Count,
+            GenreCount = genreViewers.Count,
+            MostPopularChannel = orderedChannelViewers.FirstOrDefault()?.Channel,
+            MostPopularChannelBookings = orderedChannelViewers.FirstOrDefault()?.Viewers ?? 0,
+            MostPopularGenre = orderedGenreViewers.FirstOrDefault()?.Genre,
+            MostPopularGenreBookings = orderedGenreViewers.FirstOrDefault()?.Viewers ?? 0,
+            DateFrom = from,
+            DateTo = to
+        };
     }
 
     public Task<List<Booking>> GetBookingsForDateAsync(DateTime date)

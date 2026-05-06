@@ -131,6 +131,12 @@ public class BookingQueryServiceTests
         Assert.NotNull(result.GenreViewers);
         Assert.NotNull(result.DateViewers);
         Assert.Equal(31, result.DateViewers.Count); // 30 days + today
+        Assert.Equal(0, result.TotalBookings);
+        Assert.Equal(0, result.TotalMinutes);
+        Assert.Equal(0, result.ActiveChannels);
+        Assert.Equal(0, result.GenreCount);
+        Assert.Null(result.MostPopularChannel);
+        Assert.Null(result.MostPopularGenre);
     }
 
     [Fact]
