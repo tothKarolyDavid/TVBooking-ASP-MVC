@@ -41,6 +41,11 @@
                         @if (User.IsInRole(RoleNames.Admin))
                         {
                             <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Guests" asp-action="Index">
+                                    <i class="bi bi-people me-1"></i>Guests
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Booking" asp-action="Statistics">
                                     <i class="bi bi-bar-chart me-1"></i>Statistics
                                 </a>
