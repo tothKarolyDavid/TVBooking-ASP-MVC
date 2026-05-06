@@ -170,6 +170,15 @@ public class BookingController : Controller
             return NotFound();
         }
 
+        if (!User.IsInRole(RoleNames.Admin))
+        {
+            var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+            if (currentRoomNumber == null || booking.RoomNumber != currentRoomNumber.Value)
+            {
+                return Forbid();
+            }
+        }
+
         ViewBag.Channels = _bookingReferenceDataService.Channels;
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
@@ -178,7 +187,7 @@ public class BookingController : Controller
     }
 
     // POST: Booking/Edit/5
-    [Authorize(Roles = RoleNames.Admin)]
+    [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, [Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking)
@@ -188,47 +197,64 @@ public class BookingController : Controller
             return NotFound();
         }
 
+        var trackedBooking = await _context.Bookings.FindAsync(id);
+        if (trackedBooking == null)
+        {
+            return NotFound();
+        }
+
+        if (!User.IsInRole(RoleNames.Admin))
+        {
+            var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+            if (currentRoomNumber == null || trackedBooking.RoomNumber != currentRoomNumber.Value)
+            {
+                return Forbid();
+            }
+
+            booking.RoomNumber = currentRoomNumber.Value;
+        }
+
+        ViewBag.Channels = _bookingReferenceDataService.Channels;
+        ViewBag.Genres = _bookingReferenceDataService.Genres;
+        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+
         if (ModelState.IsValid)
         {
-            try
+            var validationErrors = await _bookingValidationService.ValidateAsync(booking, booking.Id);
+            foreach (var error in validationErrors)
             {
-                var validationErrors = await _bookingValidationService.ValidateAsync(booking, booking.Id);
-                foreach (var error in validationErrors)
-                {
-                    ModelState.AddModelError(error.Field, error.Message);
-                }
+                ModelState.AddModelError(error.Field, error.Message);
+            }
 
-                if (!ModelState.IsValid)
+            if (ModelState.IsValid)
+            {
+                trackedBooking.Program = booking.Program;
+                trackedBooking.Channel = booking.Channel;
+                trackedBooking.Genre = booking.Genre;
+                trackedBooking.Start = booking.Start;
+                trackedBooking.End = booking.End;
+                trackedBooking.AgeLimit = booking.AgeLimit;
+                trackedBooking.RoomNumber = booking.RoomNumber;
+
+                try
                 {
-                    ViewBag.Channels = _bookingReferenceDataService.Channels;
-                    ViewBag.Genres = _bookingReferenceDataService.Genres;
-                    ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+                    await _context.SaveChangesAsync();
+                    TempData["Message"] = "Booking updated successfully";
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException)
+                {
+                    TempData["ErrorMessage"] = "Failed to update booking. Please try again.";
                     return View(booking);
                 }
-
-                _context.Update(booking);
-                await _context.SaveChangesAsync();
-
-                TempData["Message"] = "Booking updated successfully";
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BookingExists(booking.Id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            return RedirectToAction(nameof(Index));
         }
+
         return View(booking);
     }
 
     // GET: Booking/Delete/5
-    [Authorize(Roles = RoleNames.Admin)]
+    [Authorize]
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null)
@@ -243,29 +269,50 @@ public class BookingController : Controller
             return NotFound();
         }
 
+        if (!User.IsInRole(RoleNames.Admin))
+        {
+            var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+            if (currentRoomNumber == null || booking.RoomNumber != currentRoomNumber.Value)
+            {
+                return Forbid();
+            }
+        }
+
         return View(booking);
     }
 
     // POST: Booking/Delete/5
-    [Authorize(Roles = RoleNames.Admin)]
+    [Authorize]
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var booking = await _context.Bookings.FindAsync(id);
-        if (booking != null)
+        if (booking == null)
         {
-            _context.Bookings.Remove(booking);
+            return NotFound();
         }
 
-        TempData["Message"] = "Booking deleted successfully";
-        await _context.SaveChangesAsync();
-        return RedirectToAction(nameof(Index));
-    }
+        if (!User.IsInRole(RoleNames.Admin))
+        {
+            var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+            if (currentRoomNumber == null || booking.RoomNumber != currentRoomNumber.Value)
+            {
+                return Forbid();
+            }
+        }
 
-    private bool BookingExists(int id)
-    {
-        return _context.Bookings.Any(e => e.Id == id);
+        try
+        {
+            _context.Bookings.Remove(booking);
+            await _context.SaveChangesAsync();
+            TempData["Message"] = "Booking deleted successfully";
+        }
+        catch (DbUpdateException)
+        {
+            TempData["ErrorMessage"] = "Failed to delete booking. Please try again.";
+        }
+        return RedirectToAction(nameof(Index));
     }
 
     [Authorize]
