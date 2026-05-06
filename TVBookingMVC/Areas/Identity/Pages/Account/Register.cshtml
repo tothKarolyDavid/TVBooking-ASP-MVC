@@ -22,7 +22,20 @@
                     </div>
                     
                     <div class="form-floating mb-3">
-                        <input asp-for="Input.RoomNumber" class="form-control" aria-required="true" placeholder="Room number" />
+                        <select asp-for="Input.RoomNumber" class="form-select" aria-required="true">
+                            @if (Model.AvailableRooms.Count == 0)
+                            {
+                                <option value="" disabled selected>No rooms available</option>
+                            }
+                            else
+                            {
+                                <option value="" disabled selected>Select room...</option>
+                                @foreach (var room in Model.AvailableRooms)
+                                {
+                                    <option value="@room">@room</option>
+                                }
+                            }
+                        </select>
                         <label asp-for="Input.RoomNumber" class="form-label">Room number</label>
                         <span asp-validation-for="Input.RoomNumber" class="text-danger"></span>
                     </div>

@@ -65,6 +65,8 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
         /// </summary>
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
+        public List<int> AvailableRooms { get; set; }
+
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
@@ -112,6 +114,7 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
             ExternalLogins = _signInManager != null 
                 ? (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList() 
                 : new List<AuthenticationScheme>();
+            AvailableRooms = await GetAvailableRoomsAsync();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -130,6 +133,7 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
                 {
                     _logger.LogWarning("Duplicate email found: {Email}", Input.Email);
                     ModelState.AddModelError("Input.Email", "This email is already registered.");
+                    AvailableRooms = await GetAvailableRoomsAsync();
                     return Page();
                 }
 
@@ -138,6 +142,7 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
                 {
                     _logger.LogWarning("Duplicate room registration attempt: Room={Room}, ExistingUser={Email}", Input.RoomNumber, existingRoom.Email);
                     ModelState.AddModelError("Input.RoomNumber", "This room number is already registered to another guest.");
+                    AvailableRooms = await GetAvailableRoomsAsync();
                     return Page();
                 }
 
@@ -177,6 +182,7 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
                         {
                             TempData["Message"] = $"Registration successful! Guest account created for room {Input.RoomNumber}.";
                             Input = new InputModel();
+                            AvailableRooms = await GetAvailableRoomsAsync();
                             return Page();
                         }
                     }
@@ -206,6 +212,7 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
             }
 
             // If we got this far, something failed, redisplay form
+            AvailableRooms = await GetAvailableRoomsAsync();
             return Page();
         }
 
@@ -230,6 +237,13 @@ namespace TVBookingMVC.Areas.Identity.Pages.Account
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
             return (IUserEmailStore<ApplicationUser>)_userStore;
+        }
+
+        private async Task<List<int>> GetAvailableRoomsAsync()
+        {
+            var assignedRooms = await _context.Users.Select(u => u.RoomNumber).ToListAsync();
+            var assignedSet = assignedRooms.ToHashSet();
+            return Enumerable.Range(1, 999).Where(r => !assignedSet.Contains(r)).ToList();
         }
     }
 }
