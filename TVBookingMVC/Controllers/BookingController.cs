@@ -36,24 +36,25 @@ public class BookingController : Controller
     }
 
     // GET: Booking
-    public async Task<IActionResult> Index(string[]? ageLimit = null)
+    public async Task<IActionResult> Index(string[]? ageLimit = null, bool myBookings = false)
     {
         ViewBag.NearBookings = await _bookingQueryService.GetNearBookingsAsync();
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
         ViewBag.SelectedAgeLimits = ageLimit ?? [];
+        ViewBag.MyBookings = myBookings;
 
+        int? roomNumber = null;
         if (User.Identity?.IsAuthenticated == true)
         {
             var user = await _userManager.GetUserAsync(User);
             ViewBag.CurrentUserRoomNumber = user?.RoomNumber;
+            if (myBookings)
+            {
+                roomNumber = user?.RoomNumber;
+            }
         }
 
-        if (ageLimit == null || ageLimit.Length == 0)
-        {
-            return View(await _bookingQueryService.GetAllBookingsAsync());
-        }
-
-        return View(await _bookingQueryService.GetBookingsByAgeLimitsAsync(ageLimit));
+        return View(await _bookingQueryService.GetFilteredBookingsAsync(ageLimit, roomNumber));
     }
 
     // GET: Booking/Details/5
@@ -337,19 +338,6 @@ public class BookingController : Controller
             return LocalRedirect(returnUrl);
         }
         return RedirectToAction(nameof(Index), new { ageLimit });
-    }
-
-    [Authorize]
-    public async Task<IActionResult> UserBookings()
-    {
-        var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
-        if (currentRoomNumber == null)
-        {
-            return Forbid();
-        }
-
-        var bookings = await _bookingQueryService.GetUserBookingsAsync(currentRoomNumber.Value);
-        return View(bookings);
     }
 
     public async Task<IActionResult> FreeTimeSlots(string[]? ageLimit = null)

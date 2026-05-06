@@ -10,7 +10,7 @@ public interface IBookingQueryService
     Task<List<Booking>> GetAllBookingsAsync();
     Task<List<Booking>> GetNearBookingsAsync();
     Task<List<Booking>> GetBookingsByAgeLimitsAsync(IEnumerable<string> ageLimits);
-    Task<List<Booking>> GetUserBookingsAsync(int roomNumber);
+    Task<List<Booking>> GetFilteredBookingsAsync(string[]? ageLimits = null, int? roomNumber = null);
     Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync();
     Task<StatisticsViewModel> GetStatisticsAsync();
     Task<List<Booking>> GetBookingsForDateAsync(DateTime date);
@@ -47,9 +47,21 @@ public sealed class BookingQueryService : IBookingQueryService
             .ToListAsync();
     }
 
-    public Task<List<Booking>> GetUserBookingsAsync(int roomNumber)
+    public Task<List<Booking>> GetFilteredBookingsAsync(string[]? ageLimits = null, int? roomNumber = null)
     {
-        return _context.Bookings.Where(b => b.RoomNumber == roomNumber).ToListAsync();
+        var query = _context.Bookings.AsQueryable();
+
+        if (ageLimits is { Length: > 0 })
+        {
+            query = query.Where(b => ageLimits.Contains(b.AgeLimit));
+        }
+
+        if (roomNumber.HasValue)
+        {
+            query = query.Where(b => b.RoomNumber == roomNumber.Value);
+        }
+
+        return query.ToListAsync();
     }
 
     public Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync()
