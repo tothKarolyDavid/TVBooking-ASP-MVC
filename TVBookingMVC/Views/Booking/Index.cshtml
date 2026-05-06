@@ -6,20 +6,15 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-@model IEnumerable<TVBookingMVC.Models.Booking>
+@model TVBookingMVC.ViewModels.BookingIndexViewModel
 
 @{
     ViewData["Title"] = "Bookings";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-    var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
-    var selectedAgeLimits = ViewBag.SelectedAgeLimits as string[] ?? Array.Empty<string>();
-    var currentUserRoomNumber = ViewBag.CurrentUserRoomNumber as int?;
-    var myBookings = ViewBag.MyBookings as bool? ?? false;
-
     var filterParams = new List<string>();
-    filterParams.AddRange(selectedAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
-    if (myBookings)
+    filterParams.AddRange(Model.SelectedAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
+    if (Model.MyBookings)
     {
         filterParams.Add("myBookings=true");
     }
@@ -42,8 +37,8 @@
 {
     <div class="mb-3">
         <button type="button" id="myBookingsToggle"
-                class="btn @(myBookings ? "btn-primary" : "btn-outline-primary") rounded-pill px-4">
-            <i class="bi @(myBookings ? "bi-toggle-on" : "bi-toggle-off") me-2"></i>Show only my bookings
+                class="btn @(Model.MyBookings ? "btn-primary" : "btn-outline-primary") rounded-pill px-4">
+            <i class="bi @(Model.MyBookings ? "bi-toggle-on" : "bi-toggle-off") me-2"></i>Show only my bookings
         </button>
     </div>
 }
@@ -52,9 +47,9 @@
     <div class="card-header" data-bs-toggle="collapse" data-bs-target="#filterCollapse" role="button" aria-expanded="true">
         <h5 class="mb-0 d-flex align-items-center gap-2">
             <i class="bi bi-funnel me-1"></i>Filter by Age Limit
-            @if (selectedAgeLimits.Length > 0)
+            @if (Model.SelectedAgeLimits.Length > 0)
             {
-                <span class="badge bg-primary rounded-pill">@selectedAgeLimits.Length</span>
+                <span class="badge bg-primary rounded-pill">@Model.SelectedAgeLimits.Length</span>
             }
             <i class="bi bi-chevron-down ms-auto transition-rotate rotated"></i>
         </h5>
@@ -62,18 +57,18 @@
     <div class="collapse show" id="filterCollapse">
         <div class="card-body filter-checks">
             <form asp-action="Index" method="get" id="filterForm">
-                <input type="hidden" name="myBookings" id="myBookingsInput" value="@(myBookings ? "true" : "false")" />
+                <input type="hidden" name="myBookings" id="myBookingsInput" value="@(Model.MyBookings ? "true" : "false")" />
                 <div class="d-flex flex-wrap align-items-center gap-2">
-                    @foreach (var ageLimit in ageLimits)
+                    @foreach (var ageLimit in Model.AgeLimits)
                     {
-                        bool isChecked = selectedAgeLimits.Contains(ageLimit);
+                        bool isChecked = Model.SelectedAgeLimits.Contains(ageLimit);
                         <div class="form-check">
                             <input class="form-check-input filter-checkbox" type="checkbox" name="ageLimit" value="@ageLimit" @(isChecked ? "checked" : "") id="age-@ageLimit" />
                             <label class="form-check-label" for="age-@ageLimit">@ageLimit</label>
                         </div>
                     }
                 </div>
-                @if (selectedAgeLimits.Length > 0 || myBookings)
+                @if (Model.SelectedAgeLimits.Length > 0 || Model.MyBookings)
                 {
                     <a asp-action="Index" class="btn btn-outline-secondary btn-sm mt-2">
                         <i class="bi bi-x-circle me-1"></i>Clear
@@ -104,9 +99,9 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var item in Model.Bookings)
                 {
-                    var canManage = User.IsInRole(RoleNames.Admin) || (currentUserRoomNumber.HasValue && item.RoomNumber == currentUserRoomNumber.Value);
+                    var canManage = User.IsInRole(RoleNames.Admin) || (Model.CurrentUserRoomNumber.HasValue && item.RoomNumber == Model.CurrentUserRoomNumber.Value);
                     <tr>
                         <td>@item.Program</td>
                         <td>@item.Channel</td>
@@ -114,11 +109,11 @@
                         <td>@item.Start.ToString("yyyy/MM/dd HH:mm")</td>
                         <td>@item.End.ToString("yyyy/MM/dd HH:mm")</td>
                         <td>
-                            @if (item.AgeLimit == "18+")
+                            @if (item.AgeLimit is "Adults Only" or "Under 18 not recommended")
                             {
                                 <span class="badge bg-danger">@item.AgeLimit</span>
                             }
-                            else if (item.AgeLimit == "12+")
+                            else if (item.AgeLimit is "Under 16 not recommended" or "Under 12 not recommended")
                             {
                                 <span class="badge bg-warning text-dark">@item.AgeLimit</span>
                             }
@@ -152,7 +147,7 @@
 </div>
 
 @section Scripts {
-    <script id="near-bookings-data" type="application/json">@Html.Raw(Json.Serialize(ViewBag.NearBookings ?? Array.Empty<TVBookingMVC.Models.Booking>()))</script>
+    <script id="near-bookings-data" type="application/json">@Html.Raw(Json.Serialize(Model.NearBookings))</script>
     <script src="~/js/booking-index.js" asp-append-version="true"></script>
     
     <script>

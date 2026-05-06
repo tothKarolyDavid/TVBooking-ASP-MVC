@@ -2,9 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Globalization;
-using System.IO;
-using System.Xml;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Constants;
 using TVBookingMVC.Models;
@@ -15,108 +12,126 @@ namespace TVBookingMVC.Controllers;
 
 public class BookingController : Controller
 {
-    private readonly ApplicationDbContext _context;
-    private readonly UserManager<ApplicationUser> _userManager;
-    private readonly IBookingValidationService _bookingValidationService;
-    private readonly IBookingReferenceDataService _bookingReferenceDataService;
     private readonly IBookingQueryService _bookingQueryService;
+    private readonly IBookingCommandService _bookingCommandService;
+    private readonly IBookingReferenceDataService _bookingReferenceDataService;
+    private readonly IBookingValidationService _bookingValidationService;
+    private readonly IBookingExportService _bookingExportService;
+    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly ILogger<BookingController> _logger;
 
     public BookingController(
-        ApplicationDbContext context,
-        UserManager<ApplicationUser> userManager,
-        IBookingValidationService bookingValidationService,
+        IBookingQueryService bookingQueryService,
+        IBookingCommandService bookingCommandService,
         IBookingReferenceDataService bookingReferenceDataService,
-        IBookingQueryService bookingQueryService)
+        IBookingValidationService bookingValidationService,
+        IBookingExportService bookingExportService,
+        UserManager<ApplicationUser> userManager,
+        ILogger<BookingController> logger)
     {
-        _context = context;
-        _userManager = userManager;
-        _bookingValidationService = bookingValidationService;
-        _bookingReferenceDataService = bookingReferenceDataService;
         _bookingQueryService = bookingQueryService;
+        _bookingCommandService = bookingCommandService;
+        _bookingReferenceDataService = bookingReferenceDataService;
+        _bookingValidationService = bookingValidationService;
+        _bookingExportService = bookingExportService;
+        _userManager = userManager;
+        _logger = logger;
     }
 
     // GET: Booking
     public async Task<IActionResult> Index(string[]? ageLimit = null, bool myBookings = false)
     {
-        ViewBag.NearBookings = await _bookingQueryService.GetNearBookingsAsync();
-        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.SelectedAgeLimits = ageLimit ?? [];
-        ViewBag.MyBookings = myBookings;
-
         int? roomNumber = null;
+        int? currentUserRoomNumber = null;
+
         if (User.Identity?.IsAuthenticated == true)
         {
             var user = await _userManager.GetUserAsync(User);
-            ViewBag.CurrentUserRoomNumber = user?.RoomNumber;
+            currentUserRoomNumber = user?.RoomNumber;
             if (myBookings)
             {
-                roomNumber = user?.RoomNumber;
+                roomNumber = currentUserRoomNumber;
             }
         }
 
-        return View(await _bookingQueryService.GetFilteredBookingsAsync(ageLimit, roomNumber));
+        var vm = new BookingIndexViewModel
+        {
+            Bookings = await _bookingQueryService.GetFilteredBookingsAsync(ageLimit, roomNumber),
+            AgeLimits = _bookingReferenceDataService.AgeLimits,
+            SelectedAgeLimits = ageLimit ?? [],
+            NearBookings = await _bookingQueryService.GetNearBookingsAsync(),
+            MyBookings = myBookings,
+            CurrentUserRoomNumber = currentUserRoomNumber
+        };
+
+        return View(vm);
     }
 
     // GET: Booking/Details/5
     public async Task<IActionResult> Details(int? id, string[]? ageLimit = null)
     {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-
         if (id == null)
         {
             return NotFound();
         }
 
-        var booking = await _context.Bookings
-            .FirstOrDefaultAsync(m => m.Id == id);
+        var booking = await _bookingQueryService.GetByIdAsync(id.Value);
         if (booking == null)
         {
             return NotFound();
         }
 
-        return View(booking);
+        var vm = new BookingDeleteViewModel
+        {
+            Booking = booking,
+            ReturnAgeLimits = ageLimit ?? []
+        };
+
+        return View(vm);
     }
 
     // GET: Booking/Create
     [Authorize]
     public async Task<IActionResult> Create(string[]? ageLimit = null)
     {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-        ViewBag.Channels = _bookingReferenceDataService.Channels;
-        ViewBag.Genres = _bookingReferenceDataService.Genres;
-        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
+        int? roomNumber = null;
+        if (!User.IsInRole(RoleNames.Admin))
+        {
+            roomNumber = await GetCurrentUserRoomNumberAsync();
+        }
 
         var now = DateTime.Now;
-        var startTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(1);
-        var endTime = startTime.AddHours(1);
+        var startTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(BookingConstants.DefaultBookingDurationHours);
+        var endTime = startTime.AddHours(BookingConstants.DefaultBookingDurationHours);
 
-        var defaultBooking = new Booking
+        var vm = new BookingFormViewModel
         {
-            Start = startTime,
-            End = endTime
+            Booking = new Booking
+            {
+                Start = startTime,
+                End = endTime,
+                RoomNumber = roomNumber ?? BookingConstants.AdminRoomNumber
+            },
+            Channels = _bookingReferenceDataService.Channels,
+            Genres = _bookingReferenceDataService.Genres,
+            AgeLimits = _bookingReferenceDataService.AgeLimits,
+            ReturnAgeLimits = ageLimit ?? [],
+            FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync()
         };
 
-        if (User.IsInRole(RoleNames.Admin))
-        {
-            return View(defaultBooking);
-        }
-        else
-        {
-            var roomNumber = _context.Users.Where(u => User.Identity != null && u.UserName == User.Identity.Name).Select(u => u.RoomNumber).FirstOrDefault();
-            defaultBooking.RoomNumber = roomNumber;
-            return View(defaultBooking);
-        }
+        return View(vm);
     }
 
     // POST: Booking/Create
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking, string[]? ageLimit = null)
+    public async Task<IActionResult> Create(BookingFormViewModel vm, string[]? ageLimit = null)
     {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
+        vm.ReturnAgeLimits = ageLimit ?? [];
+        var booking = vm.Booking;
         var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
+
         if (currentRoomNumber == null)
         {
             return Forbid();
@@ -127,52 +142,51 @@ public class BookingController : Controller
             booking.RoomNumber = currentRoomNumber.Value;
         }
 
-        ViewBag.Channels = _bookingReferenceDataService.Channels;
-        ViewBag.Genres = _bookingReferenceDataService.Genres;
-        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
+        vm.Channels = _bookingReferenceDataService.Channels;
+        vm.Genres = _bookingReferenceDataService.Genres;
+        vm.AgeLimits = _bookingReferenceDataService.AgeLimits;
+        vm.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
 
         if (ModelState.IsValid)
         {
             var validationErrors = await _bookingValidationService.ValidateAsync(booking);
             foreach (var error in validationErrors)
             {
-                ModelState.AddModelError(error.Field, error.Message);
+                ModelState.AddModelError($"Booking.{error.Field}", error.Message);
             }
 
             if (!ModelState.IsValid)
             {
-                return View(booking);
+                return View(vm);
             }
 
             try
             {
-                _context.Add(booking);
-                await _context.SaveChangesAsync();
+                await _bookingCommandService.CreateAsync(booking);
                 TempData["Message"] = "Booking created successfully";
                 return RedirectToAction(nameof(Index), new { ageLimit });
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException ex)
             {
+                _logger.LogError(ex, "Failed to create booking");
                 TempData["ErrorMessage"] = "Failed to create booking. Please try again.";
-                return View(booking);
+                return View(vm);
             }
         }
-        return View(booking);
+
+        return View(vm);
     }
 
     // GET: Booking/Edit/5
     [Authorize]
     public async Task<IActionResult> Edit(int? id, string[]? ageLimit = null, string? returnUrl = null)
     {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-        ViewBag.ReturnUrl = returnUrl;
         if (id == null)
         {
             return NotFound();
         }
 
-        var booking = await _context.Bookings.FindAsync(id);
+        var booking = await _bookingQueryService.GetByIdAsync(id.Value);
         if (booking == null)
         {
             return NotFound();
@@ -187,28 +201,35 @@ public class BookingController : Controller
             }
         }
 
-        ViewBag.Channels = _bookingReferenceDataService.Channels;
-        ViewBag.Genres = _bookingReferenceDataService.Genres;
-        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
+        var vm = new BookingFormViewModel
+        {
+            Booking = booking,
+            Channels = _bookingReferenceDataService.Channels,
+            Genres = _bookingReferenceDataService.Genres,
+            AgeLimits = _bookingReferenceDataService.AgeLimits,
+            ReturnAgeLimits = ageLimit ?? [],
+            ReturnUrl = returnUrl,
+            FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync()
+        };
 
-        return View(booking);
+        return View(vm);
     }
 
     // POST: Booking/Edit/5
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking, string[]? ageLimit = null, string? returnUrl = null)
+    public async Task<IActionResult> Edit(int id, BookingFormViewModel vm, string[]? ageLimit = null, string? returnUrl = null)
     {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-        ViewBag.ReturnUrl = returnUrl;
-        if (id != booking.Id)
+        vm.ReturnAgeLimits = ageLimit ?? [];
+        vm.ReturnUrl = returnUrl;
+
+        if (id != vm.Booking.Id)
         {
             return NotFound();
         }
 
-        var trackedBooking = await _context.Bookings.FindAsync(id);
+        var trackedBooking = await _bookingQueryService.GetByIdAsync(id);
         if (trackedBooking == null)
         {
             return NotFound();
@@ -222,35 +243,27 @@ public class BookingController : Controller
                 return Forbid();
             }
 
-            booking.RoomNumber = currentRoomNumber.Value;
+            vm.Booking.RoomNumber = currentRoomNumber.Value;
         }
 
-        ViewBag.Channels = _bookingReferenceDataService.Channels;
-        ViewBag.Genres = _bookingReferenceDataService.Genres;
-        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
-        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
+        vm.Channels = _bookingReferenceDataService.Channels;
+        vm.Genres = _bookingReferenceDataService.Genres;
+        vm.AgeLimits = _bookingReferenceDataService.AgeLimits;
+        vm.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
 
         if (ModelState.IsValid)
         {
-            var validationErrors = await _bookingValidationService.ValidateAsync(booking, booking.Id);
+            var validationErrors = await _bookingValidationService.ValidateAsync(vm.Booking, vm.Booking.Id);
             foreach (var error in validationErrors)
             {
-                ModelState.AddModelError(error.Field, error.Message);
+                ModelState.AddModelError($"Booking.{error.Field}", error.Message);
             }
 
             if (ModelState.IsValid)
             {
-                trackedBooking.Program = booking.Program;
-                trackedBooking.Channel = booking.Channel;
-                trackedBooking.Genre = booking.Genre;
-                trackedBooking.Start = booking.Start;
-                trackedBooking.End = booking.End;
-                trackedBooking.AgeLimit = booking.AgeLimit;
-                trackedBooking.RoomNumber = booking.RoomNumber;
-
                 try
                 {
-                    await _context.SaveChangesAsync();
+                    await _bookingCommandService.UpdateAsync(vm.Booking);
                     TempData["Message"] = "Booking updated successfully";
                     if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                     {
@@ -258,30 +271,28 @@ public class BookingController : Controller
                     }
                     return RedirectToAction(nameof(Index), new { ageLimit });
                 }
-                catch (DbUpdateException)
+                catch (DbUpdateException ex)
                 {
+                    _logger.LogError(ex, "Failed to update booking {BookingId}", id);
                     TempData["ErrorMessage"] = "Failed to update booking. Please try again.";
-                    return View(booking);
+                    return View(vm);
                 }
             }
         }
 
-        return View(booking);
+        return View(vm);
     }
 
     // GET: Booking/Delete/5
     [Authorize]
     public async Task<IActionResult> Delete(int? id, string[]? ageLimit = null, string? returnUrl = null)
     {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-        ViewBag.ReturnUrl = returnUrl;
         if (id == null)
         {
             return NotFound();
         }
 
-        var booking = await _context.Bookings
-            .FirstOrDefaultAsync(m => m.Id == id);
+        var booking = await _bookingQueryService.GetByIdAsync(id.Value);
         if (booking == null)
         {
             return NotFound();
@@ -296,7 +307,14 @@ public class BookingController : Controller
             }
         }
 
-        return View(booking);
+        var vm = new BookingDeleteViewModel
+        {
+            Booking = booking,
+            ReturnAgeLimits = ageLimit ?? [],
+            ReturnUrl = returnUrl
+        };
+
+        return View(vm);
     }
 
     // POST: Booking/Delete/5
@@ -305,7 +323,7 @@ public class BookingController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int id, string[]? ageLimit = null, string? returnUrl = null)
     {
-        var booking = await _context.Bookings.FindAsync(id);
+        var booking = await _bookingQueryService.GetByIdAsync(id);
         if (booking == null)
         {
             return NotFound();
@@ -322,14 +340,15 @@ public class BookingController : Controller
 
         try
         {
-            _context.Bookings.Remove(booking);
-            await _context.SaveChangesAsync();
+            await _bookingCommandService.DeleteAsync(booking);
             TempData["Message"] = "Booking deleted successfully";
         }
-        catch (DbUpdateException)
+        catch (DbUpdateException ex)
         {
+            _logger.LogError(ex, "Failed to delete booking {BookingId}", id);
             TempData["ErrorMessage"] = "Failed to delete booking. Please try again.";
         }
+
         if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
         {
             return LocalRedirect(returnUrl);
@@ -347,55 +366,9 @@ public class BookingController : Controller
     [Authorize(Roles = RoleNames.Admin)]
     public async Task<IActionResult> XmlExportPost(DateTime date)
     {
-        XmlDocument doc = new();
-
-        XmlElement root = doc.CreateElement("bookings");
-        doc.AppendChild(root);
-
-        var bookings = await _bookingQueryService.GetBookingsForDateAsync(date);
-        bookings.ForEach(b =>
-        {
-            XmlElement booking = doc.CreateElement("booking");
-
-            XmlElement program = doc.CreateElement("program");
-            program.InnerText = b.Program ?? string.Empty;
-            booking.AppendChild(program);
-
-            XmlElement channel = doc.CreateElement("channel");
-            channel.InnerText = b.Channel ?? string.Empty;
-            booking.AppendChild(channel);
-
-            XmlElement genre = doc.CreateElement("genre");
-            genre.InnerText = b.Genre ?? string.Empty;
-            booking.AppendChild(genre);
-
-            XmlElement start = doc.CreateElement("start");
-            start.InnerText = b.Start.ToString("yyyy/MM/dd HH:mm");
-            booking.AppendChild(start);
-
-            XmlElement end = doc.CreateElement("end");
-            end.InnerText = b.End.ToString("yyyy/MM/dd HH:mm");
-            booking.AppendChild(end);
-
-            XmlElement ageLimit = doc.CreateElement("ageLimit");
-            ageLimit.InnerText = b.AgeLimit ?? string.Empty;
-            booking.AppendChild(ageLimit);
-
-            XmlElement roomNumber = doc.CreateElement("roomNumber");
-            roomNumber.InnerText = b.RoomNumber.ToString();
-            booking.AppendChild(roomNumber);
-
-            root.AppendChild(booking);
-        });
-
+        var bytes = await _bookingExportService.ExportBookingsToXmlAsync(date);
         var fileName = $"bookings_{date:yyyy-MM-dd}.xml";
-
-        var stream = new MemoryStream();
-        doc.Save(stream);
-        stream.Position = 0;
-
-        var count = bookings.Count;
-        return File(stream, "application/xml", fileName);
+        return File(bytes, "application/xml", fileName);
     }
 
     private async Task<int?> GetCurrentUserRoomNumberAsync()

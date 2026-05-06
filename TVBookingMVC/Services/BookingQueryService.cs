@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
+using TVBookingMVC.Constants;
 using TVBookingMVC.Models;
 using TVBookingMVC.ViewModels;
 
@@ -14,6 +15,7 @@ public interface IBookingQueryService
     Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync();
     Task<StatisticsViewModel> GetStatisticsAsync(DateTime? dateFrom = null, DateTime? dateTo = null);
     Task<List<Booking>> GetBookingsForDateAsync(DateTime date);
+    Task<Booking?> GetByIdAsync(int id);
 }
 
 public sealed class BookingQueryService : IBookingQueryService
@@ -34,7 +36,7 @@ public sealed class BookingQueryService : IBookingQueryService
     {
         var now = DateTime.Now;
         return _context.Bookings
-            .Where(b => b.Start > now && b.Start < now.AddDays(1))
+            .Where(b => b.Start > now && b.Start < now.AddHours(BookingConstants.NearBookingWindowHours))
             .OrderBy(b => b.Start)
             .ToListAsync();
     }
@@ -64,15 +66,15 @@ public sealed class BookingQueryService : IBookingQueryService
         return query.ToListAsync();
     }
 
-    public Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync()
+    public async Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync()
     {
         var now = DateTime.Now;
-        var end = now.AddDays(7);
+        var end = now.AddDays(BookingConstants.FreeSlotLookAheadDays);
 
-        var bookingsReserved = _context.Bookings
+        var bookingsReserved = await _context.Bookings
             .Where(b => b.Start < end && b.End > now)
             .OrderBy(b => b.Start)
-            .ToList();
+            .ToListAsync();
 
         var freeTimeSlots = new List<FreeTimeSlot>();
         var start = now;
@@ -95,12 +97,12 @@ public sealed class BookingQueryService : IBookingQueryService
             freeTimeSlots.Add(new FreeTimeSlot { Start = start, End = end });
         }
 
-        return Task.FromResult(freeTimeSlots);
+        return freeTimeSlots;
     }
 
     public async Task<StatisticsViewModel> GetStatisticsAsync(DateTime? dateFrom = null, DateTime? dateTo = null)
     {
-        var from = (dateFrom ?? DateTime.Now.AddDays(-30)).Date;
+        var from = (dateFrom ?? DateTime.Now.AddDays(-BookingConstants.DefaultStatisticsWindowDays)).Date;
         var to = (dateTo ?? DateTime.Now).Date;
 
         var bookingsQuery = _context.Bookings.Where(b => b.Start.Date >= from && b.Start.Date <= to);
@@ -122,11 +124,11 @@ public sealed class BookingQueryService : IBookingQueryService
             .Select(g => new DateViewer { Date = g.Key, Minutes = (int)g.Sum(b => (b.End - b.Start).TotalMinutes) })
             .ToList();
 
-        var dateViewers = new List<DateViewer>();
+        var completeDateViewers = new List<DateViewer>();
         for (var date = from; date <= to; date = date.AddDays(1))
         {
             var existing = rawDateViewers.FirstOrDefault(d => d.Date == date);
-            dateViewers.Add(new DateViewer
+            completeDateViewers.Add(new DateViewer
             {
                 Date = date,
                 Minutes = existing?.Minutes ?? 0
@@ -140,9 +142,9 @@ public sealed class BookingQueryService : IBookingQueryService
         {
             ChannelViewers = orderedChannelViewers,
             GenreViewers = orderedGenreViewers,
-            DateViewers = dateViewers,
+            DateViewers = completeDateViewers,
             TotalBookings = channelViewers.Sum(cv => cv.Viewers),
-            TotalMinutes = dateViewers.Sum(dv => dv.Minutes),
+            TotalMinutes = completeDateViewers.Sum(dv => dv.Minutes),
             ActiveChannels = channelViewers.Count,
             GenreCount = genreViewers.Count,
             MostPopularChannel = orderedChannelViewers.FirstOrDefault()?.Channel,
@@ -159,5 +161,10 @@ public sealed class BookingQueryService : IBookingQueryService
         return _context.Bookings
             .Where(b => b.Start.Date == date.Date || b.End.Date == date.Date)
             .ToListAsync();
+    }
+
+    public Task<Booking?> GetByIdAsync(int id)
+    {
+        return _context.Bookings.FirstOrDefaultAsync(m => m.Id == id);
     }
 }

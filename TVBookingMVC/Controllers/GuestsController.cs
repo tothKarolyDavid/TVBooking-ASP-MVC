@@ -5,27 +5,39 @@ using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Constants;
 using TVBookingMVC.Models;
+using TVBookingMVC.Services;
+using TVBookingMVC.ViewModels;
 
 namespace TVBookingMVC.Controllers;
 
 [Authorize(Roles = RoleNames.Admin)]
 public class GuestsController : Controller
 {
-    private readonly ApplicationDbContext _context;
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly IBookingCommandService _bookingCommandService;
 
-    public GuestsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+    public GuestsController(
+        UserManager<ApplicationUser> userManager,
+        IBookingCommandService bookingCommandService)
     {
-        _context = context;
         _userManager = userManager;
+        _bookingCommandService = bookingCommandService;
     }
 
     public async Task<IActionResult> Index()
     {
         var users = await _userManager.Users.OrderBy(u => u.RoomNumber).ToListAsync();
         var assignedRooms = users.Select(u => u.RoomNumber).ToHashSet();
-        ViewBag.AvailableRooms = Enumerable.Range(1, 999).Where(r => !assignedRooms.Contains(r)).ToList();
-        return View(users);
+        var availableRooms = Enumerable.Range(BookingConstants.MinRoomNumber, BookingConstants.MaxRoomNumber)
+            .Where(r => !assignedRooms.Contains(r)).ToList();
+
+        var vm = new ManageGuestsViewModel
+        {
+            Users = users,
+            AvailableRooms = availableRooms
+        };
+
+        return View(vm);
     }
 
     [HttpPost]
@@ -44,9 +56,7 @@ public class GuestsController : Controller
             return RedirectToAction(nameof(Index));
         }
 
-        _context.Bookings.RemoveRange(
-            await _context.Bookings.Where(b => b.RoomNumber == user.RoomNumber).ToListAsync());
-        await _context.SaveChangesAsync();
+        await _bookingCommandService.DeleteBookingsByRoomAsync(user.RoomNumber);
 
         var email = user.Email;
         await _userManager.DeleteAsync(user);
@@ -77,10 +87,7 @@ public class GuestsController : Controller
         user.RoomNumber = roomNumber;
         await _userManager.UpdateAsync(user);
 
-        var bookings = await _context.Bookings.Where(b => b.RoomNumber == oldRoomNumber).ToListAsync();
-        foreach (var booking in bookings)
-            booking.RoomNumber = roomNumber;
-        await _context.SaveChangesAsync();
+        await _bookingCommandService.ReassignBookingsByRoomAsync(oldRoomNumber, roomNumber);
 
         TempData["Message"] = $"{user.Email} assigned to room {roomNumber}.";
         return RedirectToAction(nameof(Index));

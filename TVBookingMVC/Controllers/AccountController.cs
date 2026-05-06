@@ -1,24 +1,23 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Constants;
-using TVBookingMVC.Models;
+using TVBookingMVC.Services;
 
 namespace TVBookingMVC.Controllers;
 
 public class AccountController : Controller
 {
-    private readonly ApplicationDbContext _context;
+    private readonly IBookingCommandService _bookingCommandService;
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
 
     public AccountController(
-        ApplicationDbContext context,
+        IBookingCommandService bookingCommandService,
         UserManager<ApplicationUser> userManager,
         SignInManager<ApplicationUser> signInManager)
     {
-        _context = context;
+        _bookingCommandService = bookingCommandService;
         _userManager = userManager;
         _signInManager = signInManager;
     }
@@ -38,10 +37,7 @@ public class AccountController : Controller
             return RedirectToAction("Index", "Booking");
         }
 
-        _context.Bookings.RemoveRange(
-            await _context.Bookings.Where(b => b.RoomNumber == user.RoomNumber).ToListAsync());
-
-        await _context.SaveChangesAsync();
+        await _bookingCommandService.DeleteBookingsByRoomAsync(user.RoomNumber);
         await _userManager.DeleteAsync(user);
         await _signInManager.SignOutAsync();
 

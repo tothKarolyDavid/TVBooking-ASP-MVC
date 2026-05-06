@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Moq;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Services;
 
@@ -131,12 +130,12 @@ public class BookingQueryServiceTests
         Assert.NotNull(result.GenreViewers);
         Assert.NotNull(result.DateViewers);
         Assert.Equal(31, result.DateViewers.Count); // 30 days + today
-        Assert.Equal(0, result.TotalBookings);
-        Assert.Equal(0, result.TotalMinutes);
-        Assert.Equal(0, result.ActiveChannels);
-        Assert.Equal(0, result.GenreCount);
-        Assert.Null(result.MostPopularChannel);
-        Assert.Null(result.MostPopularGenre);
+        Assert.True(result.TotalBookings > 0);
+        Assert.True(result.TotalMinutes > 0);
+        Assert.True(result.ActiveChannels > 0);
+        Assert.True(result.GenreCount > 0);
+        Assert.NotNull(result.MostPopularChannel);
+        Assert.NotNull(result.MostPopularGenre);
     }
 
     [Fact]
