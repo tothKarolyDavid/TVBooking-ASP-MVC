@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Moq;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Constants;
@@ -51,8 +52,9 @@ public sealed class GuestsControllerTests : IAsyncLifetime
     {
         var userManager = _provider.GetRequiredService<UserManager<ApplicationUser>>();
         var commandService = new Mock<IBookingCommandService>();
+        var logger = _provider.GetRequiredService<ILogger<GuestsController>>();
 
-        var controller = new GuestsController(userManager, commandService.Object);
+        var controller = new GuestsController(userManager, commandService.Object, logger);
         controller.ControllerContext = new ControllerContext { HttpContext = new DefaultHttpContext() };
         controller.TempData = new TempDataDictionary(controller.HttpContext, Mock.Of<ITempDataProvider>());
         return (controller, userManager, commandService);

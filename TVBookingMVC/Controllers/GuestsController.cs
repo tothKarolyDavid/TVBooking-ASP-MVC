@@ -15,13 +15,16 @@ public class GuestsController : Controller
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly IBookingCommandService _bookingCommandService;
+    private readonly ILogger<GuestsController> _logger;
 
     public GuestsController(
         UserManager<ApplicationUser> userManager,
-        IBookingCommandService bookingCommandService)
+        IBookingCommandService bookingCommandService,
+        ILogger<GuestsController> logger)
     {
         _userManager = userManager;
         _bookingCommandService = bookingCommandService;
+        _logger = logger;
     }
 
     public async Task<IActionResult> Index()
@@ -85,7 +88,17 @@ public class GuestsController : Controller
 
         var oldRoomNumber = user.RoomNumber;
         user.RoomNumber = roomNumber;
-        await _userManager.UpdateAsync(user);
+
+        try
+        {
+            await _userManager.UpdateAsync(user);
+        }
+        catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("UNIQUE constraint") == true)
+        {
+            _logger.LogWarning(ex, "Room {Room} assigned to {User} by another admin concurrently", roomNumber, id);
+            TempData["ErrorMessage"] = $"Room {roomNumber} was just assigned to another guest.";
+            return RedirectToAction(nameof(Index));
+        }
 
         await _bookingCommandService.ReassignBookingsByRoomAsync(oldRoomNumber, roomNumber);
 

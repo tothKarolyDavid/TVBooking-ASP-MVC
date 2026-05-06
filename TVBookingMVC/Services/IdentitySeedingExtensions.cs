@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Constants;
 
@@ -45,6 +46,11 @@ public static class IdentitySeedingExtensions
         }
         else if (user.RoomNumber != roomNumber)
         {
+            var existingRoomUser = await userManager.Users
+                .FirstOrDefaultAsync(u => u.RoomNumber == roomNumber && u.Id != user.Id);
+            if (existingRoomUser != null)
+                return;
+
             user.RoomNumber = roomNumber;
             await userManager.UpdateAsync(user);
         }
