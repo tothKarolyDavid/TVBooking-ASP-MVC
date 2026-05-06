@@ -32,7 +32,7 @@ namespace TVBookingMVC.Models
 
         [Required]
         [Display(Name = "Room number")]
-        [Range(1, 999)]
+        [Range(0, 999)]
         public int RoomNumber { get; set; }
     }
 }

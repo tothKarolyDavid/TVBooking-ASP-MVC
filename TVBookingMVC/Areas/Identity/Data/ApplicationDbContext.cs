@@ -82,6 +82,6 @@ public class ApplicationUserEntityConfiguration : IEntityTypeConfiguration<Appli
     {
         builder.Property(u => u.RoomNumber).IsRequired();
         builder.HasIndex(u => u.RoomNumber).IsUnique();
-        builder.Property(u => u.RoomNumber).HasAnnotation("Range", new[] { 1, 999 });
+        builder.Property(u => u.RoomNumber).HasAnnotation("Range", new[] { 0, 999 });
     }
 }
