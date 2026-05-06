@@ -7,47 +7,48 @@ public class BookingIndexPage
 {
     private readonly IWebDriver _driver;
     private readonly string _baseUrl;
+    private readonly int _defaultTimeout;
 
-    public BookingIndexPage(IWebDriver driver, string baseUrl)
+    private static readonly By TableSelector = By.CssSelector("table.table");
+    private static readonly By DataRowSelector = By.CssSelector("table.table tbody tr");
+    private static readonly By HeaderRowSelector = By.CssSelector("table.table thead tr");
+
+    public BookingIndexPage(IWebDriver driver, string baseUrl, int defaultTimeout = 5)
     {
         _driver = driver;
         _baseUrl = baseUrl;
+        _defaultTimeout = defaultTimeout;
     }
 
-    public void Navigate()
-    {
-        _driver.Navigate().GoToUrl(_baseUrl);
-    }
+    public void Navigate() => _driver.Navigate().GoToUrl(_baseUrl);
 
-    public void NavigateWithMyBookings()
-    {
-        _driver.Navigate().GoToUrl(_baseUrl + "/Booking?myBookings=true");
-    }
+    public void NavigateWithMyBookings() =>
+        _driver.Navigate().GoToUrl($"{_baseUrl}/Booking?myBookings=true");
 
-    public IWebElement GetTable()
-    {
-        return _driver.FindElement(By.ClassName("table"));
-    }
+    public IReadOnlyList<IWebElement> GetHeaderRows() =>
+        _driver.FindElements(HeaderRowSelector);
 
-    public List<IWebElement> GetTableRows()
-    {
-        return [.. _driver.FindElements(By.CssSelector(".table tbody tr"))];
-    }
+    public IReadOnlyList<IWebElement> GetDataRows() =>
+        _driver.FindElements(DataRowSelector);
 
-    public List<IWebElement> GetTableHeaderAndRows()
+    public IReadOnlyList<IWebElement> GetAllRows()
     {
-        var table = GetTable();
-        return [.. table.FindElements(By.TagName("tr"))];
+        var table = _driver.FindElement(TableSelector);
+        return table.FindElements(By.TagName("tr"));
     }
 
     public void ClickAgeLimitCheckbox(string value)
     {
-        _driver.FindElement(By.XPath($"//input[@value='{value}']")).Click();
+        var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(_defaultTimeout));
+        var checkbox = wait.Until(d => d.FindElement(By.XPath($"//input[@value='{value}']")));
+        checkbox.Click();
     }
 
-    public void WaitForUrlToContain(string text, int timeoutSeconds = 5)
-    {
-        var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(timeoutSeconds));
-        wait.Until(d => d.Url.Contains(text));
-    }
+    public void WaitForUrlToContain(string text) =>
+        new WebDriverWait(_driver, TimeSpan.FromSeconds(_defaultTimeout))
+            .Until(d => d.Url.Contains(text));
+
+    public void WaitForPageLoad() =>
+        new WebDriverWait(_driver, TimeSpan.FromSeconds(_defaultTimeout))
+            .Until(d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
 }
