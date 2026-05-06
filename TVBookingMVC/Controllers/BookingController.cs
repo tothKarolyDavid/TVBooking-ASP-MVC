@@ -344,12 +344,6 @@ public class BookingController : Controller
         return RedirectToAction(nameof(Index), new { ageLimit });
     }
 
-    public async Task<IActionResult> FreeTimeSlots(string[]? ageLimit = null)
-    {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-        return View(await _bookingQueryService.GetFreeTimeSlotsAsync());
-    }
-
     [Authorize(Roles = RoleNames.Admin)]
     public async Task<IActionResult> Statistics()
     {
