@@ -115,6 +115,10 @@ public class BookingController : Controller
             booking.RoomNumber = currentRoomNumber.Value;
         }
 
+        ViewBag.Channels = _bookingReferenceDataService.Channels;
+        ViewBag.Genres = _bookingReferenceDataService.Genres;
+        ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+
         if (ModelState.IsValid)
         {
             var user = _context.Users.FirstOrDefault(u => u.RoomNumber == booking.RoomNumber);
@@ -132,24 +136,27 @@ public class BookingController : Controller
 
             if (!ModelState.IsValid)
             {
-                ViewBag.Channels = _bookingReferenceDataService.Channels;
-                ViewBag.Genres = _bookingReferenceDataService.Genres;
-                ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
                 return View(booking);
             }
 
-            _context.Add(booking);
-
-            TempData["Message"] = "Booking created successfully";
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                _context.Add(booking);
+                await _context.SaveChangesAsync();
+                TempData["Message"] = "Booking created successfully";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException)
+            {
+                TempData["ErrorMessage"] = "Failed to create booking. Please try again.";
+                return View(booking);
+            }
         }
         return View(booking);
     }
 
     // GET: Booking/Edit/5
-    [Authorize(Roles = RoleNames.Admin)]
+    [Authorize]
     public async Task<IActionResult> Edit(int? id)
     {
         if (id == null)
