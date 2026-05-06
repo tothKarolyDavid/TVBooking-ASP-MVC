@@ -73,8 +73,14 @@ public class GuestsController : Controller
             return RedirectToAction(nameof(Index));
         }
 
+        var oldRoomNumber = user.RoomNumber;
         user.RoomNumber = roomNumber;
         await _userManager.UpdateAsync(user);
+
+        var bookings = await _context.Bookings.Where(b => b.RoomNumber == oldRoomNumber).ToListAsync();
+        foreach (var booking in bookings)
+            booking.RoomNumber = roomNumber;
+        await _context.SaveChangesAsync();
 
         TempData["Message"] = $"{user.Email} assigned to room {roomNumber}.";
         return RedirectToAction(nameof(Index));

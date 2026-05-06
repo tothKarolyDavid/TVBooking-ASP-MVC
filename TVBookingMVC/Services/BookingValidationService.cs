@@ -25,6 +25,12 @@ public class BookingValidationService : IBookingValidationService
         var errors = new List<BookingValidationError>();
         var referenceNow = now ?? DateTime.Now;
 
+        var roomExists = await _context.Users.AnyAsync(u => u.RoomNumber == booking.RoomNumber);
+        if (!roomExists)
+        {
+            errors.Add(new BookingValidationError(nameof(Booking.RoomNumber), "There is no guest registered in this room"));
+        }
+
         if (booking.End <= booking.Start)
         {
             errors.Add(new BookingValidationError(nameof(Booking.End), "The end time must be after the start time"));

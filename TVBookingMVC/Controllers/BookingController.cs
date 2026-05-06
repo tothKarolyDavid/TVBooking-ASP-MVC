@@ -134,13 +134,6 @@ public class BookingController : Controller
 
         if (ModelState.IsValid)
         {
-            var user = _context.Users.FirstOrDefault(u => u.RoomNumber == booking.RoomNumber);
-            if (user == null)
-            {
-                ModelState.AddModelError(nameof(Booking.RoomNumber), "There is no guest registered in this room");
-                return View(booking);
-            }
-
             var validationErrors = await _bookingValidationService.ValidateAsync(booking);
             foreach (var error in validationErrors)
             {
