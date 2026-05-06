@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using TVBookingMVC.Areas.Identity.Data
+@using TVBookingMVC.Constants
 
 
 @inject SignInManager<ApplicationUser> SignInManager
@@ -74,6 +75,10 @@
                     <th>End</th>
                     <th>Age Limit</th>
                     <th>Room</th>
+                    @if (User.IsInRole(RoleNames.Admin))
+                    {
+                        <th class="text-center">Actions</th>
+                    }
                 </tr>
             </thead>
             <tbody>
@@ -100,6 +105,19 @@
                             }
                         </td>
                         <td class="text-center">@item.RoomNumber</td>
+                        @if (User.IsInRole(RoleNames.Admin))
+                        {
+                            <td class="text-center">
+                                <div class="action-buttons justify-content-center">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Edit">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        }
                     </tr>
                 }
             </tbody>
