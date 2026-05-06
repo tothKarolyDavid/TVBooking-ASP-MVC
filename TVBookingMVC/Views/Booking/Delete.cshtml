@@ -7,6 +7,9 @@
     var returnAgeLimits = ViewBag.ReturnAgeLimits as string[] ?? Array.Empty<string>();
     var returnQuery = string.Join("&", returnAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
     var returnQueryPrefix = !string.IsNullOrEmpty(returnQuery) ? "?" + returnQuery : "";
+
+    var returnUrl = ViewBag.ReturnUrl as string;
+    var isReturnUrlValid = !string.IsNullOrEmpty(returnUrl);
 }
 
 <div class="page-header page-content">
@@ -49,11 +52,15 @@
                     {
                         <input type="hidden" name="ageLimit" value="@al" />
                     }
+                    @if (isReturnUrlValid)
+                    {
+                        <input type="hidden" name="returnUrl" value="@returnUrl" />
+                    }
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-danger">
                             <i class="bi bi-trash me-2"></i>Delete
                         </button>
-                        <a href="@Url.Action("Index")@returnQueryPrefix" class="btn btn-secondary">
+                        <a href="@(isReturnUrlValid ? returnUrl : Url.Action("Index") + returnQueryPrefix)" class="btn btn-secondary">
                             <i class="bi bi-x-lg me-2"></i>Cancel
                         </a>
                     </div>
@@ -64,7 +71,7 @@
 </div>
 
 <div class="mt-3">
-    <a href="@Url.Action("Index")@returnQueryPrefix" class="btn btn-outline-secondary">
+    <a href="@(isReturnUrlValid ? returnUrl : Url.Action("Index") + returnQueryPrefix)" class="btn btn-outline-secondary">
         <i class="bi bi-arrow-left me-1"></i>Back to List
     </a>
 </div>

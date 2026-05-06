@@ -35,8 +35,8 @@
                         <td>@item.Program</td>
                         <td>@item.Channel</td>
                         <td>@item.Genre</td>
-                        <td>@item.Start.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@item.End.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@item.Start.ToString("yyyy/MM/dd HH:mm")</td>
+                        <td>@item.End.ToString("yyyy/MM/dd HH:mm")</td>
                         <td>
                             @if (item.AgeLimit == "18+")
                             {
@@ -54,10 +54,10 @@
                         <td class="text-center">@item.RoomNumber</td>
                         <td>
                             <div class="action-buttons">
-                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Edit">
+                                <a asp-action="Edit" asp-route-id="@item.Id" asp-route-returnUrl="@Url.Action("UserBookings")" class="btn btn-sm btn-outline-primary" title="Edit">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
-                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Delete">
+                                <a asp-action="Delete" asp-route-id="@item.Id" asp-route-returnUrl="@Url.Action("UserBookings")" class="btn btn-sm btn-outline-danger" title="Delete">
                                     <i class="bi bi-trash"></i>
                                 </a>
                             </div>

@@ -42,6 +42,12 @@ public class BookingController : Controller
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
         ViewBag.SelectedAgeLimits = ageLimit ?? [];
 
+        if (User.Identity?.IsAuthenticated == true)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.CurrentUserRoomNumber = user?.RoomNumber;
+        }
+
         if (ageLimit == null || ageLimit.Length == 0)
         {
             return View(await _bookingQueryService.GetAllBookingsAsync());
@@ -51,8 +57,10 @@ public class BookingController : Controller
     }
 
     // GET: Booking/Details/5
-    public async Task<IActionResult> Details(int? id)
+    public async Task<IActionResult> Details(int? id, string[]? ageLimit = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
+
         if (id == null)
         {
             return NotFound();
@@ -70,8 +78,9 @@ public class BookingController : Controller
 
     // GET: Booking/Create
     [Authorize]
-    public IActionResult Create()
+    public IActionResult Create(string[]? ageLimit = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
         ViewBag.Channels = _bookingReferenceDataService.Channels;
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
@@ -102,8 +111,9 @@ public class BookingController : Controller
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking)
+    public async Task<IActionResult> Create([Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking, string[]? ageLimit = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
         var currentRoomNumber = await GetCurrentUserRoomNumberAsync();
         if (currentRoomNumber == null)
         {
@@ -144,7 +154,7 @@ public class BookingController : Controller
                 _context.Add(booking);
                 await _context.SaveChangesAsync();
                 TempData["Message"] = "Booking created successfully";
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { ageLimit });
             }
             catch (DbUpdateException)
             {
@@ -157,8 +167,10 @@ public class BookingController : Controller
 
     // GET: Booking/Edit/5
     [Authorize]
-    public async Task<IActionResult> Edit(int? id)
+    public async Task<IActionResult> Edit(int? id, string[]? ageLimit = null, string? returnUrl = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
+        ViewBag.ReturnUrl = returnUrl;
         if (id == null)
         {
             return NotFound();
@@ -190,8 +202,10 @@ public class BookingController : Controller
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Program,Channel,Genre,Start,End,AgeLimit,RoomNumber")] Booking booking, string[]? ageLimit = null, string? returnUrl = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
+        ViewBag.ReturnUrl = returnUrl;
         if (id != booking.Id)
         {
             return NotFound();
@@ -240,7 +254,11 @@ public class BookingController : Controller
                 {
                     await _context.SaveChangesAsync();
                     TempData["Message"] = "Booking updated successfully";
-                    return RedirectToAction(nameof(Index));
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                    {
+                        return LocalRedirect(returnUrl);
+                    }
+                    return RedirectToAction(nameof(Index), new { ageLimit });
                 }
                 catch (DbUpdateException)
                 {
@@ -255,8 +273,10 @@ public class BookingController : Controller
 
     // GET: Booking/Delete/5
     [Authorize]
-    public async Task<IActionResult> Delete(int? id)
+    public async Task<IActionResult> Delete(int? id, string[]? ageLimit = null, string? returnUrl = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
+        ViewBag.ReturnUrl = returnUrl;
         if (id == null)
         {
             return NotFound();
@@ -285,7 +305,7 @@ public class BookingController : Controller
     [Authorize]
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> DeleteConfirmed(int id)
+    public async Task<IActionResult> DeleteConfirmed(int id, string[]? ageLimit = null, string? returnUrl = null)
     {
         var booking = await _context.Bookings.FindAsync(id);
         if (booking == null)
@@ -312,7 +332,11 @@ public class BookingController : Controller
         {
             TempData["ErrorMessage"] = "Failed to delete booking. Please try again.";
         }
-        return RedirectToAction(nameof(Index));
+        if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+        {
+            return LocalRedirect(returnUrl);
+        }
+        return RedirectToAction(nameof(Index), new { ageLimit });
     }
 
     [Authorize]
@@ -328,8 +352,9 @@ public class BookingController : Controller
         return View(bookings);
     }
 
-    public async Task<IActionResult> FreeTimeSlots()
+    public async Task<IActionResult> FreeTimeSlots(string[]? ageLimit = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
         return View(await _bookingQueryService.GetFreeTimeSlotsAsync());
     }
 
@@ -341,8 +366,9 @@ public class BookingController : Controller
 
     [HttpGet, ActionName("XmlExport")]
     [Authorize(Roles = RoleNames.Admin)]
-    public IActionResult XmlExport()
+    public IActionResult XmlExport(string[]? ageLimit = null)
     {
+        ViewBag.ReturnAgeLimits = ageLimit ?? [];
         return View();
     }
 
@@ -373,11 +399,11 @@ public class BookingController : Controller
             booking.AppendChild(genre);
 
             XmlElement start = doc.CreateElement("start");
-            start.InnerText = b.Start.ToString(CultureInfo.InvariantCulture);
+            start.InnerText = b.Start.ToString("yyyy/MM/dd HH:mm");
             booking.AppendChild(start);
 
             XmlElement end = doc.CreateElement("end");
-            end.InnerText = b.End.ToString(CultureInfo.InvariantCulture);
+            end.InnerText = b.End.ToString("yyyy/MM/dd HH:mm");
             booking.AppendChild(end);
 
             XmlElement ageLimit = doc.CreateElement("ageLimit");
@@ -392,6 +418,7 @@ public class BookingController : Controller
         });
 
         var fileName = $"bookings_{date:yyyy-MM-dd}.xml";
+
         var stream = new MemoryStream();
         doc.Save(stream);
         stream.Position = 0;

@@ -14,6 +14,10 @@
 
     var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
     var selectedAgeLimits = ViewBag.SelectedAgeLimits as string[] ?? Array.Empty<string>();
+    var currentUserRoomNumber = ViewBag.CurrentUserRoomNumber as int?;
+
+    var ageLimitQuery = string.Join("&", selectedAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
+    var ageLimitQueryPrefix = !string.IsNullOrEmpty(ageLimitQuery) ? "?" + ageLimitQuery : "";
 }
 
 <div class="page-header d-flex justify-content-between align-items-center page-content">
@@ -21,7 +25,7 @@
     
     @if (SignInManager.IsSignedIn(User))
     {
-        <a asp-action="Create" class="btn btn-primary">
+        <a href="@Url.Action("Create", "Booking")@(ageLimitQueryPrefix)" class="btn btn-primary">
             <i class="bi bi-plus-lg me-1"></i>Create booking
         </a>
     }
@@ -75,7 +79,7 @@
                     <th>End</th>
                     <th>Age Limit</th>
                     <th>Room</th>
-                    @if (User.IsInRole(RoleNames.Admin))
+                    @if (User.IsInRole(RoleNames.Admin) || SignInManager.IsSignedIn(User))
                     {
                         <th class="text-center">Actions</th>
                     }
@@ -84,12 +88,13 @@
             <tbody>
                 @foreach (var item in Model)
                 {
+                    var canManage = User.IsInRole(RoleNames.Admin) || (currentUserRoomNumber.HasValue && item.RoomNumber == currentUserRoomNumber.Value);
                     <tr>
                         <td>@item.Program</td>
                         <td>@item.Channel</td>
                         <td>@item.Genre</td>
-                        <td>@item.Start.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@item.End.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@item.Start.ToString("yyyy/MM/dd HH:mm")</td>
+                        <td>@item.End.ToString("yyyy/MM/dd HH:mm")</td>
                         <td>
                             @if (item.AgeLimit == "18+")
                             {
@@ -105,17 +110,20 @@
                             }
                         </td>
                         <td class="text-center">@item.RoomNumber</td>
-                        @if (User.IsInRole(RoleNames.Admin))
+                        @if (User.IsInRole(RoleNames.Admin) || SignInManager.IsSignedIn(User))
                         {
                             <td class="text-center">
-                                <div class="action-buttons justify-content-center">
-                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Edit">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </a>
-                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Delete">
-                                        <i class="bi bi-trash"></i>
-                                    </a>
-                                </div>
+                                @if (canManage)
+                                {
+                                    <div class="action-buttons justify-content-center">
+                                        <a href="@Url.Action("Edit", "Booking", new { id = item.Id, returnUrl = Url.Action("Index") + ageLimitQueryPrefix })" class="btn btn-sm btn-outline-primary" title="Edit">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a href="@Url.Action("Delete", "Booking", new { id = item.Id, returnUrl = Url.Action("Index") + ageLimitQueryPrefix })" class="btn btn-sm btn-outline-danger" title="Delete">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                }
                             </td>
                         }
                     </tr>
