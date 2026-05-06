@@ -79,12 +79,13 @@ public class BookingController : Controller
 
     // GET: Booking/Create
     [Authorize]
-    public IActionResult Create(string[]? ageLimit = null)
+    public async Task<IActionResult> Create(string[]? ageLimit = null)
     {
         ViewBag.ReturnAgeLimits = ageLimit ?? [];
         ViewBag.Channels = _bookingReferenceDataService.Channels;
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
 
         var now = DateTime.Now;
         var startTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(1);
@@ -129,6 +130,7 @@ public class BookingController : Controller
         ViewBag.Channels = _bookingReferenceDataService.Channels;
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
 
         if (ModelState.IsValid)
         {
@@ -195,6 +197,7 @@ public class BookingController : Controller
         ViewBag.Channels = _bookingReferenceDataService.Channels;
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
 
         return View(booking);
     }
@@ -232,6 +235,7 @@ public class BookingController : Controller
         ViewBag.Channels = _bookingReferenceDataService.Channels;
         ViewBag.Genres = _bookingReferenceDataService.Genres;
         ViewBag.AgeLimits = _bookingReferenceDataService.AgeLimits;
+        ViewBag.FreeTimeSlots = await _bookingQueryService.GetFreeTimeSlotsAsync();
 
         if (ModelState.IsValid)
         {

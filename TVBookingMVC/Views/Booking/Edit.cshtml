@@ -132,7 +132,14 @@
                 <h5 class="mb-0"><i class="bi bi-clock me-2"></i>Available Time Slots</h5>
             </div>
             <div class="card-body">
-                <p class="text-muted">View <a asp-action="FreeTimeSlots">available time slots</a> to find the best time for your booking.</p>
+                @if (ViewBag.FreeTimeSlots != null && ((IEnumerable<TVBookingMVC.ViewModels.FreeTimeSlot>)ViewBag.FreeTimeSlots).Any())
+                {
+                    @await Html.PartialAsync("_FreeTimeSlotsTable", (IEnumerable<TVBookingMVC.ViewModels.FreeTimeSlot>)ViewBag.FreeTimeSlots)
+                }
+                else
+                {
+                    <p class="text-muted mb-0">No free time slots available at the moment.</p>
+                }
             </div>
         </div>
     </div>
@@ -150,6 +157,23 @@
     }
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
+        $(document).ready(function() {
+            if ($.fn.dataTable) {
+                $('#freeSlotsTable').DataTable({
+                    responsive: true,
+                    pageLength: 25,
+                    lengthMenu: [10, 25, 50, 100],
+                    order: [[0, 'asc']],
+                    language: {
+                        search: "_INPUT_",
+                        searchPlaceholder: "Search...",
+                        emptyTable: "No free time slots available",
+                        zeroRecords: "No matching slots found"
+                    }
+                });
+            }
+        });
+
         $.validator.methods.date = function(value, element) {
             return this.optional(element) || /^\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}$/.test(value);
         };
