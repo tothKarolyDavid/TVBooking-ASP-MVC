@@ -18,12 +18,12 @@ namespace TVBookingMVC.Models
 
         [Required]
         [Display(Name = "Start time")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
         public DateTime Start { get; set; }
 
         [Required]
         [Display(Name = "End time")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
         public DateTime End { get; set; }
 
         [Required]

@@ -1,4 +1,6 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
@@ -46,6 +48,19 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+var cultureInfo = new CultureInfo("en-US");
+cultureInfo.DateTimeFormat.ShortDatePattern = "yyyy/MM/dd";
+cultureInfo.DateTimeFormat.LongDatePattern = "yyyy/MM/dd";
+cultureInfo.DateTimeFormat.ShortTimePattern = "HH:mm";
+cultureInfo.DateTimeFormat.LongTimePattern = "HH:mm:ss";
+
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture(cultureInfo),
+    SupportedCultures = [cultureInfo],
+    SupportedUICultures = [cultureInfo]
+});
 
 app.UseAuthentication();
 
