@@ -5,15 +5,6 @@
 @inject UserManager<ApplicationUser> UserManager
 
 <ul class="navbar-nav">
-    @if (User.IsInRole(RoleNames.Admin))
-    {
-        <li class="nav-item">
-            <a class="nav-link" id="register" asp-area="Identity" asp-page="/Account/Register">
-                <i class="bi bi-person-plus me-1"></i>Register guest
-            </a>
-        </li>
-    }
-
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
@@ -28,6 +19,17 @@
                 </button>
             </form>
         </li>
+        @if (!User.IsInRole(RoleNames.Admin))
+        {
+            <li class="nav-item">
+                <form class="form-inline" asp-controller="Account" asp-action="Checkout" method="post"
+                      onsubmit="return confirm('Are you sure you want to check out of the hotel? This will permanently delete your account and all bookings.');">
+                    <button type="submit" class="nav-link btn btn-link border-0">
+                        <i class="bi bi-door-open me-1"></i>Checkout
+                    </button>
+                </form>
+            </li>
+        }
     }
     else
     {
