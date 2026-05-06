@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution>
+  <Configurations>
+    <Configuration Id="Debug" Platform="Any CPU" />
+    <Configuration Id="Release" Platform="Any CPU" />
+  </Configurations>
+  <Project Path="TVBookingMVC\TVBookingMVC.csproj" />
+  <Project Path="TVBookingMVCSelenium\TVBookingMVCSelenium.csproj" />
+  <Project Path="TVBookingMVC.UnitTests\TVBookingMVC.UnitTests.csproj" />
+</Solution>
