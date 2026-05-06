@@ -41,10 +41,14 @@
             </div>
         </div>
 
+        <style>
+            .demo-credential { cursor: pointer; }
+            .demo-credential:hover { text-decoration: underline; }
+        </style>
         <div class="demo-credentials">
             <h5><i class="bi bi-info-circle me-2"></i>Demo Credentials</h5>
-            <p><strong>User:</strong> room2@hotel.com / 2</p>
-            <p><strong>Admin:</strong> admin@hotel.com / 0</p>
+            <p class="demo-credential" data-email="room2@hotel.com" data-room="2" role="button" tabindex="0"><strong>User:</strong> room2@hotel.com / 2</p>
+            <p class="demo-credential" data-email="admin@hotel.com" data-room="0" role="button" tabindex="0"><strong>Admin:</strong> admin@hotel.com / 0</p>
         </div>
     </div>
 </div>
@@ -52,6 +56,13 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
+        document.querySelectorAll('.demo-credential').forEach(function(el) {
+            el.addEventListener('click', function() {
+                document.getElementById('email').value = this.dataset.email;
+                document.getElementById('roomnumber').value = this.dataset.room;
+            });
+        });
+
         function addValidationClasses() {
             var emailError = document.querySelector('span[data-valmsg-for="Input.Email"]');
             var roomError = document.querySelector('span[data-valmsg-for="Input.RoomNumber"]');
