@@ -15,9 +15,16 @@
     var ageLimits = ViewBag.AgeLimits as IEnumerable<string> ?? Array.Empty<string>();
     var selectedAgeLimits = ViewBag.SelectedAgeLimits as string[] ?? Array.Empty<string>();
     var currentUserRoomNumber = ViewBag.CurrentUserRoomNumber as int?;
+    var myBookings = ViewBag.MyBookings as bool? ?? false;
 
-    var ageLimitQuery = string.Join("&", selectedAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
-    var ageLimitQueryPrefix = !string.IsNullOrEmpty(ageLimitQuery) ? "?" + ageLimitQuery : "";
+    var filterParams = new List<string>();
+    filterParams.AddRange(selectedAgeLimits.Select(a => $"ageLimit={Uri.EscapeDataString(a)}"));
+    if (myBookings)
+    {
+        filterParams.Add("myBookings=true");
+    }
+    var filterQuery = string.Join("&", filterParams);
+    var filterQueryPrefix = !string.IsNullOrEmpty(filterQuery) ? "?" + filterQuery : "";
 }
 
 <div class="page-header d-flex justify-content-between align-items-center page-content">
@@ -25,11 +32,21 @@
     
     @if (SignInManager.IsSignedIn(User))
     {
-        <a href="@Url.Action("Create", "Booking")@(ageLimitQueryPrefix)" class="btn btn-primary">
+        <a href="@Url.Action("Create", "Booking")@(filterQueryPrefix)" class="btn btn-primary">
             <i class="bi bi-plus-lg me-1"></i>Create booking
         </a>
     }
 </div>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="mb-3">
+        <button type="button" id="myBookingsToggle"
+                class="btn @(myBookings ? "btn-primary" : "btn-outline-primary") rounded-pill px-4">
+            <i class="bi @(myBookings ? "bi-toggle-on" : "bi-toggle-off") me-2"></i>Show only my bookings
+        </button>
+    </div>
+}
 
 <div class="card mb-3">
     <div class="card-header" data-bs-toggle="collapse" data-bs-target="#filterCollapse" role="button" aria-expanded="true">
@@ -45,6 +62,7 @@
     <div class="collapse show" id="filterCollapse">
         <div class="card-body filter-checks">
             <form asp-action="Index" method="get" id="filterForm">
+                <input type="hidden" name="myBookings" id="myBookingsInput" value="@(myBookings ? "true" : "false")" />
                 <div class="d-flex flex-wrap align-items-center gap-2">
                     @foreach (var ageLimit in ageLimits)
                     {
@@ -55,7 +73,7 @@
                         </div>
                     }
                 </div>
-                @if (selectedAgeLimits.Length > 0)
+                @if (selectedAgeLimits.Length > 0 || myBookings)
                 {
                     <a asp-action="Index" class="btn btn-outline-secondary btn-sm mt-2">
                         <i class="bi bi-x-circle me-1"></i>Clear
@@ -116,10 +134,10 @@
                                 @if (canManage)
                                 {
                                     <div class="action-buttons justify-content-center">
-                                        <a href="@Url.Action("Edit", "Booking", new { id = item.Id, returnUrl = Url.Action("Index") + ageLimitQueryPrefix })" class="btn btn-sm btn-outline-primary" title="Edit">
+                                        <a href="@Url.Action("Edit", "Booking", new { id = item.Id, returnUrl = Url.Action("Index") + filterQueryPrefix })" class="btn btn-sm btn-outline-primary" title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
-                                        <a href="@Url.Action("Delete", "Booking", new { id = item.Id, returnUrl = Url.Action("Index") + ageLimitQueryPrefix })" class="btn btn-sm btn-outline-danger" title="Delete">
+                                        <a href="@Url.Action("Delete", "Booking", new { id = item.Id, returnUrl = Url.Action("Index") + filterQueryPrefix })" class="btn btn-sm btn-outline-danger" title="Delete">
                                             <i class="bi bi-trash"></i>
                                         </a>
                                     </div>
@@ -156,6 +174,12 @@
             });
 
             $('.filter-checkbox').on('change', function() {
+                $('#filterForm').submit();
+            });
+
+            $('#myBookingsToggle').on('click', function() {
+                var input = $('#myBookingsInput');
+                input.val(input.val() === 'true' ? 'false' : 'true');
                 $('#filterForm').submit();
             });
         });
