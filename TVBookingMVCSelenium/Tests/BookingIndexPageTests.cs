@@ -4,66 +4,59 @@ using TVBookingMVCSelenium.Pages;
 
 namespace TVBookingMVCSelenium.Tests;
 
+[Collection("Selenium")]
 public class BookingIndexPageTests : TestBase
 {
-    public BookingIndexPageTests(SeleniumWebApplicationFactory factory) : base(factory)
-    {
-    }
+    public BookingIndexPageTests(SeleniumWebApplicationFactory factory, WebDriverFixture driverFixture)
+        : base(factory, driverFixture) { }
 
     [Fact]
     public void IndexBookingsTableHasRows()
     {
-        using var driver = CreateDriver();
-        var page = new BookingIndexPage(driver, BaseUrl);
-
+        var page = new BookingIndexPage(Driver, BaseUrl);
         page.Navigate();
-
-        var rows = page.GetTableHeaderAndRows();
-        Assert.True(rows.Count >= 2, "Expected at least 2 table rows (header + data)");
+        page.WaitForPageLoad();
+        var rows = page.GetAllRows();
+        rows.Should().HaveCountGreaterOrEqualTo(2);
     }
 
     [Fact]
     public void FilterBySingleAgeLimit_ReturnsOnlyMatchingRows()
     {
-        using var driver = CreateDriver();
-        var page = new BookingIndexPage(driver, BaseUrl);
-
+        var page = new BookingIndexPage(Driver, BaseUrl);
         page.Navigate();
-        page.ClickAgeLimitCheckbox("Gyermekbarát program");
-        page.WaitForUrlToContain("ageLimit=Gyermekbar%C3%A1t+program");
+        page.WaitForPageLoad();
+        page.ClickAgeLimitCheckbox("Child-friendly Program");
+        page.WaitForUrlToContain("ageLimit=Child-friendly+Program");
 
-        var rows = page.GetTableRows();
+        var rows = page.GetDataRows();
         foreach (var row in rows)
         {
             var cells = row.FindElements(By.TagName("td"));
-            Assert.True(cells.Count > 0, "Data row should have cells");
-            Assert.Equal("Gyermekbarát program", cells[5].Text);
+            cells.Should().NotBeEmpty();
+            cells[5].Text.Should().Be("Child-friendly Program");
         }
     }
 
     [Fact]
     public void FilterByMultipleAgeLimits_ReturnsAllMatchingRows()
     {
-        using var driver = CreateDriver();
-        var page = new BookingIndexPage(driver, BaseUrl);
-
+        var page = new BookingIndexPage(Driver, BaseUrl);
         page.Navigate();
-        page.ClickAgeLimitCheckbox("Gyermekbarát program");
-        page.WaitForUrlToContain("ageLimit=Gyermekbar%C3%A1t+program");
+        page.WaitForPageLoad();
+        page.ClickAgeLimitCheckbox("Child-friendly Program");
+        page.WaitForUrlToContain("ageLimit=Child-friendly+Program");
 
-        page.ClickAgeLimitCheckbox("Korhatárra való tekintet nélkül megtekinthető");
-        page.WaitForUrlToContain("ageLimit=Korhat%C3%A1rra+val%C3%B3+tekintet+n%C3%A9lk%C3%BCl+megtekinthet%C5%91");
+        page.ClickAgeLimitCheckbox("General Audience");
+        page.WaitForUrlToContain("ageLimit=General+Audience");
 
-        var rows = page.GetTableRows();
+        var rows = page.GetDataRows();
         foreach (var row in rows)
         {
             var cells = row.FindElements(By.TagName("td"));
-            Assert.True(cells.Count > 0);
+            cells.Should().NotBeEmpty();
             var ageLimit = cells[5].Text;
-            Assert.True(
-                ageLimit == "Gyermekbarát program" ||
-                ageLimit == "Korhatárra való tekintet nélkül megtekinthető",
-                $"Unexpected age limit: {ageLimit}");
+            ageLimit.Should().BeOneOf("Child-friendly Program", "General Audience");
         }
     }
 }

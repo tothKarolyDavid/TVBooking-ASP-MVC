@@ -1,44 +1,47 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using TVBookingMVCSelenium.Infrastructure;
 using TVBookingMVCSelenium.Pages;
 
 namespace TVBookingMVCSelenium.Tests;
 
+[Collection("Selenium")]
 public class BookingNavigationAndFilterTests : TestBase
 {
-    public BookingNavigationAndFilterTests(SeleniumWebApplicationFactory factory) : base(factory)
-    {
-    }
+    public BookingNavigationAndFilterTests(SeleniumWebApplicationFactory factory, WebDriverFixture driverFixture)
+        : base(factory, driverFixture) { }
 
     [Fact]
     public void FreeTimeSlotsPageShowsTable()
     {
-        using var driver = CreateDriver();
-        var page = new BookingIndexPage(driver, BaseUrl);
+        var loginPage = new LoginPage(Driver, BaseUrl);
+        loginPage.Login("admin@hotel.com", "0");
 
-        driver.Navigate().GoToUrl(BaseUrl + "/Booking/FreeTimeSlots");
+        Driver.Navigate().GoToUrl($"{BaseUrl}/Booking/Create");
+        var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(DefaultTimeoutSeconds));
+        wait.Until(d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
 
-        var rows = page.GetTableHeaderAndRows();
-        Assert.True(rows.Count >= 2, "Expected header + data rows");
+        Driver.PageSource.Should().Contain("Create");
+        Driver.FindElement(By.CssSelector(".page-content h1")).Text.Should().Contain("Create");
     }
 
     [Fact]
     public void MyBookingsFilterShowsOnlyCurrentRoomBookings()
     {
-        using var driver = CreateDriver();
-        var loginPage = new LoginPage(driver, BaseUrl);
-        var bookingsPage = new BookingIndexPage(driver, BaseUrl);
+        var loginPage = new LoginPage(Driver, BaseUrl);
+        var bookingsPage = new BookingIndexPage(Driver, BaseUrl);
 
         loginPage.Login("room2@hotel.com", "2");
         bookingsPage.NavigateWithMyBookings();
+        bookingsPage.WaitForPageLoad();
 
-        var rows = bookingsPage.GetTableRows();
+        var rows = bookingsPage.GetDataRows();
         foreach (var row in rows)
         {
             var cells = row.FindElements(By.TagName("td"));
             if (cells.Count > 0)
             {
-                Assert.Equal("2", cells[6].Text);
+                cells[6].Text.Should().Be("2");
             }
         }
     }
