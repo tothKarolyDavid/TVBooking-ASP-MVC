@@ -55,14 +55,15 @@ public sealed class BookingQueryService : IBookingQueryService
     public Task<List<FreeTimeSlot>> GetFreeTimeSlotsAsync()
     {
         var now = DateTime.Now;
+        var end = now.AddDays(7);
+
         var bookingsReserved = _context.Bookings
-            .Where(b => b.Start > now && b.Start < now.AddDays(7))
+            .Where(b => b.Start < end && b.End > now)
             .OrderBy(b => b.Start)
             .ToList();
 
         var freeTimeSlots = new List<FreeTimeSlot>();
         var start = now;
-        var end = now.AddDays(7);
 
         foreach (var booking in bookingsReserved)
         {
@@ -71,7 +72,10 @@ public sealed class BookingQueryService : IBookingQueryService
                 freeTimeSlots.Add(new FreeTimeSlot { Start = start, End = booking.Start });
             }
 
-            start = booking.End;
+            if (booking.End > start)
+            {
+                start = booking.End;
+            }
         }
 
         if (start < end)
