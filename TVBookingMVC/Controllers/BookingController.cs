@@ -352,14 +352,6 @@ public class BookingController : Controller
         return View(await _bookingQueryService.GetStatisticsAsync());
     }
 
-    [HttpGet, ActionName("XmlExport")]
-    [Authorize(Roles = RoleNames.Admin)]
-    public IActionResult XmlExport(string[]? ageLimit = null)
-    {
-        ViewBag.ReturnAgeLimits = ageLimit ?? [];
-        return View();
-    }
-
     [HttpPost, ActionName("XmlExport")]
     [Authorize(Roles = RoleNames.Admin)]
     public async Task<IActionResult> XmlExportPost(DateTime date)
