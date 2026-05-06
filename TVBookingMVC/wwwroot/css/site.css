@@ -232,7 +232,7 @@ a:hover {
 
 /* Floating labels */
 .form-floating > .form-control:focus,
-.form-floating > .form-select {
+.form-floating > .form-select:focus {
   border-color: var(--accent);
 }
 
