@@ -29,6 +29,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IBookingValidationService, BookingValidationService>();
 builder.Services.AddScoped<IBookingReferenceDataService, BookingReferenceDataService>();
 builder.Services.AddScoped<IBookingQueryService, BookingQueryService>();
+builder.Services.AddScoped<IBookingCommandService, BookingCommandService>();
+builder.Services.AddScoped<IBookingExportService, BookingExportService>();
 
 var app = builder.Build();
 
