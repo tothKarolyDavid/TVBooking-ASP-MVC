@@ -38,6 +38,12 @@ public class GuestsController : Controller
             return NotFound();
         }
 
+        if (await _userManager.IsInRoleAsync(user, RoleNames.Admin))
+        {
+            TempData["ErrorMessage"] = "Cannot delete the admin user.";
+            return RedirectToAction(nameof(Index));
+        }
+
         _context.Bookings.RemoveRange(
             await _context.Bookings.Where(b => b.RoomNumber == user.RoomNumber).ToListAsync());
         await _context.SaveChangesAsync();
