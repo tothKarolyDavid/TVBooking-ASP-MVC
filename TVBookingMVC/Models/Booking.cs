@@ -8,13 +8,16 @@ namespace TVBookingMVC.Models
         public int Id { get; set; }
 
         [Required]
-        public string? Program { get; set; }
+        [MaxLength(200)]
+        public string Program { get; set; } = string.Empty;
 
         [Required]
-        public string? Channel { get; set; }
+        [MaxLength(100)]
+        public string Channel { get; set; } = string.Empty;
 
         [Required]
-        public string? Genre { get; set; }
+        [MaxLength(100)]
+        public string Genre { get; set; } = string.Empty;
 
         [Required]
         [Display(Name = "Start time")]
@@ -27,8 +30,9 @@ namespace TVBookingMVC.Models
         public DateTime End { get; set; }
 
         [Required]
+        [MaxLength(50)]
         [Display(Name = "Age limit")]
-        public string? AgeLimit { get; set; }
+        public string AgeLimit { get; set; } = string.Empty;
 
         [Required]
         [Display(Name = "Room number")]
