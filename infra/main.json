@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.43.1.21952",
-      "templateHash": "4752238547716576493"
+      "templateHash": "6517138197925539421"
     }
   },
   "parameters": {
@@ -87,10 +87,17 @@
             "transport": "auto",
             "allowInsecure": false
           },
+          "secrets": [
+            {
+              "name": "acr-password",
+              "value": "[listCredentials(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').passwords[0].value]"
+            }
+          ],
           "registries": [
             {
               "server": "[reference(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').loginServer]",
-              "identity": "system"
+              "username": "[listCredentials(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').username]",
+              "passwordSecretRef": "acr-password"
             }
           ]
         },
@@ -98,12 +105,8 @@
           "containers": [
             {
               "name": "tvbooking",
-              "image": "tvbookingacr.azurecr.io/tvbooking/web-tvbooking:latest",
+              "image": "[format('{0}/tvbooking/web-tvbooking:latest', reference(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').loginServer)]",
               "env": [
-                {
-                  "name": "ConnectionStrings__ApplicationDbContextConnection",
-                  "value": "Data Source=/data/TVBookingMVC.db"
-                },
                 {
                   "name": "ASPNETCORE_ENVIRONMENT",
                   "value": "Production"
@@ -112,26 +115,13 @@
               "resources": {
                 "cpu": "[json('0.25')]",
                 "memory": "0.5Gi"
-              },
-              "volumeMounts": [
-                {
-                  "volumeName": "tvbooking-data",
-                  "mountPath": "/data"
-                }
-              ]
+              }
             }
           ],
           "scale": {
             "minReplicas": 0,
             "maxReplicas": 1
-          },
-          "volumes": [
-            {
-              "name": "tvbooking-data",
-              "storageType": "AzureFile",
-              "storageName": "tvbooking-data-storage"
-            }
-          ]
+          }
         }
       },
       "dependsOn": [

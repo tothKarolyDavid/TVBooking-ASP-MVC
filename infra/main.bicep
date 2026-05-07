@@ -40,22 +40,6 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2025-11-01' =
   }
 }
 
-resource managedEnvironmentStorage 'Microsoft.App/managedEnvironments/storages@2024-02-02-preview' = {
-  parent: containerAppsEnvironment
-  name: 'tvbooking-data-storage'
-  dependsOn: [
-    fileShare
-  ]
-  properties: {
-    azureFile: {
-      accountName: storageAccount.name
-      accountKey: storageAccount.listKeys().keys[0].value
-      shareName: fileShareName
-      accessMode: 'ReadWrite'
-    }
-  }
-}
-
 resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
   name: containerAppName
   location: location
@@ -73,10 +57,17 @@ resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
         transport: 'auto'
         allowInsecure: false
       }
+      secrets: [
+        {
+          name: 'acr-password'
+          value: containerRegistry.listCredentials().passwords[0].value
+        }
+      ]
       registries: [
         {
           server: containerRegistry.properties.loginServer
-          identity: 'system'
+          username: containerRegistry.listCredentials().username
+          passwordSecretRef: 'acr-password'
         }
       ]
     }
@@ -87,10 +78,6 @@ resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
           image: '${containerRegistry.properties.loginServer}/tvbooking/web-tvbooking:latest'
           env: [
             {
-              name: 'ConnectionStrings__ApplicationDbContextConnection'
-              value: 'Data Source=/data/TVBookingMVC.db'
-            }
-            {
               name: 'ASPNETCORE_ENVIRONMENT'
               value: 'Production'
             }
@@ -99,25 +86,12 @@ resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          volumeMounts: [
-            {
-              volumeName: 'tvbooking-data'
-              mountPath: '/data'
-            }
-          ]
         }
       ]
       scale: {
         minReplicas: 0
         maxReplicas: 1
       }
-      volumes: [
-        {
-          name: 'tvbooking-data'
-          storageType: 'AzureFile'
-          storageName: 'tvbooking-data-storage'
-        }
-      ]
     }
   }
 }
