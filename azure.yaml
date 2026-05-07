@@ -1,0 +1,8 @@
+name: tvbooking
+services:
+  web:
+    project: TVBookingMVC
+    language: dotnet
+    host: containerapp
+    docker:
+      path: Dockerfile
