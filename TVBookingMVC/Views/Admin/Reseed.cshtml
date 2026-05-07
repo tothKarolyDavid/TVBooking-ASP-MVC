@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Reseed Database";
+}
+
+<div class="container py-4">
+    <h1 class="mb-4">Reseed Database</h1>
+
+    <div class="alert alert-danger" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <strong>Warning!</strong> This will permanently delete all bookings, users, and roles,
+        then restore the database to its default state with sample data.
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">What will happen</h5>
+            <ul>
+                <li>All bookings will be deleted</li>
+                <li>All guest accounts will be deleted</li>
+                <li>The admin account (admin@hotel.com) will be recreated</li>
+                <li>20 guest rooms (2-21) will be recreated with sample data</li>
+                <li>Sample booking data will be regenerated</li>
+            </ul>
+        </div>
+    </div>
+
+    <form method="post" class="mt-4">
+        <button type="submit" class="btn btn-danger btn-lg"
+                onclick="return confirm('Are you absolutely sure? This cannot be undone.');">
+            <i class="bi bi-arrow-repeat me-2"></i>Yes, Reseed Database
+        </button>
+        <a asp-controller="Booking" asp-action="Index" class="btn btn-secondary btn-lg ms-2">Cancel</a>
+    </form>
+</div>

@@ -37,6 +37,7 @@ public partial class Program
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
         builder.Services.AddControllersWithViews();
+        builder.Services.AddScoped<IDatabaseReseedService, DatabaseReseedService>();
         builder.Services.AddScoped<IBookingValidationService, BookingValidationService>();
         builder.Services.AddScoped<IBookingReferenceDataService, BookingReferenceDataService>();
         builder.Services.AddScoped<IBookingQueryService, BookingQueryService>();
