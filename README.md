@@ -9,11 +9,11 @@
 ![Chart.js](https://img.shields.io/badge/Chart.js-4.4-FF6384?logo=chart.js)
 ![DataTables](https://img.shields.io/badge/DataTables-2.1-004F9F?logo=jquery)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-[![Azure](https://img.shields.io/badge/Azure-Container_Apps-0078D4?logo=microsoft-azure)](https://tvbooking-app.calmwave-a1c4b01c.polandcentral.azurecontainerapps.io)
+[![Azure](https://img.shields.io/badge/Azure-Container_Apps-0078D4?logo=microsoft-azure)](https://tvbooking-app.nicerock-ba6c6149.polandcentral.azurecontainerapps.io)
 
 ASP.NET Core MVC app for scheduling a hotel's communal TV. Guests reserve time slots from their room; admins manage everything.
 
-**[Demo](https://tvbooking-app.calmwave-a1c4b01c.polandcentral.azurecontainerapps.io) · [Screenshots](#screenshots) · [Features](#features) · [Tech Stack](#technology-stack) · [Getting Started](#getting-started)**
+**[Demo](https://tvbooking-app.nicerock-ba6c6149.polandcentral.azurecontainerapps.io) · [Screenshots](#screenshots) · [Features](#features) · [Tech Stack](#technology-stack) · [Getting Started](#getting-started)**
 
 </div>
 
@@ -21,7 +21,7 @@ ASP.NET Core MVC app for scheduling a hotel's communal TV. Guests reserve time s
 
 ## Live Demo
 
-[https://tvbooking-app.calmwave-a1c4b01c.polandcentral.azurecontainerapps.io](https://tvbooking-app.calmwave-a1c4b01c.polandcentral.azurecontainerapps.io)
+[https://tvbooking-app.nicerock-ba6c6149.polandcentral.azurecontainerapps.io](https://tvbooking-app.nicerock-ba6c6149.polandcentral.azurecontainerapps.io)
 
 ---
 
