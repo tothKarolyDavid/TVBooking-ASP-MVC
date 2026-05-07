@@ -27,6 +27,13 @@ jobs:
       - name: Configure azd to use Azure CLI auth
         run: azd config set auth.useAzCliAuth "true"
 
+      - name: Resolve Azure subscription for azd
+        shell: bash
+        run: |
+          AZURE_SUBSCRIPTION_ID="$(az account show --query id -o tsv)"
+          test -n "${AZURE_SUBSCRIPTION_ID}"
+          echo "AZURE_SUBSCRIPTION_ID=${AZURE_SUBSCRIPTION_ID}" >> "$GITHUB_ENV"
+
       - name: Provision + deploy with azd
         run: azd up --no-prompt
         env:
