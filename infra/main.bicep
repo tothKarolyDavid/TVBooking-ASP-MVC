@@ -75,7 +75,7 @@ resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
       containers: [
         {
           name: 'tvbooking'
-          image: '${containerRegistry.properties.loginServer}/tvbooking/web-tvbooking:latest'
+          image: 'mcr.microsoft.com/dotnet/aspnet:10.0'
           env: [
             {
               name: 'ASPNETCORE_ENVIRONMENT'

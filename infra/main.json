@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.43.1.21952",
-      "templateHash": "6517138197925539421"
+      "templateHash": "7364608602238706315"
     }
   },
   "parameters": {
@@ -105,7 +105,7 @@
           "containers": [
             {
               "name": "tvbooking",
-              "image": "[format('{0}/tvbooking/web-tvbooking:latest', reference(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').loginServer)]",
+              "image": "mcr.microsoft.com/dotnet/aspnet:10.0",
               "env": [
                 {
                   "name": "ASPNETCORE_ENVIRONMENT",
