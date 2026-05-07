@@ -3,12 +3,13 @@ name: CD
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -22,6 +23,9 @@ jobs:
 
       - name: Install azd
         uses: Azure/setup-azd@v2
+
+      - name: Configure azd to use Azure CLI auth
+        run: azd config set auth.useAzCliAuth "true"
 
       - name: Deploy with azd
         run: azd deploy
