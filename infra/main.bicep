@@ -40,6 +40,22 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2025-11-01' =
   }
 }
 
+resource managedEnvironmentStorage 'Microsoft.App/managedEnvironments/storages@2024-02-02-preview' = {
+  parent: containerAppsEnvironment
+  name: 'tvbooking-data-storage'
+  dependsOn: [
+    fileShare
+  ]
+  properties: {
+    azureFile: {
+      accountName: storageAccount.name
+      accountKey: storageAccount.listKeys().keys[0].value
+      shareName: fileShareName
+      accessMode: 'ReadWrite'
+    }
+  }
+}
+
 resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
   name: containerAppName
   location: location
