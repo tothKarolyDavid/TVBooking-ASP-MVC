@@ -37,5 +37,5 @@ jobs:
       - name: Provision + deploy with azd
         run: azd up --no-prompt
         env:
-          AZURE_ENV_NAME: tvbooking2
+          AZURE_ENV_NAME: tvbooking-${{ github.run_id }}
           AZURE_LOCATION: polandcentral
