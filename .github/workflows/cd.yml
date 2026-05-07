@@ -38,4 +38,4 @@ jobs:
         run: azd up --no-prompt
         env:
           AZURE_ENV_NAME: tvbooking
-          AZURE_LOCATION: polandcentral
+          AZURE_LOCATION: westeurope
