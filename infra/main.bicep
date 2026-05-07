@@ -68,7 +68,7 @@ resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
       containers: [
         {
           name: 'tvbooking'
-          image: 'tvbookingacr.azurecr.io/tvbooking/web-tvbooking:latest'
+          image: '${containerRegistry.properties.loginServer}/tvbooking/web-tvbooking:latest'
           env: [
             {
               name: 'ConnectionStrings__ApplicationDbContextConnection'
