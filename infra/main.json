@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.43.1.21952",
-      "templateHash": "7364608602238706315"
+      "templateHash": "3100331308544838461"
     }
   },
   "parameters": {
@@ -18,58 +18,29 @@
     }
   },
   "variables": {
-    "containerAppName": "[format('{0}-app', parameters('environmentName'))]",
-    "containerAppsEnvName": "[format('{0}-env', parameters('environmentName'))]",
-    "containerRegistryName": "[replace(replace(format('{0}acr', parameters('environmentName')), '-', ''), '.', '')]",
-    "storageAccountName": "[replace(replace(format('{0}data', parameters('environmentName')), '-', ''), '.', '')]",
-    "fileShareName": "tvbooking-data"
+    "appServicePlanName": "[format('{0}-asp', parameters('environmentName'))]",
+    "webAppName": "[format('{0}-app', parameters('environmentName'))]",
+    "dataDirectory": "D:\\home\\data"
   },
   "resources": [
     {
-      "type": "Microsoft.App/managedEnvironments",
-      "apiVersion": "2026-01-01",
-      "name": "[variables('containerAppsEnvName')]",
-      "location": "[parameters('location')]",
-      "properties": {
-        "appLogsConfiguration": {
-          "destination": null
-        }
-      }
-    },
-    {
-      "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2025-08-01",
-      "name": "[variables('storageAccountName')]",
-      "location": "[parameters('location')]",
-      "kind": "StorageV2",
-      "sku": {
-        "name": "Standard_LRS"
-      }
-    },
-    {
-      "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
-      "apiVersion": "2025-08-01",
-      "name": "[format('{0}/default/{1}', variables('storageAccountName'), variables('fileShareName'))]",
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
-      ]
-    },
-    {
-      "type": "Microsoft.ContainerRegistry/registries",
-      "apiVersion": "2025-11-01",
-      "name": "[variables('containerRegistryName')]",
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2023-01-01",
+      "name": "[variables('appServicePlanName')]",
       "location": "[parameters('location')]",
       "sku": {
-        "name": "Basic"
+        "name": "F1",
+        "tier": "Free"
       },
+      "kind": "app",
       "properties": {
-        "adminUserEnabled": true
+        "reserved": false
       }
     },
     {
-      "type": "Microsoft.App/containerApps",
-      "apiVersion": "2026-01-01",
-      "name": "[variables('containerAppName')]",
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2023-01-01",
+      "name": "[variables('webAppName')]",
       "location": "[parameters('location')]",
       "tags": {
         "azd-service-name": "web"
@@ -78,101 +49,41 @@
         "type": "SystemAssigned"
       },
       "properties": {
-        "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments', variables('containerAppsEnvName'))]",
-        "configuration": {
-          "activeRevisionsMode": "Single",
-          "ingress": {
-            "external": true,
-            "targetPort": 8080,
-            "transport": "auto",
-            "allowInsecure": false
-          },
-          "secrets": [
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
+        "httpsOnly": true,
+        "siteConfig": {
+          "netFrameworkVersion": "v10.0",
+          "alwaysOn": false,
+          "http20Enabled": true,
+          "appSettings": [
             {
-              "name": "acr-password",
-              "value": "[listCredentials(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').passwords[0].value]"
-            }
-          ],
-          "registries": [
+              "name": "ASPNETCORE_ENVIRONMENT",
+              "value": "Production"
+            },
             {
-              "server": "[reference(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').loginServer]",
-              "username": "[listCredentials(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').username]",
-              "passwordSecretRef": "acr-password"
+              "name": "ConnectionStrings__ApplicationDbContextConnection",
+              "value": "[format('Data Source={0}\\TVBookingMVC.db', variables('dataDirectory'))]"
             }
           ]
-        },
-        "template": {
-          "containers": [
-            {
-              "name": "tvbooking",
-              "image": "mcr.microsoft.com/dotnet/aspnet:10.0",
-              "env": [
-                {
-                  "name": "ASPNETCORE_ENVIRONMENT",
-                  "value": "Production"
-                }
-              ],
-              "resources": {
-                "cpu": "[json('0.25')]",
-                "memory": "0.5Gi"
-              }
-            }
-          ],
-          "scale": {
-            "minReplicas": 0,
-            "maxReplicas": 1
-          }
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.App/managedEnvironments', variables('containerAppsEnvName'))]",
-        "[resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName'))]"
-      ]
-    },
-    {
-      "type": "Microsoft.Authorization/roleAssignments",
-      "apiVersion": "2022-04-01",
-      "scope": "[resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName'))]",
-      "name": "[guid(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), resourceId('Microsoft.App/containerApps', variables('containerAppName')), 'AcrPull')]",
-      "properties": {
-        "principalId": "[reference(resourceId('Microsoft.App/containerApps', variables('containerAppName')), '2026-01-01', 'full').identity.principalId]",
-        "principalType": "ServicePrincipal",
-        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')]"
-      },
-      "dependsOn": [
-        "[resourceId('Microsoft.App/containerApps', variables('containerAppName'))]",
-        "[resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
       ]
     }
   ],
   "outputs": {
-    "AZURE_CONTAINER_REGISTRY_ENDPOINT": {
-      "type": "string",
-      "value": "[reference(resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName')), '2025-11-01').loginServer]"
-    },
-    "AZURE_CONTAINER_APPS_ENVIRONMENT_NAME": {
-      "type": "string",
-      "value": "[variables('containerAppsEnvName')]"
-    },
     "APPLICATION_URL": {
       "type": "string",
-      "value": "[format('https://{0}', reference(resourceId('Microsoft.App/containerApps', variables('containerAppName')), '2026-01-01').configuration.ingress.fqdn)]"
+      "value": "[format('https://{0}', reference(resourceId('Microsoft.Web/sites', variables('webAppName')), '2023-01-01').defaultHostName)]"
     },
-    "STORAGE_ACCOUNT_NAME": {
+    "APP_SERVICE_PLAN_NAME": {
       "type": "string",
-      "value": "[variables('storageAccountName')]"
+      "value": "[variables('appServicePlanName')]"
     },
-    "STORAGE_ACCOUNT_KEY": {
+    "WEBAPP_NAME": {
       "type": "string",
-      "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2025-08-01').keys[0].value]"
-    },
-    "FILE_SHARE_NAME": {
-      "type": "string",
-      "value": "[variables('fileShareName')]"
-    },
-    "CONTAINER_APP_NAME": {
-      "type": "string",
-      "value": "[variables('containerAppName')]"
+      "value": "[variables('webAppName')]"
     },
     "RESOURCE_GROUP_NAME": {
       "type": "string",
