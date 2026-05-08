@@ -1,6 +1,7 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using TVBookingMVC.Areas.Identity.Data;
 using TVBookingMVC.Services;
@@ -20,6 +21,11 @@ public partial class Program
             ApplicationName = typeof(Program).Assembly.GetName().Name
         });
         var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
+
+        var dbPath = new SqliteConnectionStringBuilder(connectionString).DataSource;
+        var dbDir = Path.GetDirectoryName(dbPath);
+        if (!string.IsNullOrEmpty(dbDir))
+            Directory.CreateDirectory(dbDir);
 
         builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
 
