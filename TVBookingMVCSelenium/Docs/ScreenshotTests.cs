@@ -10,6 +10,8 @@ public class ScreenshotTests : TestBase
 {
     private static readonly string ScreenshotDir = Path.GetFullPath(
         Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Docs", "preview"));
+    private const string LightTheme = "light";
+    private const string DarkTheme = "dark";
 
     public ScreenshotTests(SeleniumWebApplicationFactory factory, WebDriverFixture driverFixture)
         : base(factory, driverFixture)
@@ -25,64 +27,97 @@ public class ScreenshotTests : TestBase
         screenshot.SaveAsFile(filePath);
     }
 
+    private void SetThemePreference(string theme)
+    {
+        Driver.Navigate().GoToUrl(BaseUrl);
+        ((IJavaScriptExecutor)Driver)
+            .ExecuteScript("localStorage.setItem('tvbooking-theme-preference', arguments[0]);", theme);
+    }
+
+    private void CaptureWithTheme(string theme, string filename, Action captureAction)
+    {
+        SetThemePreference(theme);
+        captureAction();
+        TakeScreenshot(filename);
+    }
+
+    private void CaptureBothThemes(string baseName, Action captureAction)
+    {
+        CaptureWithTheme(LightTheme, $"{baseName}.light.png", captureAction);
+        CaptureWithTheme(DarkTheme, $"{baseName}.dark.png", captureAction);
+    }
+
     [Fact]
     public void Capture_01_BookingList()
     {
-        Driver.Manage().Cookies.DeleteAllCookies();
-        var indexPage = new BookingIndexPage(Driver, BaseUrl);
-        indexPage.Navigate();
-        indexPage.WaitForPageLoad();
-        Thread.Sleep(500);
-        TakeScreenshot("01-booking-list.png");
+        CaptureBothThemes("01-booking-list", () =>
+        {
+            Driver.Manage().Cookies.DeleteAllCookies();
+            var indexPage = new BookingIndexPage(Driver, BaseUrl);
+            indexPage.Navigate();
+            indexPage.WaitForPageLoad();
+            Thread.Sleep(500);
+        });
     }
 
     [Fact]
     public void Capture_02_CreateBooking()
     {
-        var loginPage = new LoginPage(Driver, BaseUrl);
-        loginPage.Login("room2@hotel.com", "2");
+        CaptureBothThemes("02-create-booking", () =>
+        {
+            Driver.Manage().Cookies.DeleteAllCookies();
+            var loginPage = new LoginPage(Driver, BaseUrl);
+            loginPage.Login("room2@hotel.com", "2");
 
-        var createPage = new CreateBookingPage(Driver, BaseUrl);
-        createPage.Navigate();
-        createPage.WaitForPageLoad();
-        Thread.Sleep(500);
-        TakeScreenshot("02-create-booking.png");
+            var createPage = new CreateBookingPage(Driver, BaseUrl);
+            createPage.Navigate();
+            createPage.WaitForPageLoad();
+            Thread.Sleep(500);
+        });
     }
 
     [Fact]
     public void Capture_03_Statistics()
     {
-        var loginPage = new LoginPage(Driver, BaseUrl);
-        loginPage.Login("admin@hotel.com", "0");
+        CaptureBothThemes("03-statistics", () =>
+        {
+            Driver.Manage().Cookies.DeleteAllCookies();
+            var loginPage = new LoginPage(Driver, BaseUrl);
+            loginPage.Login("admin@hotel.com", "0");
 
-        var statsPage = new StatisticsPage(Driver, BaseUrl);
-        statsPage.Navigate();
-        statsPage.WaitForPageLoad();
-        statsPage.WaitForCharts();
-        TakeScreenshot("03-statistics.png");
+            var statsPage = new StatisticsPage(Driver, BaseUrl);
+            statsPage.Navigate();
+            statsPage.WaitForPageLoad();
+            statsPage.WaitForCharts();
+        });
     }
 
     [Fact]
     public void Capture_04_GuestManagement()
     {
-        var loginPage = new LoginPage(Driver, BaseUrl);
-        loginPage.Login("admin@hotel.com", "0");
+        CaptureBothThemes("04-guest-management", () =>
+        {
+            Driver.Manage().Cookies.DeleteAllCookies();
+            var loginPage = new LoginPage(Driver, BaseUrl);
+            loginPage.Login("admin@hotel.com", "0");
 
-        var guestsPage = new GuestsPage(Driver, BaseUrl);
-        guestsPage.Navigate();
-        guestsPage.WaitForPageLoad();
-        Thread.Sleep(500);
-        TakeScreenshot("04-guest-management.png");
+            var guestsPage = new GuestsPage(Driver, BaseUrl);
+            guestsPage.Navigate();
+            guestsPage.WaitForPageLoad();
+            Thread.Sleep(500);
+        });
     }
 
     [Fact]
     public void Capture_05_Login()
     {
-        Driver.Manage().Cookies.DeleteAllCookies();
-        var loginPage = new LoginPage(Driver, BaseUrl);
-        loginPage.Navigate();
-        loginPage.WaitForPageLoad();
-        Thread.Sleep(300);
-        TakeScreenshot("05-login.png");
+        CaptureBothThemes("05-login", () =>
+        {
+            Driver.Manage().Cookies.DeleteAllCookies();
+            var loginPage = new LoginPage(Driver, BaseUrl);
+            loginPage.Navigate();
+            loginPage.WaitForPageLoad();
+            Thread.Sleep(300);
+        });
     }
 }

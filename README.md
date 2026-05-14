@@ -29,11 +29,27 @@ ASP.NET Core MVC app for scheduling a hotel's communal TV. Guests reserve time s
 
 <div align="center">
 
-<img src="Docs/preview/01-booking-list.png" width="48%" alt="Booking list with DataTable, age filter, and My Bookings toggle"/>
-<img src="Docs/preview/02-create-booking.png" width="48%" alt="Create booking form with free time slots sidebar"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/preview/01-booking-list.dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="Docs/preview/01-booking-list.light.png" />
+  <img src="Docs/preview/01-booking-list.light.png" width="48%" alt="Booking list with DataTable, age filter, and My Bookings toggle" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/preview/02-create-booking.dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="Docs/preview/02-create-booking.light.png" />
+  <img src="Docs/preview/02-create-booking.light.png" width="48%" alt="Create booking form with free time slots sidebar" />
+</picture>
 
-<img src="Docs/preview/03-statistics.png" width="48%" alt="Statistics dashboard with pie charts and line chart"/>
-<img src="Docs/preview/04-guest-management.png" width="48%" alt="Admin guest management page"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/preview/03-statistics.dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="Docs/preview/03-statistics.light.png" />
+  <img src="Docs/preview/03-statistics.light.png" width="48%" alt="Statistics dashboard with pie charts and line chart" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/preview/04-guest-management.dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="Docs/preview/04-guest-management.light.png" />
+  <img src="Docs/preview/04-guest-management.light.png" width="48%" alt="Admin guest management page" />
+</picture>
 
 </div>
 
@@ -153,7 +169,7 @@ dotnet test TVBookingMVCSelenium
 dotnet test TVBookingMVCSelenium --filter "FullyQualifiedName~ScreenshotTests"
 ```
 
-Screenshots are generated to `Docs/preview/`. The Selenium project runs the app in-process with an in-memory SQLite database -- no external setup needed.
+Screenshots are generated to `Docs/preview/` as `.light.png` and `.dark.png` variants. The Selenium project runs the app in-process with an in-memory SQLite database -- no external setup needed.
 
 ---
 
