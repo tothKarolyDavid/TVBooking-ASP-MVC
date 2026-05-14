@@ -111,7 +111,7 @@
     </div>
 </div>
 
-<div class="row mb-4 mb-lg-5">
+<div class="row mb-4">
     <div class="col-12 col-md-8 col-lg-6">
         <div class="card">
             <div class="card-header">
@@ -133,23 +133,28 @@
     </div>
 </div>
 
-@section Head {
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
-}
+
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script id="statistics-data" type="application/json">@Html.Raw(Json.Serialize(Model))</script>
     <script src="~/js/booking-statistics.js" asp-append-version="true"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        Chart.defaults.color = '#a0a0a0';
-        Chart.defaults.borderColor = '#404040';
+        // Initialize chart colors based on current theme
+        function updateChartColors() {
+            const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark' || 
+                                (getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim() === '#a0a0a0');
+            
+            Chart.defaults.color = isDarkTheme ? '#a0a0a0' : '#666666';
+            Chart.defaults.borderColor = isDarkTheme ? '#404040' : '#e0e0e0';
+        }
+        
+        updateChartColors();
+        
+        // Listen for theme changes
+        const observer = new MutationObserver(() => updateChartColors());
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-        flatpickr('.flatpickr-input', {
-            dateFormat: "Y/m/d",
-            allowInput: true
-        });
+
     </script>
 }
