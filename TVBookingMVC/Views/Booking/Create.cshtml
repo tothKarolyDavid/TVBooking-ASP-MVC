@@ -6,10 +6,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Head {
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
-}
-
 <div class="page-header page-content">
     <h1><i class="bi bi-calendar-plus"></i> @ViewData["Title"]</h1>
 </div>
@@ -140,7 +136,6 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         $(document).ready(function() {
             if ($.fn.dataTable) {
@@ -162,14 +157,6 @@
         $.validator.methods.date = function(value, element) {
             return this.optional(element) || /^\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}$/.test(value);
         };
-
-        flatpickr('[name="Booking.Start"], [name="Booking.End"]', {
-            enableTime: true,
-            dateFormat: "Y/m/d H:i",
-            time_24hr: true,
-            minuteIncrement: 1,
-            allowInput: true
-        });
 
         function addValidationClasses() {
             var fields = ['Booking.Program', 'Booking.Channel', 'Booking.Genre', 'Booking.Start', 'Booking.End', 'Booking.AgeLimit', 'Booking.RoomNumber'];
