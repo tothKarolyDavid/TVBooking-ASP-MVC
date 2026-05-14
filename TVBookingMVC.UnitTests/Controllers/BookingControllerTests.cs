@@ -45,7 +45,7 @@ public sealed class BookingControllerTests
     private void SetupReferenceData()
     {
         _referenceDataService.Setup(s => s.AgeLimits).Returns(["General Audience", "Adults Only"]);
-        _referenceDataService.Setup(s => s.Channels).Returns(["M1", "HBO"]);
+        _referenceDataService.Setup(s => s.Channels).Returns(["BBC One", "HBO"]);
         _referenceDataService.Setup(s => s.Genres).Returns(["Action", "Comedy"]);
     }
 

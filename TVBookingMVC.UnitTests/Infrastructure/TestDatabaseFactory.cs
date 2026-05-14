@@ -34,7 +34,7 @@ public static class BookingTestData
     public static Booking CreateValidBooking(
         int? id = null,
         string program = "Test Program",
-        string channel = "M1",
+        string channel = "BBC One",
         string genre = "Action",
         DateTime? start = null,
         DateTime? end = null,
@@ -84,10 +84,10 @@ public static class BookingTestData
 
         var bookings = new List<Booking>
         {
-            new() { Program = "Morning News", Channel = "M1", Genre = "News", Start = baseTime, End = baseTime.AddHours(1), AgeLimit = "General Audience", RoomNumber = 5 },
-            new() { Program = "Late Morning Show", Channel = "M1", Genre = "Show", Start = baseTime.AddHours(1), End = baseTime.AddHours(2), AgeLimit = "General Audience", RoomNumber = 5 },
+            new() { Program = "Morning News", Channel = "BBC News", Genre = "News", Start = baseTime, End = baseTime.AddHours(1), AgeLimit = "General Audience", RoomNumber = 5 },
+            new() { Program = "Late Morning Show", Channel = "BBC One", Genre = "Show", Start = baseTime.AddHours(1), End = baseTime.AddHours(2), AgeLimit = "General Audience", RoomNumber = 5 },
             new() { Program = "Midday Movie", Channel = "HBO", Genre = "Movie", Start = baseTime.AddHours(3), End = baseTime.AddHours(5), AgeLimit = "Under 12 not recommended", RoomNumber = 6 },
-            new() { Program = "Evening Documentary", Channel = "M4 Sport", Genre = "Documentary", Start = baseTime.AddHours(6), End = baseTime.AddHours(7), AgeLimit = "General Audience", RoomNumber = 5 }
+            new() { Program = "Evening Documentary", Channel = "Discovery Channel", Genre = "Documentary", Start = baseTime.AddHours(6), End = baseTime.AddHours(7), AgeLimit = "General Audience", RoomNumber = 5 }
         };
 
         context.Bookings.AddRange(bookings);
