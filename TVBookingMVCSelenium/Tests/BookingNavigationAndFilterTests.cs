@@ -16,10 +16,11 @@ public class BookingNavigationAndFilterTests : TestBase
     {
         var loginPage = new LoginPage(Driver, BaseUrl);
         loginPage.Login("admin@hotel.com", "0");
+        loginPage.WaitForPageLoad();
 
-        Driver.Navigate().GoToUrl($"{BaseUrl}/Booking/Create");
-        var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(DefaultTimeoutSeconds));
-        wait.Until(d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
+        var createPage = new CreateBookingPage(Driver, BaseUrl);
+        createPage.Navigate();
+        createPage.WaitForPageLoad();
 
         Driver.PageSource.Should().Contain("Create");
         Driver.FindElement(By.CssSelector(".page-content h1")).Text.Should().Contain("Create");

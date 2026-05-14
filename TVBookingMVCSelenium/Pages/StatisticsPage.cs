@@ -25,12 +25,20 @@ public class StatisticsPage
 
     public void WaitForCharts()
     {
-        var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(_defaultTimeout));
+        Thread.Sleep(2000); // Give CDN time to load Chart.js
+        var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(_defaultTimeout * 3));
         wait.Until(d =>
         {
-            var scriptResult = ((IJavaScriptExecutor)d).ExecuteScript(
-                "return typeof Chart !== 'undefined' && document.querySelectorAll('canvas').length > 0");
-            return scriptResult is true;
+            try
+            {
+                var scriptResult = ((IJavaScriptExecutor)d).ExecuteScript(
+                    "return typeof Chart !== 'undefined' && document.querySelectorAll('canvas').length > 0");
+                return scriptResult is true;
+            }
+            catch
+            {
+                return false;
+            }
         });
         Thread.Sleep(1000);
     }
