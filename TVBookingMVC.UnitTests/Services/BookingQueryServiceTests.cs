@@ -465,7 +465,7 @@ public sealed class BookingQueryServiceTests
         await BookingTestData.SeedRoomAsync(context, 2);
         await BookingTestData.SeedBookingAsync(context, BookingTestData.CreateValidBooking(channel: "HBO", genre: "Action", roomNumber: 2));
         await BookingTestData.SeedBookingAsync(context, BookingTestData.CreateValidBooking(channel: "HBO", genre: "Action", roomNumber: 2));
-        await BookingTestData.SeedBookingAsync(context, BookingTestData.CreateValidBooking(channel: "M1", genre: "Comedy", roomNumber: 2));
+        await BookingTestData.SeedBookingAsync(context, BookingTestData.CreateValidBooking(channel: "BBC News", genre: "Comedy", roomNumber: 2));
 
         var result = await service.GetStatisticsAsync(
             dateFrom: DateTime.UtcNow.AddDays(-1), dateTo: DateTime.UtcNow.AddDays(10));

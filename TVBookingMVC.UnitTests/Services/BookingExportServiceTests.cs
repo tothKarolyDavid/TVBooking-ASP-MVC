@@ -23,7 +23,7 @@ public sealed class BookingExportServiceTests
             {
                 Id = 1,
                 Program = "Morning News",
-                Channel = "M1",
+                Channel = "BBC News",
                 Genre = "News",
                 Start = date.AddHours(8),
                 End = date.AddHours(9),
@@ -60,7 +60,7 @@ public sealed class BookingExportServiceTests
 
         var firstBooking = root.Elements("booking").First();
         Assert.Equal("Morning News", firstBooking.Element("program")?.Value);
-        Assert.Equal("M1", firstBooking.Element("channel")?.Value);
+        Assert.Equal("BBC News", firstBooking.Element("channel")?.Value);
         Assert.Equal("News", firstBooking.Element("genre")?.Value);
         Assert.Equal("2025/06/01 08:00", firstBooking.Element("start")?.Value);
         Assert.Equal("2025/06/01 09:00", firstBooking.Element("end")?.Value);
@@ -98,7 +98,7 @@ public sealed class BookingExportServiceTests
             {
                 Id = 1,
                 Program = "Test",
-                Channel = "M1",
+                Channel = "BBC News",
                 Genre = "News",
                 Start = date.AddHours(8).AddMinutes(5),
                 End = date.AddHours(9).AddMinutes(15),

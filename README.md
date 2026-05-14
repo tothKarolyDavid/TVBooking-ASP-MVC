@@ -44,8 +44,8 @@ ASP.NET Core MVC app for scheduling a hotel's communal TV. Guests reserve time s
 ### Booking Management
 - **Create bookings** with program name, channel, genre, start/end times, age rating, and room number
 - **Edit/delete** existing bookings with ownership checks
-- **74 Hungarian TV channels** (M1, RTL, HBO, Discovery, National Geographic, Eurosport, and more)
-- **29 genres** (Action, Documentary, Comedy, Sports, Kids, News, etc.)
+- **56 UK & international TV channels** (BBC, ITV, Sky, HBO, ESPN, National Geographic, Eurosport, and more)
+- **29 genres** (Action, Comedy, Documentary, Drama, Sports, News, etc.)
 - **7 age rating categories** (Child-friendly through Adults Only)
 
 ### Smart Scheduling
